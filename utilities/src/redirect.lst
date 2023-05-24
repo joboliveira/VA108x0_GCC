@@ -1,0 +1,122 @@
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cck74dxb.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   3              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   4              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   5              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   6              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   7              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   8              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+   9              		.eabi_attribute 34, 0	@ Tag_CPU_unaligned_access
+  10              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  11              		.file	"redirect.c"
+  12              	@ GNU C11 (GNU Tools for Arm Embedded Processors 7-2017-q4-major) version 7.2.1 20170904 (release) 
+  13              	@	compiled by GNU C version 5.3.1 20160211, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.
+  14              	
+  15              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  16              	@ options passed:  -I . -I .\common\hdr -I .\driver\hdr -I .\utilities\hdr
+  17              	@ -I .\inc -I .\driver\hdr -I .\hdr -imultilib thumb/v6-m
+  18              	@ -iprefix c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../lib/gcc/arm-none-ea
+  19              	@ -isysroot c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../arm-none-eabi
+  20              	@ -D__USES_INITFINI__ -D RUN_FROM_FLASH=1 .\utilities\src\redirect.c
+  21              	@ -mcpu=cortex-m0 -mthumb -auxbase-strip .\utilities\src\redirect.o
+  22              	@ -gdwarf-2 -Os -Wall -Wstrict-prototypes -fomit-frame-pointer
+  23              	@ -fverbose-asm
+  24              	@ options enabled:  -faggressive-loop-optimizations -falign-jumps
+  25              	@ -falign-labels -falign-loops -fauto-inc-dec -fbranch-count-reg
+  26              	@ -fcaller-saves -fchkp-check-incomplete-type -fchkp-check-read
+  27              	@ -fchkp-check-write -fchkp-instrument-calls -fchkp-narrow-bounds
+  28              	@ -fchkp-optimize -fchkp-store-bounds -fchkp-use-static-bounds
+  29              	@ -fchkp-use-static-const-bounds -fchkp-use-wrappers -fcode-hoisting
+  30              	@ -fcombine-stack-adjustments -fcommon -fcompare-elim -fcprop-registers
+  31              	@ -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  32              	@ -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  33              	@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  34              	@ -fexpensive-optimizations -fforward-propagate -ffp-int-builtin-inexact
+  35              	@ -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime -fgnu-unique
+  36              	@ -fguess-branch-probability -fhoist-adjacent-loads -fident -fif-conversion
+  37              	@ -fif-conversion2 -findirect-inlining -finline -finline-atomics
+  38              	@ -finline-functions -finline-functions-called-once
+  39              	@ -finline-small-functions -fipa-bit-cp -fipa-cp -fipa-icf
+  40              	@ -fipa-icf-functions -fipa-icf-variables -fipa-profile -fipa-pure-const
+  41              	@ -fipa-reference -fipa-sra -fipa-vrp -fira-hoist-pressure
+  42              	@ -fira-share-save-slots -fira-share-spill-slots
+  43              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+  44              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  45              	@ -fmath-errno -fmerge-constants -fmerge-debug-strings
+  46              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  47              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
+  48              	@ -freg-struct-return -freorder-blocks -freorder-functions
+  49              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  50              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  51              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  52              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  53              	@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
+  54              	@ -fshow-column -fshrink-wrap -fshrink-wrap-separate -fsigned-zeros
+  55              	@ -fsplit-ivs-in-unroller -fsplit-wide-types -fssa-backprop -fssa-phiopt
+  56              	@ -fstdarg-opt -fstore-merging -fstrict-aliasing -fstrict-overflow
+  57              	@ -fstrict-volatile-bitfields -fsync-libcalls -fthread-jumps
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cck74dxb.s 			page 2
+
+
+  58              	@ -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp -ftree-builtin-call-dce
+  59              	@ -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+  60              	@ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+  61              	@ -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  62              	@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pre
+  63              	@ -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr
+  64              	@ -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+  65              	@ -ftree-vrp -funit-at-a-time -fvar-tracking -fvar-tracking-assignments
+  66              	@ -fverbose-asm -fzero-initialized-in-bss -mlittle-endian
+  67              	@ -mpic-data-is-text-relative -msched-prolog -mthumb
+  68              	@ -mvectorize-with-neon-quad
+  69              	
+  70              		.text
+  71              	.Ltext0:
+  72              		.cfi_sections	.debug_frame
+  73              	.Letext0:
+  74              		.section	.debug_line,"",%progbits
+  75              	.Ldebug_line0:
+  76              		.section	.debug_str,"MS",%progbits,1
+  77              	.LASF0:
+  78 0000 433A5C44 		.ascii	"C:\\Development\\New_Mar8\\Workspace-Vorago - REB1\\"
+  78      6576656C 
+  78      6F706D65 
+  78      6E745C4E 
+  78      65775F4D 
+  79 0030 766F7261 		.ascii	"vorago_try311\000"
+  79      676F5F74 
+  79      72793331 
+  79      3100
+  80              	.LASF1:
+  81 003e 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+  81      43313120 
+  81      372E322E 
+  81      31203230 
+  81      31373039 
+  82 0071 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m0 -mthumb -gdwa"
+  82      20726576 
+  82      6973696F 
+  82      6E203235 
+  82      35323034 
+  83 00a4 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+  83      202D4F73 
+  83      202D666F 
+  83      6D69742D 
+  83      6672616D 
+  84              	.LASF2:
+  85 00c2 2E5C7574 		.ascii	".\\utilities\\src\\redirect.c\000"
+  85      696C6974 
+  85      6965735C 
+  85      7372635C 
+  85      72656469 
+  86              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cck74dxb.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 redirect.c
+
+NO UNDEFINED SYMBOLS

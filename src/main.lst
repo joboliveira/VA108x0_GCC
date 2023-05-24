@@ -1,0 +1,2212 @@
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   3              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   4              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   5              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   6              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   7              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   8              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+   9              		.eabi_attribute 34, 0	@ Tag_CPU_unaligned_access
+  10              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  11              		.file	"main.c"
+  12              	@ GNU C11 (GNU Tools for Arm Embedded Processors 7-2017-q4-major) version 7.2.1 20170904 (release) 
+  13              	@	compiled by GNU C version 5.3.1 20160211, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.
+  14              	
+  15              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  16              	@ options passed:  -I . -I .\common\hdr -I .\driver\hdr -I .\utilities\hdr
+  17              	@ -I .\inc -I .\driver\hdr -I .\hdr -imultilib thumb/v6-m
+  18              	@ -iprefix c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../lib/gcc/arm-none-ea
+  19              	@ -isysroot c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../arm-none-eabi
+  20              	@ -D__USES_INITFINI__ -D RUN_FROM_FLASH=1 .\src\main.c -mcpu=cortex-m0
+  21              	@ -mthumb -auxbase-strip .\src\main.o -gdwarf-2 -Os -Wall
+  22              	@ -Wstrict-prototypes -fomit-frame-pointer -fverbose-asm
+  23              	@ options enabled:  -faggressive-loop-optimizations -falign-jumps
+  24              	@ -falign-labels -falign-loops -fauto-inc-dec -fbranch-count-reg
+  25              	@ -fcaller-saves -fchkp-check-incomplete-type -fchkp-check-read
+  26              	@ -fchkp-check-write -fchkp-instrument-calls -fchkp-narrow-bounds
+  27              	@ -fchkp-optimize -fchkp-store-bounds -fchkp-use-static-bounds
+  28              	@ -fchkp-use-static-const-bounds -fchkp-use-wrappers -fcode-hoisting
+  29              	@ -fcombine-stack-adjustments -fcommon -fcompare-elim -fcprop-registers
+  30              	@ -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  31              	@ -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  32              	@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  33              	@ -fexpensive-optimizations -fforward-propagate -ffp-int-builtin-inexact
+  34              	@ -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime -fgnu-unique
+  35              	@ -fguess-branch-probability -fhoist-adjacent-loads -fident -fif-conversion
+  36              	@ -fif-conversion2 -findirect-inlining -finline -finline-atomics
+  37              	@ -finline-functions -finline-functions-called-once
+  38              	@ -finline-small-functions -fipa-bit-cp -fipa-cp -fipa-icf
+  39              	@ -fipa-icf-functions -fipa-icf-variables -fipa-profile -fipa-pure-const
+  40              	@ -fipa-reference -fipa-sra -fipa-vrp -fira-hoist-pressure
+  41              	@ -fira-share-save-slots -fira-share-spill-slots
+  42              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+  43              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  44              	@ -fmath-errno -fmerge-constants -fmerge-debug-strings
+  45              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  46              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
+  47              	@ -freg-struct-return -freorder-blocks -freorder-functions
+  48              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  49              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  50              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  51              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  52              	@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
+  53              	@ -fshow-column -fshrink-wrap -fshrink-wrap-separate -fsigned-zeros
+  54              	@ -fsplit-ivs-in-unroller -fsplit-wide-types -fssa-backprop -fssa-phiopt
+  55              	@ -fstdarg-opt -fstore-merging -fstrict-aliasing -fstrict-overflow
+  56              	@ -fstrict-volatile-bitfields -fsync-libcalls -fthread-jumps
+  57              	@ -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp -ftree-builtin-call-dce
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 2
+
+
+  58              	@ -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+  59              	@ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+  60              	@ -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  61              	@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pre
+  62              	@ -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr
+  63              	@ -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+  64              	@ -ftree-vrp -funit-at-a-time -fvar-tracking -fvar-tracking-assignments
+  65              	@ -fverbose-asm -fzero-initialized-in-bss -mlittle-endian
+  66              	@ -mpic-data-is-text-relative -msched-prolog -mthumb
+  67              	@ -mvectorize-with-neon-quad
+  68              	
+  69              		.text
+  70              	.Ltext0:
+  71              		.cfi_sections	.debug_frame
+  72              		.section	.text.startup,"ax",%progbits
+  73              		.align	1
+  74              		.global	main
+  75              		.syntax unified
+  76              		.code	16
+  77              		.thumb_func
+  78              		.fpu softvfp
+  79              		.type	main, %function
+  80              	main:
+  81              	.LFB34:
+  82              		.file 1 ".\\src\\main.c"
+   1:.\src/main.c  **** /**
+   2:.\src/main.c  ****   ******************************************************************************
+   3:.\src/main.c  ****   * @file    try1/main.c 
+   4:.\src/main.c  ****   * @author  CEM
+   5:.\src/main.c  ****   * @version V1.0.0
+   6:.\src/main.c  ****   * @date    23-March-2012
+   7:.\src/main.c  ****   * @brief   Main program body - Sole purpose: blink LED
+   8:.\src/main.c  ****   ******************************************************************************
+   9:.\src/main.c  **** 
+  10:.\src/main.c  ****   *
+  11:.\src/main.c  ****   ******************************************************************************
+  12:.\src/main.c  ****   */
+  13:.\src/main.c  **** 
+  14:.\src/main.c  **** /* Local Includes ------------------------------------------------------------------*/
+  15:.\src/main.c  **** 
+  16:.\src/main.c  **** #include "va108xx.h"
+  17:.\src/main.c  **** 
+  18:.\src/main.c  **** volatile int msec_tim_timeout = 1 ;
+  19:.\src/main.c  **** 
+  20:.\src/main.c  **** /* Local defines ------------------------------------------------------------*/
+  21:.\src/main.c  **** #define PORTA_10_D2 			10
+  22:.\src/main.c  **** #define PORTA_7_D3 				7
+  23:.\src/main.c  **** #define PORTA_6_D4	 			6
+  24:.\src/main.c  **** #define PORTA_11_SW_USER 		11
+  25:.\src/main.c  **** 
+  26:.\src/main.c  **** 
+  27:.\src/main.c  **** /* Private variables ---------------------------------------------------------*/
+  28:.\src/main.c  **** 
+  29:.\src/main.c  **** 
+  30:.\src/main.c  **** /*  function prototypes ------------*/
+  31:.\src/main.c  **** 
+  32:.\src/main.c  **** 
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 3
+
+
+  33:.\src/main.c  **** /* Private functions ---------------------*/
+  34:.\src/main.c  **** //  void delay (int a);
+  35:.\src/main.c  **** /**
+  36:.\src/main.c  ****   * @brief  Main program.   (Blink LED on REB1 brd)
+  37:.\src/main.c  ****   * @param  None
+  38:.\src/main.c  ****   * @retval None
+  39:.\src/main.c  ****   */
+  40:.\src/main.c  **** int main(void)
+  41:.\src/main.c  **** {
+  83              		.loc 1 41 0
+  84              		.cfi_startproc
+  85              		@ Volatile: function does not return.
+  86              		@ args = 0, pretend = 0, frame = 8
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              	@ .\src\main.c:42: 	 volatile int count = 1  ;  /* counts the # of blinks  */
+  42:.\src/main.c  **** 	 volatile int count = 1  ;  /* counts the # of blinks  */
+  89              		.loc 1 42 0
+  90 0000 0123     		movs	r3, #1	@ tmp122,
+  91              	@ .\src\main.c:41: {
+  41:.\src/main.c  **** 	 volatile int count = 1  ;  /* counts the # of blinks  */
+  92              		.loc 1 41 0
+  93 0002 13B5     		push	{r0, r1, r4, lr}	@
+  94              	.LCFI0:
+  95              		.cfi_def_cfa_offset 16
+  96              		.cfi_offset 0, -16
+  97              		.cfi_offset 1, -12
+  98              		.cfi_offset 4, -8
+  99              		.cfi_offset 14, -4
+ 100              	@ .\src\main.c:42: 	 volatile int count = 1  ;  /* counts the # of blinks  */
+ 101              		.loc 1 42 0
+ 102 0004 0193     		str	r3, [sp, #4]	@ tmp122, count
+ 103              	@ .\src\main.c:45: 		VOR_SYSCONFIG->PERIPHERAL_CLK_ENABLE = ( CLK_ENABLE_PORTA | CLK_ENABLE_PORTB |
+  43:.\src/main.c  **** 
+  44:.\src/main.c  **** 	/* Enable clock for all peripherals */
+  45:.\src/main.c  **** 		VOR_SYSCONFIG->PERIPHERAL_CLK_ENABLE = ( CLK_ENABLE_PORTA | CLK_ENABLE_PORTB | CLK_ENABLE_SPIA | 
+ 104              		.loc 1 45 0
+ 105 0006 8023     		movs	r3, #128	@ tmp123,
+ 106 0008 124A     		ldr	r2, .L6	@ tmp124,
+ 107 000a DB05     		lsls	r3, r3, #23	@ tmp123, tmp123,
+ 108 000c DA67     		str	r2, [r3, #124]	@ tmp124, MEM[(struct VOR_SYSCONFIG_Type *)1073741824B].PERIPHERAL_CLK_ENABLE
+ 109              	@ .\src\main.c:52:       VOR_GPIO->BANK[0].DIR |= (1 << PORTA_7_D3);
+  46:.\src/main.c  **** 				 CLK_ENABLE_UARTA | CLK_ENABLE_UARTB | CLK_ENABLE_I2CA | CLK_ENABLE_I2CB | CLK_ENABLE_IRQSEL |
+  47:.\src/main.c  **** 				 CLK_ENABLE_IOMGR | CLK_ENABLE_UTILITY | CLK_ENABLE_PORTIO | CLK_ENABLE_SYSTEM );
+  48:.\src/main.c  **** 
+  49:.\src/main.c  **** 
+  50:.\src/main.c  **** 
+  51:.\src/main.c  **** /* Configure PA[7]. This GPIO will turn ON LED D3. */
+  52:.\src/main.c  ****       VOR_GPIO->BANK[0].DIR |= (1 << PORTA_7_D3);
+ 110              		.loc 1 52 0
+ 111 000e A023     		movs	r3, #160	@ tmp125,
+ 112 0010 8022     		movs	r2, #128	@ tmp126,
+ 113              	@ .\src\main.c:60:       	SysTick -> LOAD = 0x800000  ;
+  53:.\src/main.c  **** 	  VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
+  54:.\src/main.c  ****       VOR_GPIO->BANK[0].DATAOUT |= (1 << PORTA_7_D3);
+  55:.\src/main.c  **** 
+  56:.\src/main.c  **** 
+  57:.\src/main.c  ****       /* Systick added for debug purposes  5/29  */
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 4
+
+
+  58:.\src/main.c  **** 
+  59:.\src/main.c  ****       	SysTick -> CTRL = 0  ;
+  60:.\src/main.c  ****       	SysTick -> LOAD = 0x800000  ;
+ 114              		.loc 1 60 0
+ 115 0012 8024     		movs	r4, #128	@ tmp137,
+ 116              	@ .\src\main.c:59:       	SysTick -> CTRL = 0  ;
+  59:.\src/main.c  ****       	SysTick -> LOAD = 0x800000  ;
+ 117              		.loc 1 59 0
+ 118 0014 0020     		movs	r0, #0	@ tmp135,
+ 119              	@ .\src\main.c:52:       VOR_GPIO->BANK[0].DIR |= (1 << PORTA_7_D3);
+  52:.\src/main.c  **** 	  VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
+ 120              		.loc 1 52 0
+ 121 0016 DB05     		lsls	r3, r3, #23	@ tmp125, tmp125,
+ 122 0018 196A     		ldr	r1, [r3, #32]	@ _2, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4504.DI
+ 123              	@ .\src\main.c:60:       	SysTick -> LOAD = 0x800000  ;
+ 124              		.loc 1 60 0
+ 125 001a 2404     		lsls	r4, r4, #16	@ tmp137, tmp137,
+ 126              	@ .\src\main.c:52:       VOR_GPIO->BANK[0].DIR |= (1 << PORTA_7_D3);
+  52:.\src/main.c  **** 	  VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
+ 127              		.loc 1 52 0
+ 128 001c 1143     		orrs	r1, r2	@ _3, tmp126
+ 129 001e 1962     		str	r1, [r3, #32]	@ _3, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4504.DI
+ 130              	@ .\src\main.c:53: 	  VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
+  53:.\src/main.c  **** 	  VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
+ 131              		.loc 1 53 0
+ 132 0020 D969     		ldr	r1, [r3, #28]	@ _4, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4500.DA
+ 133 0022 1143     		orrs	r1, r2	@ _5, tmp126
+ 134 0024 D961     		str	r1, [r3, #28]	@ _5, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4500.DA
+ 135              	@ .\src\main.c:54:       VOR_GPIO->BANK[0].DATAOUT |= (1 << PORTA_7_D3);
+  54:.\src/main.c  **** 
+ 136              		.loc 1 54 0
+ 137 0026 9968     		ldr	r1, [r3, #8]	@ _6, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4480.DAT
+ 138 0028 1143     		orrs	r1, r2	@ _7, tmp126
+ 139 002a 9960     		str	r1, [r3, #8]	@ _7, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4480.DAT
+ 140              	@ .\src\main.c:59:       	SysTick -> CTRL = 0  ;
+  59:.\src/main.c  ****       	SysTick -> LOAD = 0x800000  ;
+ 141              		.loc 1 59 0
+ 142 002c 0A49     		ldr	r1, .L6+4	@ tmp134,
+ 143 002e 0860     		str	r0, [r1]	@ tmp135, MEM[(struct SysTick_Type *)3758153744B].CTRL
+ 144              	@ .\src\main.c:60:       	SysTick -> LOAD = 0x800000  ;
+ 145              		.loc 1 60 0
+ 146 0030 4C60     		str	r4, [r1, #4]	@ tmp137, MEM[(struct SysTick_Type *)3758153744B].LOAD
+ 147              	@ .\src\main.c:62:       	SysTick -> CTRL = 7  ;    /* enable systick with ints enabled */
+  61:.\src/main.c  ****       	SysTick -> VAL = 0x00   ;
+  62:.\src/main.c  ****       	SysTick -> CTRL = 7  ;    /* enable systick with ints enabled */
+ 148              		.loc 1 62 0
+ 149 0032 0724     		movs	r4, #7	@ tmp141,
+ 150              	@ .\src\main.c:61:       	SysTick -> VAL = 0x00   ;
+  61:.\src/main.c  ****       	SysTick -> VAL = 0x00   ;
+ 151              		.loc 1 61 0
+ 152 0034 8860     		str	r0, [r1, #8]	@ tmp135, MEM[(struct SysTick_Type *)3758153744B].VAL
+ 153              	@ .\src\main.c:62:       	SysTick -> CTRL = 7  ;    /* enable systick with ints enabled */
+ 154              		.loc 1 62 0
+ 155 0036 0C60     		str	r4, [r1]	@ tmp141, MEM[(struct SysTick_Type *)3758153744B].CTRL
+ 156              	@ .\src\main.c:65:       	msec_tim_timeout = 99   ;
+  63:.\src/main.c  **** 
+  64:.\src/main.c  ****       //	ret_code = VOR_TIM0_MSecInitialize(100);
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 5
+
+
+  65:.\src/main.c  ****       	msec_tim_timeout = 99   ;
+ 157              		.loc 1 65 0
+ 158 0038 6321     		movs	r1, #99	@ tmp143,
+ 159 003a 084C     		ldr	r4, .L6+8	@ tmp142,
+ 160 003c 2160     		str	r1, [r4]	@ tmp143, msec_tim_timeout
+ 161              	.L2:
+ 162              	@ .\src\main.c:69:        		if(msec_tim_timeout!=0)
+  66:.\src/main.c  ****       	while(1)
+  67:.\src/main.c  ****       	{
+  68:.\src/main.c  **** 
+  69:.\src/main.c  ****        		if(msec_tim_timeout!=0)
+ 163              		.loc 1 69 0
+ 164 003e 2168     		ldr	r1, [r4]	@ msec_tim_timeout.0_8, msec_tim_timeout
+ 165 0040 0029     		cmp	r1, #0	@ msec_tim_timeout.0_8,
+ 166 0042 FCD0     		beq	.L2	@,
+ 167              	@ .\src\main.c:71:       					count ++  ;
+  70:.\src/main.c  ****       				{
+  71:.\src/main.c  ****       					count ++  ;
+ 168              		.loc 1 71 0
+ 169 0044 0199     		ldr	r1, [sp, #4]	@ count.1_9, count
+ 170 0046 0131     		adds	r1, r1, #1	@ _10,
+ 171 0048 0191     		str	r1, [sp, #4]	@ _10, count
+ 172              	@ .\src\main.c:72:       					msec_tim_timeout = 0 ;
+  72:.\src/main.c  ****       					msec_tim_timeout = 0 ;
+ 173              		.loc 1 72 0
+ 174 004a 2060     		str	r0, [r4]	@ tmp146, msec_tim_timeout
+ 175              	@ .\src\main.c:73:       					VOR_GPIO->BANK[0].TOGOUT |= (1 << PORTA_7_D3);
+  73:.\src/main.c  ****       					VOR_GPIO->BANK[0].TOGOUT |= (1 << PORTA_7_D3);
+ 176              		.loc 1 73 0
+ 177 004c 9969     		ldr	r1, [r3, #24]	@ _11, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4496.T
+ 178 004e 1143     		orrs	r1, r2	@ _12, tmp148
+ 179 0050 9961     		str	r1, [r3, #24]	@ _12, MEM[(struct VOR_GPIO_PERIPHERAL_BANK_Type *)1342177280B].BANK[0].D.4496.T
+ 180 0052 F4E7     		b	.L2	@
+ 181              	.L7:
+ 182              		.align	2
+ 183              	.L6:
+ 184 0054 7303F301 		.word	32703347
+ 185 0058 10E000E0 		.word	-536813552
+ 186 005c 00000000 		.word	.LANCHOR0
+ 187              		.cfi_endproc
+ 188              	.LFE34:
+ 189              		.size	main, .-main
+ 190              		.text
+ 191              		.align	1
+ 192              		.global	SysTick_Handler
+ 193              		.syntax unified
+ 194              		.code	16
+ 195              		.thumb_func
+ 196              		.fpu softvfp
+ 197              		.type	SysTick_Handler, %function
+ 198              	SysTick_Handler:
+ 199              	.LFB35:
+  74:.\src/main.c  ****       				}
+  75:.\src/main.c  ****       	}
+  76:.\src/main.c  **** 
+  77:.\src/main.c  **** 
+  78:.\src/main.c  **** //  while (1)    /*  loop forever here   */
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 6
+
+
+  79:.\src/main.c  **** //  {
+  80:.\src/main.c  **** //     count ++ ;
+  81:.\src/main.c  **** //	 delay(500000)  ;  /*  delay 500k counts  */
+  82:.\src/main.c  **** //	 VOR_GPIO->BANK[0].TOGOUT |= (1 << PORTA_7_D3);
+  83:.\src/main.c  ****     
+  84:.\src/main.c  **** //  }
+  85:.\src/main.c  **** }   /* **************  foot of main loop  ****************   */
+  86:.\src/main.c  **** //void delay (int a)
+  87:.\src/main.c  **** //{
+  88:.\src/main.c  **** //	volatile int i,j;
+  89:.\src/main.c  **** 	
+  90:.\src/main.c  **** //	for (i=0 ; i < a ; i++)
+  91:.\src/main.c  **** //	{
+  92:.\src/main.c  **** //		j++;
+  93:.\src/main.c  **** //	}
+  94:.\src/main.c  **** 	
+  95:.\src/main.c  **** //	return;
+  96:.\src/main.c  **** // }
+  97:.\src/main.c  **** 
+  98:.\src/main.c  **** 
+  99:.\src/main.c  **** 
+ 100:.\src/main.c  **** /*   added to show SysTick Exception firing     */
+ 101:.\src/main.c  **** void SysTick_Handler(void)
+ 102:.\src/main.c  **** {
+ 200              		.loc 1 102 0
+ 201              		.cfi_startproc
+ 202              		@ args = 0, pretend = 0, frame = 0
+ 203              		@ frame_needed = 0, uses_anonymous_args = 0
+ 204              		@ link register save eliminated.
+ 205              	@ .\src\main.c:103: 	msec_tim_timeout = 1  ;
+ 103:.\src/main.c  **** 	msec_tim_timeout = 1  ;
+ 206              		.loc 1 103 0
+ 207 0000 0122     		movs	r2, #1	@ tmp111,
+ 208 0002 014B     		ldr	r3, .L9	@ tmp110,
+ 209              	@ .\src\main.c:105: }
+ 104:.\src/main.c  **** 
+ 105:.\src/main.c  **** }
+ 210              		.loc 1 105 0
+ 211              		@ sp needed	@
+ 212              	@ .\src\main.c:103: 	msec_tim_timeout = 1  ;
+ 103:.\src/main.c  **** 	msec_tim_timeout = 1  ;
+ 213              		.loc 1 103 0
+ 214 0004 1A60     		str	r2, [r3]	@ tmp111, msec_tim_timeout
+ 215              	@ .\src\main.c:105: }
+ 216              		.loc 1 105 0
+ 217 0006 7047     		bx	lr
+ 218              	.L10:
+ 219              		.align	2
+ 220              	.L9:
+ 221 0008 00000000 		.word	.LANCHOR0
+ 222              		.cfi_endproc
+ 223              	.LFE35:
+ 224              		.size	SysTick_Handler, .-SysTick_Handler
+ 225              		.global	msec_tim_timeout
+ 226              		.data
+ 227              		.align	2
+ 228              		.set	.LANCHOR0,. + 0
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 7
+
+
+ 229              		.type	msec_tim_timeout, %object
+ 230              		.size	msec_tim_timeout, 4
+ 231              	msec_tim_timeout:
+ 232 0000 01000000 		.word	1
+ 233              		.text
+ 234              	.Letext0:
+ 235              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 236              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 237              		.file 4 ".\\common\\hdr/core_cm0.h"
+ 238              		.file 5 ".\\common\\hdr/va108xx.h"
+ 239              		.file 6 ".\\common\\hdr/system_va108xx.h"
+ 240              		.section	.debug_info,"",%progbits
+ 241              	.Ldebug_info0:
+ 242 0000 F5060000 		.4byte	0x6f5
+ 243 0004 0200     		.2byte	0x2
+ 244 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 245 000a 04       		.byte	0x4
+ 246 000b 01       		.uleb128 0x1
+ 247 000c CA000000 		.4byte	.LASF90
+ 248 0010 0C       		.byte	0xc
+ 249 0011 12020000 		.4byte	.LASF91
+ 250 0015 64040000 		.4byte	.LASF92
+ 251 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 252 001d 00000000 		.4byte	0
+ 253 0021 00000000 		.4byte	0
+ 254 0025 00000000 		.4byte	.Ldebug_line0
+ 255 0029 02       		.uleb128 0x2
+ 256 002a 01       		.byte	0x1
+ 257 002b 06       		.byte	0x6
+ 258 002c AB000000 		.4byte	.LASF0
+ 259 0030 03       		.uleb128 0x3
+ 260 0031 3D000000 		.4byte	.LASF5
+ 261 0035 02       		.byte	0x2
+ 262 0036 2B       		.byte	0x2b
+ 263 0037 3B000000 		.4byte	0x3b
+ 264 003b 02       		.uleb128 0x2
+ 265 003c 01       		.byte	0x1
+ 266 003d 08       		.byte	0x8
+ 267 003e 80030000 		.4byte	.LASF1
+ 268 0042 02       		.uleb128 0x2
+ 269 0043 02       		.byte	0x2
+ 270 0044 05       		.byte	0x5
+ 271 0045 8E030000 		.4byte	.LASF2
+ 272 0049 02       		.uleb128 0x2
+ 273 004a 02       		.byte	0x2
+ 274 004b 07       		.byte	0x7
+ 275 004c 68020000 		.4byte	.LASF3
+ 276 0050 02       		.uleb128 0x2
+ 277 0051 04       		.byte	0x4
+ 278 0052 05       		.byte	0x5
+ 279 0053 64010000 		.4byte	.LASF4
+ 280 0057 03       		.uleb128 0x3
+ 281 0058 DA010000 		.4byte	.LASF6
+ 282 005c 02       		.byte	0x2
+ 283 005d 4F       		.byte	0x4f
+ 284 005e 62000000 		.4byte	0x62
+ 285 0062 02       		.uleb128 0x2
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 8
+
+
+ 286 0063 04       		.byte	0x4
+ 287 0064 07       		.byte	0x7
+ 288 0065 4D020000 		.4byte	.LASF7
+ 289 0069 02       		.uleb128 0x2
+ 290 006a 08       		.byte	0x8
+ 291 006b 05       		.byte	0x5
+ 292 006c 9D000000 		.4byte	.LASF8
+ 293 0070 02       		.uleb128 0x2
+ 294 0071 08       		.byte	0x8
+ 295 0072 07       		.byte	0x7
+ 296 0073 5B000000 		.4byte	.LASF9
+ 297 0077 04       		.uleb128 0x4
+ 298 0078 04       		.byte	0x4
+ 299 0079 05       		.byte	0x5
+ 300 007a 696E7400 		.ascii	"int\000"
+ 301 007e 05       		.uleb128 0x5
+ 302 007f 77000000 		.4byte	0x77
+ 303 0083 02       		.uleb128 0x2
+ 304 0084 04       		.byte	0x4
+ 305 0085 07       		.byte	0x7
+ 306 0086 05020000 		.4byte	.LASF10
+ 307 008a 03       		.uleb128 0x3
+ 308 008b AF040000 		.4byte	.LASF11
+ 309 008f 03       		.byte	0x3
+ 310 0090 18       		.byte	0x18
+ 311 0091 30000000 		.4byte	0x30
+ 312 0095 06       		.uleb128 0x6
+ 313 0096 8A000000 		.4byte	0x8a
+ 314 009a 05       		.uleb128 0x5
+ 315 009b 95000000 		.4byte	0x95
+ 316 009f 05       		.uleb128 0x5
+ 317 00a0 8A000000 		.4byte	0x8a
+ 318 00a4 03       		.uleb128 0x3
+ 319 00a5 D6030000 		.4byte	.LASF12
+ 320 00a9 03       		.byte	0x3
+ 321 00aa 30       		.byte	0x30
+ 322 00ab 57000000 		.4byte	0x57
+ 323 00af 05       		.uleb128 0x5
+ 324 00b0 A4000000 		.4byte	0xa4
+ 325 00b4 06       		.uleb128 0x6
+ 326 00b5 AF000000 		.4byte	0xaf
+ 327 00b9 07       		.uleb128 0x7
+ 328 00ba 10       		.byte	0x10
+ 329 00bb 04       		.byte	0x4
+ 330 00bc F001     		.2byte	0x1f0
+ 331 00be FF000000 		.4byte	0xff
+ 332 00c2 08       		.uleb128 0x8
+ 333 00c3 40040000 		.4byte	.LASF13
+ 334 00c7 04       		.byte	0x4
+ 335 00c8 F201     		.2byte	0x1f2
+ 336 00ca AF000000 		.4byte	0xaf
+ 337 00ce 02       		.byte	0x2
+ 338 00cf 23       		.byte	0x23
+ 339 00d0 00       		.uleb128 0
+ 340 00d1 08       		.uleb128 0x8
+ 341 00d2 A4020000 		.4byte	.LASF14
+ 342 00d6 04       		.byte	0x4
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 9
+
+
+ 343 00d7 F301     		.2byte	0x1f3
+ 344 00d9 AF000000 		.4byte	0xaf
+ 345 00dd 02       		.byte	0x2
+ 346 00de 23       		.byte	0x23
+ 347 00df 04       		.uleb128 0x4
+ 348 00e0 09       		.uleb128 0x9
+ 349 00e1 56414C00 		.ascii	"VAL\000"
+ 350 00e5 04       		.byte	0x4
+ 351 00e6 F401     		.2byte	0x1f4
+ 352 00e8 AF000000 		.4byte	0xaf
+ 353 00ec 02       		.byte	0x2
+ 354 00ed 23       		.byte	0x23
+ 355 00ee 08       		.uleb128 0x8
+ 356 00ef 08       		.uleb128 0x8
+ 357 00f0 9D040000 		.4byte	.LASF15
+ 358 00f4 04       		.byte	0x4
+ 359 00f5 F501     		.2byte	0x1f5
+ 360 00f7 B4000000 		.4byte	0xb4
+ 361 00fb 02       		.byte	0x2
+ 362 00fc 23       		.byte	0x23
+ 363 00fd 0C       		.uleb128 0xc
+ 364 00fe 00       		.byte	0
+ 365 00ff 0A       		.uleb128 0xa
+ 366 0100 BF010000 		.4byte	.LASF16
+ 367 0104 04       		.byte	0x4
+ 368 0105 F601     		.2byte	0x1f6
+ 369 0107 B9000000 		.4byte	0xb9
+ 370 010b 0B       		.uleb128 0xb
+ 371 010c 27020000 		.4byte	.LASF88
+ 372 0110 06       		.byte	0x6
+ 373 0111 B2       		.byte	0xb2
+ 374 0112 A4000000 		.4byte	0xa4
+ 375 0116 01       		.byte	0x1
+ 376 0117 01       		.byte	0x1
+ 377 0118 0C       		.uleb128 0xc
+ 378 0119 0010     		.2byte	0x1000
+ 379 011b 05       		.byte	0x5
+ 380 011c 9C       		.byte	0x9c
+ 381 011d 3C030000 		.4byte	0x33c
+ 382 0121 0D       		.uleb128 0xd
+ 383 0122 C1030000 		.4byte	.LASF17
+ 384 0126 05       		.byte	0x5
+ 385 0127 9D       		.byte	0x9d
+ 386 0128 AF000000 		.4byte	0xaf
+ 387 012c 02       		.byte	0x2
+ 388 012d 23       		.byte	0x23
+ 389 012e 00       		.uleb128 0
+ 390 012f 0D       		.uleb128 0xd
+ 391 0130 84000000 		.4byte	.LASF18
+ 392 0134 05       		.byte	0x5
+ 393 0135 9E       		.byte	0x9e
+ 394 0136 AF000000 		.4byte	0xaf
+ 395 013a 02       		.byte	0x2
+ 396 013b 23       		.byte	0x23
+ 397 013c 04       		.uleb128 0x4
+ 398 013d 0D       		.uleb128 0xd
+ 399 013e F2010000 		.4byte	.LASF19
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 10
+
+
+ 400 0142 05       		.byte	0x5
+ 401 0143 9F       		.byte	0x9f
+ 402 0144 AF000000 		.4byte	0xaf
+ 403 0148 02       		.byte	0x2
+ 404 0149 23       		.byte	0x23
+ 405 014a 08       		.uleb128 0x8
+ 406 014b 0D       		.uleb128 0xd
+ 407 014c 93020000 		.4byte	.LASF20
+ 408 0150 05       		.byte	0x5
+ 409 0151 A0       		.byte	0xa0
+ 410 0152 AF000000 		.4byte	0xaf
+ 411 0156 02       		.byte	0x2
+ 412 0157 23       		.byte	0x23
+ 413 0158 0C       		.uleb128 0xc
+ 414 0159 0D       		.uleb128 0xd
+ 415 015a 10000000 		.4byte	.LASF21
+ 416 015e 05       		.byte	0x5
+ 417 015f A1       		.byte	0xa1
+ 418 0160 AF000000 		.4byte	0xaf
+ 419 0164 02       		.byte	0x2
+ 420 0165 23       		.byte	0x23
+ 421 0166 10       		.uleb128 0x10
+ 422 0167 0D       		.uleb128 0xd
+ 423 0168 E4040000 		.4byte	.LASF22
+ 424 016c 05       		.byte	0x5
+ 425 016d A2       		.byte	0xa2
+ 426 016e AF000000 		.4byte	0xaf
+ 427 0172 02       		.byte	0x2
+ 428 0173 23       		.byte	0x23
+ 429 0174 14       		.uleb128 0x14
+ 430 0175 0D       		.uleb128 0xd
+ 431 0176 01040000 		.4byte	.LASF23
+ 432 017a 05       		.byte	0x5
+ 433 017b A3       		.byte	0xa3
+ 434 017c AF000000 		.4byte	0xaf
+ 435 0180 02       		.byte	0x2
+ 436 0181 23       		.byte	0x23
+ 437 0182 18       		.uleb128 0x18
+ 438 0183 0D       		.uleb128 0xd
+ 439 0184 CC010000 		.4byte	.LASF24
+ 440 0188 05       		.byte	0x5
+ 441 0189 A4       		.byte	0xa4
+ 442 018a AF000000 		.4byte	0xaf
+ 443 018e 02       		.byte	0x2
+ 444 018f 23       		.byte	0x23
+ 445 0190 1C       		.uleb128 0x1c
+ 446 0191 0D       		.uleb128 0xd
+ 447 0192 BB020000 		.4byte	.LASF25
+ 448 0196 05       		.byte	0x5
+ 449 0197 A5       		.byte	0xa5
+ 450 0198 AF000000 		.4byte	0xaf
+ 451 019c 02       		.byte	0x2
+ 452 019d 23       		.byte	0x23
+ 453 019e 20       		.uleb128 0x20
+ 454 019f 0D       		.uleb128 0xd
+ 455 01a0 47000000 		.4byte	.LASF26
+ 456 01a4 05       		.byte	0x5
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 11
+
+
+ 457 01a5 A6       		.byte	0xa6
+ 458 01a6 AF000000 		.4byte	0xaf
+ 459 01aa 02       		.byte	0x2
+ 460 01ab 23       		.byte	0x23
+ 461 01ac 24       		.uleb128 0x24
+ 462 01ad 0D       		.uleb128 0xd
+ 463 01ae 30040000 		.4byte	.LASF27
+ 464 01b2 05       		.byte	0x5
+ 465 01b3 A7       		.byte	0xa7
+ 466 01b4 AF000000 		.4byte	0xaf
+ 467 01b8 02       		.byte	0x2
+ 468 01b9 23       		.byte	0x23
+ 469 01ba 28       		.uleb128 0x28
+ 470 01bb 0D       		.uleb128 0xd
+ 471 01bc 1D040000 		.4byte	.LASF28
+ 472 01c0 05       		.byte	0x5
+ 473 01c1 A8       		.byte	0xa8
+ 474 01c2 B4000000 		.4byte	0xb4
+ 475 01c6 02       		.byte	0x2
+ 476 01c7 23       		.byte	0x23
+ 477 01c8 2C       		.uleb128 0x2c
+ 478 01c9 0D       		.uleb128 0xd
+ 479 01ca 38040000 		.4byte	.LASF29
+ 480 01ce 05       		.byte	0x5
+ 481 01cf A9       		.byte	0xa9
+ 482 01d0 B4000000 		.4byte	0xb4
+ 483 01d4 02       		.byte	0x2
+ 484 01d5 23       		.byte	0x23
+ 485 01d6 30       		.uleb128 0x30
+ 486 01d7 0D       		.uleb128 0xd
+ 487 01d8 DC040000 		.4byte	.LASF30
+ 488 01dc 05       		.byte	0x5
+ 489 01dd AA       		.byte	0xaa
+ 490 01de AF000000 		.4byte	0xaf
+ 491 01e2 02       		.byte	0x2
+ 492 01e3 23       		.byte	0x23
+ 493 01e4 34       		.uleb128 0x34
+ 494 01e5 0D       		.uleb128 0xd
+ 495 01e6 B0010000 		.4byte	.LASF31
+ 496 01ea 05       		.byte	0x5
+ 497 01eb AB       		.byte	0xab
+ 498 01ec AF000000 		.4byte	0xaf
+ 499 01f0 02       		.byte	0x2
+ 500 01f1 23       		.byte	0x23
+ 501 01f2 38       		.uleb128 0x38
+ 502 01f3 0D       		.uleb128 0xd
+ 503 01f4 1F020000 		.4byte	.LASF32
+ 504 01f8 05       		.byte	0x5
+ 505 01f9 AC       		.byte	0xac
+ 506 01fa AF000000 		.4byte	0xaf
+ 507 01fe 02       		.byte	0x2
+ 508 01ff 23       		.byte	0x23
+ 509 0200 3C       		.uleb128 0x3c
+ 510 0201 0D       		.uleb128 0xd
+ 511 0202 9C020000 		.4byte	.LASF33
+ 512 0206 05       		.byte	0x5
+ 513 0207 AD       		.byte	0xad
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 12
+
+
+ 514 0208 AF000000 		.4byte	0xaf
+ 515 020c 02       		.byte	0x2
+ 516 020d 23       		.byte	0x23
+ 517 020e 40       		.uleb128 0x40
+ 518 020f 0D       		.uleb128 0xd
+ 519 0210 B3020000 		.4byte	.LASF34
+ 520 0214 05       		.byte	0x5
+ 521 0215 AE       		.byte	0xae
+ 522 0216 AF000000 		.4byte	0xaf
+ 523 021a 02       		.byte	0x2
+ 524 021b 23       		.byte	0x23
+ 525 021c 44       		.uleb128 0x44
+ 526 021d 0D       		.uleb128 0xd
+ 527 021e F8020000 		.4byte	.LASF35
+ 528 0222 05       		.byte	0x5
+ 529 0223 AF       		.byte	0xaf
+ 530 0224 B4000000 		.4byte	0xb4
+ 531 0228 02       		.byte	0x2
+ 532 0229 23       		.byte	0x23
+ 533 022a 48       		.uleb128 0x48
+ 534 022b 0D       		.uleb128 0xd
+ 535 022c 09030000 		.4byte	.LASF36
+ 536 0230 05       		.byte	0x5
+ 537 0231 B0       		.byte	0xb0
+ 538 0232 AF000000 		.4byte	0xaf
+ 539 0236 02       		.byte	0x2
+ 540 0237 23       		.byte	0x23
+ 541 0238 4C       		.uleb128 0x4c
+ 542 0239 0D       		.uleb128 0xd
+ 543 023a 1A030000 		.4byte	.LASF37
+ 544 023e 05       		.byte	0x5
+ 545 023f B1       		.byte	0xb1
+ 546 0240 AF000000 		.4byte	0xaf
+ 547 0244 02       		.byte	0x2
+ 548 0245 23       		.byte	0x23
+ 549 0246 50       		.uleb128 0x50
+ 550 0247 0D       		.uleb128 0xd
+ 551 0248 2B030000 		.4byte	.LASF38
+ 552 024c 05       		.byte	0x5
+ 553 024d B2       		.byte	0xb2
+ 554 024e AF000000 		.4byte	0xaf
+ 555 0252 02       		.byte	0x2
+ 556 0253 23       		.byte	0x23
+ 557 0254 54       		.uleb128 0x54
+ 558 0255 0D       		.uleb128 0xd
+ 559 0256 3C030000 		.4byte	.LASF39
+ 560 025a 05       		.byte	0x5
+ 561 025b B3       		.byte	0xb3
+ 562 025c AF000000 		.4byte	0xaf
+ 563 0260 02       		.byte	0x2
+ 564 0261 23       		.byte	0x23
+ 565 0262 58       		.uleb128 0x58
+ 566 0263 0D       		.uleb128 0xd
+ 567 0264 4D030000 		.4byte	.LASF40
+ 568 0268 05       		.byte	0x5
+ 569 0269 B4       		.byte	0xb4
+ 570 026a AF000000 		.4byte	0xaf
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 13
+
+
+ 571 026e 02       		.byte	0x2
+ 572 026f 23       		.byte	0x23
+ 573 0270 5C       		.uleb128 0x5c
+ 574 0271 0D       		.uleb128 0xd
+ 575 0272 5E030000 		.4byte	.LASF41
+ 576 0276 05       		.byte	0x5
+ 577 0277 B5       		.byte	0xb5
+ 578 0278 AF000000 		.4byte	0xaf
+ 579 027c 02       		.byte	0x2
+ 580 027d 23       		.byte	0x23
+ 581 027e 60       		.uleb128 0x60
+ 582 027f 0D       		.uleb128 0xd
+ 583 0280 6F030000 		.4byte	.LASF42
+ 584 0284 05       		.byte	0x5
+ 585 0285 B6       		.byte	0xb6
+ 586 0286 AF000000 		.4byte	0xaf
+ 587 028a 02       		.byte	0x2
+ 588 028b 23       		.byte	0x23
+ 589 028c 64       		.uleb128 0x64
+ 590 028d 0D       		.uleb128 0xd
+ 591 028e CA030000 		.4byte	.LASF43
+ 592 0292 05       		.byte	0x5
+ 593 0293 B7       		.byte	0xb7
+ 594 0294 B4000000 		.4byte	0xb4
+ 595 0298 02       		.byte	0x2
+ 596 0299 23       		.byte	0x23
+ 597 029a 68       		.uleb128 0x68
+ 598 029b 0D       		.uleb128 0xd
+ 599 029c D4020000 		.4byte	.LASF44
+ 600 02a0 05       		.byte	0x5
+ 601 02a1 B8       		.byte	0xb8
+ 602 02a2 AF000000 		.4byte	0xaf
+ 603 02a6 02       		.byte	0x2
+ 604 02a7 23       		.byte	0x23
+ 605 02a8 6C       		.uleb128 0x6c
+ 606 02a9 0D       		.uleb128 0xd
+ 607 02aa 1A000000 		.4byte	.LASF45
+ 608 02ae 05       		.byte	0x5
+ 609 02af B9       		.byte	0xb9
+ 610 02b0 AF000000 		.4byte	0xaf
+ 611 02b4 02       		.byte	0x2
+ 612 02b5 23       		.byte	0x23
+ 613 02b6 70       		.uleb128 0x70
+ 614 02b7 0D       		.uleb128 0xd
+ 615 02b8 3E020000 		.4byte	.LASF46
+ 616 02bc 05       		.byte	0x5
+ 617 02bd BA       		.byte	0xba
+ 618 02be AF000000 		.4byte	0xaf
+ 619 02c2 02       		.byte	0x2
+ 620 02c3 23       		.byte	0x23
+ 621 02c4 74       		.uleb128 0x74
+ 622 02c5 0D       		.uleb128 0xd
+ 623 02c6 53040000 		.4byte	.LASF47
+ 624 02ca 05       		.byte	0x5
+ 625 02cb BB       		.byte	0xbb
+ 626 02cc AF000000 		.4byte	0xaf
+ 627 02d0 02       		.byte	0x2
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 14
+
+
+ 628 02d1 23       		.byte	0x23
+ 629 02d2 78       		.uleb128 0x78
+ 630 02d3 0D       		.uleb128 0xd
+ 631 02d4 98030000 		.4byte	.LASF48
+ 632 02d8 05       		.byte	0x5
+ 633 02d9 BC       		.byte	0xbc
+ 634 02da AF000000 		.4byte	0xaf
+ 635 02de 02       		.byte	0x2
+ 636 02df 23       		.byte	0x23
+ 637 02e0 7C       		.uleb128 0x7c
+ 638 02e1 0D       		.uleb128 0xd
+ 639 02e2 E5010000 		.4byte	.LASF49
+ 640 02e6 05       		.byte	0x5
+ 641 02e7 BD       		.byte	0xbd
+ 642 02e8 AF000000 		.4byte	0xaf
+ 643 02ec 03       		.byte	0x3
+ 644 02ed 23       		.byte	0x23
+ 645 02ee 8001     		.uleb128 0x80
+ 646 02f0 0D       		.uleb128 0xd
+ 647 02f1 E3020000 		.4byte	.LASF50
+ 648 02f5 05       		.byte	0x5
+ 649 02f6 BE       		.byte	0xbe
+ 650 02f7 52030000 		.4byte	0x352
+ 651 02fb 03       		.byte	0x3
+ 652 02fc 23       		.byte	0x23
+ 653 02fd 8401     		.uleb128 0x84
+ 654 02ff 0D       		.uleb128 0xd
+ 655 0300 72000000 		.4byte	.LASF51
+ 656 0304 05       		.byte	0x5
+ 657 0305 BF       		.byte	0xbf
+ 658 0306 B4000000 		.4byte	0xb4
+ 659 030a 03       		.byte	0x3
+ 660 030b 23       		.byte	0x23
+ 661 030c F01F     		.uleb128 0xff0
+ 662 030e 0D       		.uleb128 0xd
+ 663 030f 55000000 		.4byte	.LASF52
+ 664 0313 05       		.byte	0x5
+ 665 0314 C0       		.byte	0xc0
+ 666 0315 B4000000 		.4byte	0xb4
+ 667 0319 03       		.byte	0x3
+ 668 031a 23       		.byte	0x23
+ 669 031b F41F     		.uleb128 0xff4
+ 670 031d 0D       		.uleb128 0xd
+ 671 031e A8040000 		.4byte	.LASF53
+ 672 0322 05       		.byte	0x5
+ 673 0323 C1       		.byte	0xc1
+ 674 0324 B4000000 		.4byte	0xb4
+ 675 0328 03       		.byte	0x3
+ 676 0329 23       		.byte	0x23
+ 677 032a F81F     		.uleb128 0xff8
+ 678 032c 0D       		.uleb128 0xd
+ 679 032d D6040000 		.4byte	.LASF54
+ 680 0331 05       		.byte	0x5
+ 681 0332 C2       		.byte	0xc2
+ 682 0333 B4000000 		.4byte	0xb4
+ 683 0337 03       		.byte	0x3
+ 684 0338 23       		.byte	0x23
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 15
+
+
+ 685 0339 FC1F     		.uleb128 0xffc
+ 686 033b 00       		.byte	0
+ 687 033c 0E       		.uleb128 0xe
+ 688 033d B4000000 		.4byte	0xb4
+ 689 0341 4D030000 		.4byte	0x34d
+ 690 0345 0F       		.uleb128 0xf
+ 691 0346 83000000 		.4byte	0x83
+ 692 034a DA03     		.2byte	0x3da
+ 693 034c 00       		.byte	0
+ 694 034d 06       		.uleb128 0x6
+ 695 034e 3C030000 		.4byte	0x33c
+ 696 0352 05       		.uleb128 0x5
+ 697 0353 4D030000 		.4byte	0x34d
+ 698 0357 03       		.uleb128 0x3
+ 699 0358 AE030000 		.4byte	.LASF55
+ 700 035c 05       		.byte	0x5
+ 701 035d C3       		.byte	0xc3
+ 702 035e 18010000 		.4byte	0x118
+ 703 0362 10       		.uleb128 0x10
+ 704 0363 04       		.byte	0x4
+ 705 0364 05       		.byte	0x5
+ 706 0365 2101     		.2byte	0x121
+ 707 0367 84030000 		.4byte	0x384
+ 708 036b 11       		.uleb128 0x11
+ 709 036c 37020000 		.4byte	.LASF56
+ 710 0370 05       		.byte	0x5
+ 711 0371 2201     		.2byte	0x122
+ 712 0373 B4000000 		.4byte	0xb4
+ 713 0377 11       		.uleb128 0x11
+ 714 0378 ED020000 		.4byte	.LASF57
+ 715 037c 05       		.byte	0x5
+ 716 037d 2301     		.2byte	0x123
+ 717 037f 99030000 		.4byte	0x399
+ 718 0383 00       		.byte	0
+ 719 0384 0E       		.uleb128 0xe
+ 720 0385 9A000000 		.4byte	0x9a
+ 721 0389 94030000 		.4byte	0x394
+ 722 038d 12       		.uleb128 0x12
+ 723 038e 83000000 		.4byte	0x83
+ 724 0392 03       		.byte	0x3
+ 725 0393 00       		.byte	0
+ 726 0394 06       		.uleb128 0x6
+ 727 0395 84030000 		.4byte	0x384
+ 728 0399 05       		.uleb128 0x5
+ 729 039a 94030000 		.4byte	0x394
+ 730 039e 05       		.uleb128 0x5
+ 731 039f 94030000 		.4byte	0x394
+ 732 03a3 10       		.uleb128 0x10
+ 733 03a4 04       		.byte	0x4
+ 734 03a5 05       		.byte	0x5
+ 735 03a6 2601     		.2byte	0x126
+ 736 03a8 C5030000 		.4byte	0x3c5
+ 737 03ac 11       		.uleb128 0x11
+ 738 03ad 06000000 		.4byte	.LASF58
+ 739 03b1 05       		.byte	0x5
+ 740 03b2 2701     		.2byte	0x127
+ 741 03b4 B4000000 		.4byte	0xb4
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 16
+
+
+ 742 03b8 11       		.uleb128 0x11
+ 743 03b9 8B010000 		.4byte	.LASF59
+ 744 03bd 05       		.byte	0x5
+ 745 03be 2801     		.2byte	0x128
+ 746 03c0 9E030000 		.4byte	0x39e
+ 747 03c4 00       		.byte	0
+ 748 03c5 10       		.uleb128 0x10
+ 749 03c6 04       		.byte	0x4
+ 750 03c7 05       		.byte	0x5
+ 751 03c8 2B01     		.2byte	0x12b
+ 752 03ca E7030000 		.4byte	0x3e7
+ 753 03ce 11       		.uleb128 0x11
+ 754 03cf 00050000 		.4byte	.LASF60
+ 755 03d3 05       		.byte	0x5
+ 756 03d4 2C01     		.2byte	0x12c
+ 757 03d6 AF000000 		.4byte	0xaf
+ 758 03da 11       		.uleb128 0x11
+ 759 03db 91000000 		.4byte	.LASF61
+ 760 03df 05       		.byte	0x5
+ 761 03e0 2D01     		.2byte	0x12d
+ 762 03e2 F7030000 		.4byte	0x3f7
+ 763 03e6 00       		.byte	0
+ 764 03e7 0E       		.uleb128 0xe
+ 765 03e8 9F000000 		.4byte	0x9f
+ 766 03ec F7030000 		.4byte	0x3f7
+ 767 03f0 12       		.uleb128 0x12
+ 768 03f1 83000000 		.4byte	0x83
+ 769 03f5 03       		.byte	0x3
+ 770 03f6 00       		.byte	0
+ 771 03f7 05       		.uleb128 0x5
+ 772 03f8 E7030000 		.4byte	0x3e7
+ 773 03fc 10       		.uleb128 0x10
+ 774 03fd 04       		.byte	0x4
+ 775 03fe 05       		.byte	0x5
+ 776 03ff 3001     		.2byte	0x130
+ 777 0401 1E040000 		.4byte	0x41e
+ 778 0405 11       		.uleb128 0x11
+ 779 0406 4E010000 		.4byte	.LASF62
+ 780 040a 05       		.byte	0x5
+ 781 040b 3101     		.2byte	0x131
+ 782 040d AF000000 		.4byte	0xaf
+ 783 0411 11       		.uleb128 0x11
+ 784 0412 A1010000 		.4byte	.LASF63
+ 785 0416 05       		.byte	0x5
+ 786 0417 3201     		.2byte	0x132
+ 787 0419 F7030000 		.4byte	0x3f7
+ 788 041d 00       		.byte	0
+ 789 041e 10       		.uleb128 0x10
+ 790 041f 04       		.byte	0x4
+ 791 0420 05       		.byte	0x5
+ 792 0421 3501     		.2byte	0x135
+ 793 0423 40040000 		.4byte	0x440
+ 794 0427 11       		.uleb128 0x11
+ 795 0428 B8010000 		.4byte	.LASF64
+ 796 042c 05       		.byte	0x5
+ 797 042d 3601     		.2byte	0x136
+ 798 042f AF000000 		.4byte	0xaf
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 17
+
+
+ 799 0433 11       		.uleb128 0x11
+ 800 0434 CB040000 		.4byte	.LASF65
+ 801 0438 05       		.byte	0x5
+ 802 0439 3701     		.2byte	0x137
+ 803 043b F7030000 		.4byte	0x3f7
+ 804 043f 00       		.byte	0
+ 805 0440 10       		.uleb128 0x10
+ 806 0441 04       		.byte	0x4
+ 807 0442 05       		.byte	0x5
+ 808 0443 3A01     		.2byte	0x13a
+ 809 0445 62040000 		.4byte	0x462
+ 810 0449 11       		.uleb128 0x11
+ 811 044a 7B020000 		.4byte	.LASF66
+ 812 044e 05       		.byte	0x5
+ 813 044f 3B01     		.2byte	0x13b
+ 814 0451 AF000000 		.4byte	0xaf
+ 815 0455 11       		.uleb128 0x11
+ 816 0456 25040000 		.4byte	.LASF67
+ 817 045a 05       		.byte	0x5
+ 818 045b 3C01     		.2byte	0x13c
+ 819 045d F7030000 		.4byte	0x3f7
+ 820 0461 00       		.byte	0
+ 821 0462 10       		.uleb128 0x10
+ 822 0463 04       		.byte	0x4
+ 823 0464 05       		.byte	0x5
+ 824 0465 3F01     		.2byte	0x13f
+ 825 0467 84040000 		.4byte	0x484
+ 826 046b 11       		.uleb128 0x11
+ 827 046c FA030000 		.4byte	.LASF68
+ 828 0470 05       		.byte	0x5
+ 829 0471 4001     		.2byte	0x140
+ 830 0473 AF000000 		.4byte	0xaf
+ 831 0477 11       		.uleb128 0x11
+ 832 0478 EF030000 		.4byte	.LASF69
+ 833 047c 05       		.byte	0x5
+ 834 047d 4101     		.2byte	0x141
+ 835 047f F7030000 		.4byte	0x3f7
+ 836 0483 00       		.byte	0
+ 837 0484 10       		.uleb128 0x10
+ 838 0485 04       		.byte	0x4
+ 839 0486 05       		.byte	0x5
+ 840 0487 4401     		.2byte	0x144
+ 841 0489 A6040000 		.4byte	0x4a6
+ 842 048d 11       		.uleb128 0x11
+ 843 048e 5F020000 		.4byte	.LASF70
+ 844 0492 05       		.byte	0x5
+ 845 0493 4501     		.2byte	0x145
+ 846 0495 AF000000 		.4byte	0xaf
+ 847 0499 11       		.uleb128 0x11
+ 848 049a F3040000 		.4byte	.LASF71
+ 849 049e 05       		.byte	0x5
+ 850 049f 4601     		.2byte	0x146
+ 851 04a1 F7030000 		.4byte	0x3f7
+ 852 04a5 00       		.byte	0
+ 853 04a6 10       		.uleb128 0x10
+ 854 04a7 04       		.byte	0x4
+ 855 04a8 05       		.byte	0x5
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 18
+
+
+ 856 04a9 4901     		.2byte	0x149
+ 857 04ab C8040000 		.4byte	0x4c8
+ 858 04af 13       		.uleb128 0x13
+ 859 04b0 44495200 		.ascii	"DIR\000"
+ 860 04b4 05       		.byte	0x5
+ 861 04b5 4A01     		.2byte	0x14a
+ 862 04b7 AF000000 		.4byte	0xaf
+ 863 04bb 11       		.uleb128 0x11
+ 864 04bc 99010000 		.4byte	.LASF72
+ 865 04c0 05       		.byte	0x5
+ 866 04c1 4B01     		.2byte	0x14b
+ 867 04c3 F7030000 		.4byte	0x3f7
+ 868 04c7 00       		.byte	0
+ 869 04c8 10       		.uleb128 0x10
+ 870 04c9 04       		.byte	0x4
+ 871 04ca 05       		.byte	0x5
+ 872 04cb 4E01     		.2byte	0x14e
+ 873 04cd EA040000 		.4byte	0x4ea
+ 874 04d1 11       		.uleb128 0x11
+ 875 04d2 FF010000 		.4byte	.LASF73
+ 876 04d6 05       		.byte	0x5
+ 877 04d7 4F01     		.2byte	0x14f
+ 878 04d9 AF000000 		.4byte	0xaf
+ 879 04dd 11       		.uleb128 0x11
+ 880 04de A9020000 		.4byte	.LASF74
+ 881 04e2 05       		.byte	0x5
+ 882 04e3 5001     		.2byte	0x150
+ 883 04e5 F7030000 		.4byte	0x3f7
+ 884 04e9 00       		.byte	0
+ 885 04ea 10       		.uleb128 0x10
+ 886 04eb 04       		.byte	0x4
+ 887 04ec 05       		.byte	0x5
+ 888 04ed 5301     		.2byte	0x153
+ 889 04ef 0C050000 		.4byte	0x50c
+ 890 04f3 11       		.uleb128 0x11
+ 891 04f4 C0000000 		.4byte	.LASF75
+ 892 04f8 05       		.byte	0x5
+ 893 04f9 5401     		.2byte	0x154
+ 894 04fb AF000000 		.4byte	0xaf
+ 895 04ff 11       		.uleb128 0x11
+ 896 0500 45040000 		.4byte	.LASF76
+ 897 0504 05       		.byte	0x5
+ 898 0505 5501     		.2byte	0x155
+ 899 0507 F7030000 		.4byte	0x3f7
+ 900 050b 00       		.byte	0
+ 901 050c 10       		.uleb128 0x10
+ 902 050d 04       		.byte	0x4
+ 903 050e 05       		.byte	0x5
+ 904 050f 5801     		.2byte	0x158
+ 905 0511 2E050000 		.4byte	0x52e
+ 906 0515 11       		.uleb128 0x11
+ 907 0516 0F040000 		.4byte	.LASF77
+ 908 051a 05       		.byte	0x5
+ 909 051b 5901     		.2byte	0x159
+ 910 051d AF000000 		.4byte	0xaf
+ 911 0521 11       		.uleb128 0x11
+ 912 0522 C9020000 		.4byte	.LASF78
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 19
+
+
+ 913 0526 05       		.byte	0x5
+ 914 0527 5A01     		.2byte	0x15a
+ 915 0529 F7030000 		.4byte	0x3f7
+ 916 052d 00       		.byte	0
+ 917 052e 10       		.uleb128 0x10
+ 918 052f 04       		.byte	0x4
+ 919 0530 05       		.byte	0x5
+ 920 0531 5D01     		.2byte	0x15d
+ 921 0533 50050000 		.4byte	0x550
+ 922 0537 11       		.uleb128 0x11
+ 923 0538 16040000 		.4byte	.LASF79
+ 924 053c 05       		.byte	0x5
+ 925 053d 5E01     		.2byte	0x15e
+ 926 053f AF000000 		.4byte	0xaf
+ 927 0543 11       		.uleb128 0x11
+ 928 0544 59010000 		.4byte	.LASF80
+ 929 0548 05       		.byte	0x5
+ 930 0549 5F01     		.2byte	0x15f
+ 931 054b F7030000 		.4byte	0x3f7
+ 932 054f 00       		.byte	0
+ 933 0550 14       		.uleb128 0x14
+ 934 0551 0010     		.2byte	0x1000
+ 935 0553 05       		.byte	0x5
+ 936 0554 1F01     		.2byte	0x11f
+ 937 0556 4B060000 		.4byte	0x64b
+ 938 055a 15       		.uleb128 0x15
+ 939 055b 62030000 		.4byte	0x362
+ 940 055f 02       		.byte	0x2
+ 941 0560 23       		.byte	0x23
+ 942 0561 00       		.uleb128 0
+ 943 0562 15       		.uleb128 0x15
+ 944 0563 A3030000 		.4byte	0x3a3
+ 945 0567 02       		.byte	0x2
+ 946 0568 23       		.byte	0x23
+ 947 0569 04       		.uleb128 0x4
+ 948 056a 15       		.uleb128 0x15
+ 949 056b C5030000 		.4byte	0x3c5
+ 950 056f 02       		.byte	0x2
+ 951 0570 23       		.byte	0x23
+ 952 0571 08       		.uleb128 0x8
+ 953 0572 15       		.uleb128 0x15
+ 954 0573 FC030000 		.4byte	0x3fc
+ 955 0577 02       		.byte	0x2
+ 956 0578 23       		.byte	0x23
+ 957 0579 0C       		.uleb128 0xc
+ 958 057a 15       		.uleb128 0x15
+ 959 057b 1E040000 		.4byte	0x41e
+ 960 057f 02       		.byte	0x2
+ 961 0580 23       		.byte	0x23
+ 962 0581 10       		.uleb128 0x10
+ 963 0582 15       		.uleb128 0x15
+ 964 0583 40040000 		.4byte	0x440
+ 965 0587 02       		.byte	0x2
+ 966 0588 23       		.byte	0x23
+ 967 0589 14       		.uleb128 0x14
+ 968 058a 15       		.uleb128 0x15
+ 969 058b 62040000 		.4byte	0x462
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 20
+
+
+ 970 058f 02       		.byte	0x2
+ 971 0590 23       		.byte	0x23
+ 972 0591 18       		.uleb128 0x18
+ 973 0592 15       		.uleb128 0x15
+ 974 0593 84040000 		.4byte	0x484
+ 975 0597 02       		.byte	0x2
+ 976 0598 23       		.byte	0x23
+ 977 0599 1C       		.uleb128 0x1c
+ 978 059a 15       		.uleb128 0x15
+ 979 059b A6040000 		.4byte	0x4a6
+ 980 059f 02       		.byte	0x2
+ 981 05a0 23       		.byte	0x23
+ 982 05a1 20       		.uleb128 0x20
+ 983 05a2 15       		.uleb128 0x15
+ 984 05a3 C8040000 		.4byte	0x4c8
+ 985 05a7 02       		.byte	0x2
+ 986 05a8 23       		.byte	0x23
+ 987 05a9 24       		.uleb128 0x24
+ 988 05aa 15       		.uleb128 0x15
+ 989 05ab EA040000 		.4byte	0x4ea
+ 990 05af 02       		.byte	0x2
+ 991 05b0 23       		.byte	0x23
+ 992 05b1 28       		.uleb128 0x28
+ 993 05b2 15       		.uleb128 0x15
+ 994 05b3 0C050000 		.4byte	0x50c
+ 995 05b7 02       		.byte	0x2
+ 996 05b8 23       		.byte	0x23
+ 997 05b9 2C       		.uleb128 0x2c
+ 998 05ba 15       		.uleb128 0x15
+ 999 05bb 2E050000 		.4byte	0x52e
+ 1000 05bf 02       		.byte	0x2
+ 1001 05c0 23       		.byte	0x23
+ 1002 05c1 30       		.uleb128 0x30
+ 1003 05c2 08       		.uleb128 0x8
+ 1004 05c3 7C000000 		.4byte	.LASF81
+ 1005 05c7 05       		.byte	0x5
+ 1006 05c8 6101     		.2byte	0x161
+ 1007 05ca AF000000 		.4byte	0xaf
+ 1008 05ce 02       		.byte	0x2
+ 1009 05cf 23       		.byte	0x23
+ 1010 05d0 34       		.uleb128 0x34
+ 1011 05d1 08       		.uleb128 0x8
+ 1012 05d2 B7000000 		.4byte	.LASF82
+ 1013 05d6 05       		.byte	0x5
+ 1014 05d7 6201     		.2byte	0x162
+ 1015 05d9 AF000000 		.4byte	0xaf
+ 1016 05dd 02       		.byte	0x2
+ 1017 05de 23       		.byte	0x23
+ 1018 05df 38       		.uleb128 0x38
+ 1019 05e0 08       		.uleb128 0x8
+ 1020 05e1 B7040000 		.4byte	.LASF83
+ 1021 05e5 05       		.byte	0x5
+ 1022 05e6 6301     		.2byte	0x163
+ 1023 05e8 AF000000 		.4byte	0xaf
+ 1024 05ec 02       		.byte	0x2
+ 1025 05ed 23       		.byte	0x23
+ 1026 05ee 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 21
+
+
+ 1027 05ef 08       		.uleb128 0x8
+ 1028 05f0 30040000 		.4byte	.LASF27
+ 1029 05f4 05       		.byte	0x5
+ 1030 05f5 6501     		.2byte	0x165
+ 1031 05f7 AF000000 		.4byte	0xaf
+ 1032 05fb 02       		.byte	0x2
+ 1033 05fc 23       		.byte	0x23
+ 1034 05fd 40       		.uleb128 0x40
+ 1035 05fe 08       		.uleb128 0x8
+ 1036 05ff 1D040000 		.4byte	.LASF28
+ 1037 0603 05       		.byte	0x5
+ 1038 0604 6601     		.2byte	0x166
+ 1039 0606 B4000000 		.4byte	0xb4
+ 1040 060a 02       		.byte	0x2
+ 1041 060b 23       		.byte	0x23
+ 1042 060c 44       		.uleb128 0x44
+ 1043 060d 08       		.uleb128 0x8
+ 1044 060e 38040000 		.4byte	.LASF29
+ 1045 0612 05       		.byte	0x5
+ 1046 0613 6701     		.2byte	0x167
+ 1047 0615 B4000000 		.4byte	0xb4
+ 1048 0619 02       		.byte	0x2
+ 1049 061a 23       		.byte	0x23
+ 1050 061b 48       		.uleb128 0x48
+ 1051 061c 08       		.uleb128 0x8
+ 1052 061d BF040000 		.4byte	.LASF84
+ 1053 0621 05       		.byte	0x5
+ 1054 0622 6801     		.2byte	0x168
+ 1055 0624 AF000000 		.4byte	0xaf
+ 1056 0628 02       		.byte	0x2
+ 1057 0629 23       		.byte	0x23
+ 1058 062a 4C       		.uleb128 0x4c
+ 1059 062b 08       		.uleb128 0x8
+ 1060 062c E3020000 		.4byte	.LASF50
+ 1061 0630 05       		.byte	0x5
+ 1062 0631 6901     		.2byte	0x169
+ 1063 0633 61060000 		.4byte	0x661
+ 1064 0637 02       		.byte	0x2
+ 1065 0638 23       		.byte	0x23
+ 1066 0639 50       		.uleb128 0x50
+ 1067 063a 08       		.uleb128 0x8
+ 1068 063b D6040000 		.4byte	.LASF54
+ 1069 063f 05       		.byte	0x5
+ 1070 0640 6A01     		.2byte	0x16a
+ 1071 0642 B4000000 		.4byte	0xb4
+ 1072 0646 03       		.byte	0x3
+ 1073 0647 23       		.byte	0x23
+ 1074 0648 FC1F     		.uleb128 0xffc
+ 1075 064a 00       		.byte	0
+ 1076 064b 0E       		.uleb128 0xe
+ 1077 064c B4000000 		.4byte	0xb4
+ 1078 0650 5C060000 		.4byte	0x65c
+ 1079 0654 0F       		.uleb128 0xf
+ 1080 0655 83000000 		.4byte	0x83
+ 1081 0659 EA03     		.2byte	0x3ea
+ 1082 065b 00       		.byte	0
+ 1083 065c 06       		.uleb128 0x6
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 22
+
+
+ 1084 065d 4B060000 		.4byte	0x64b
+ 1085 0661 05       		.uleb128 0x5
+ 1086 0662 5C060000 		.4byte	0x65c
+ 1087 0666 0A       		.uleb128 0xa
+ 1088 0667 24000000 		.4byte	.LASF85
+ 1089 066b 05       		.byte	0x5
+ 1090 066c 6B01     		.2byte	0x16b
+ 1091 066e 50050000 		.4byte	0x550
+ 1092 0672 14       		.uleb128 0x14
+ 1093 0673 0020     		.2byte	0x2000
+ 1094 0675 05       		.byte	0x5
+ 1095 0676 0202     		.2byte	0x202
+ 1096 0678 8C060000 		.4byte	0x68c
+ 1097 067c 08       		.uleb128 0x8
+ 1098 067d A3040000 		.4byte	.LASF86
+ 1099 0681 05       		.byte	0x5
+ 1100 0682 0302     		.2byte	0x203
+ 1101 0684 8C060000 		.4byte	0x68c
+ 1102 0688 02       		.byte	0x2
+ 1103 0689 23       		.byte	0x23
+ 1104 068a 00       		.uleb128 0
+ 1105 068b 00       		.byte	0
+ 1106 068c 0E       		.uleb128 0xe
+ 1107 068d 66060000 		.4byte	0x666
+ 1108 0691 9C060000 		.4byte	0x69c
+ 1109 0695 12       		.uleb128 0x12
+ 1110 0696 83000000 		.4byte	0x83
+ 1111 069a 01       		.byte	0x1
+ 1112 069b 00       		.byte	0
+ 1113 069c 0A       		.uleb128 0xa
+ 1114 069d 6D010000 		.4byte	.LASF87
+ 1115 06a1 05       		.byte	0x5
+ 1116 06a2 0402     		.2byte	0x204
+ 1117 06a4 72060000 		.4byte	0x672
+ 1118 06a8 16       		.uleb128 0x16
+ 1119 06a9 82020000 		.4byte	.LASF89
+ 1120 06ad 01       		.byte	0x1
+ 1121 06ae 12       		.byte	0x12
+ 1122 06af 7E000000 		.4byte	0x7e
+ 1123 06b3 01       		.byte	0x1
+ 1124 06b4 05       		.byte	0x5
+ 1125 06b5 03       		.byte	0x3
+ 1126 06b6 00000000 		.4byte	msec_tim_timeout
+ 1127 06ba 17       		.uleb128 0x17
+ 1128 06bb 01       		.byte	0x1
+ 1129 06bc DF030000 		.4byte	.LASF93
+ 1130 06c0 01       		.byte	0x1
+ 1131 06c1 65       		.byte	0x65
+ 1132 06c2 01       		.byte	0x1
+ 1133 06c3 00000000 		.4byte	.LFB35
+ 1134 06c7 0C000000 		.4byte	.LFE35
+ 1135 06cb 02       		.byte	0x2
+ 1136 06cc 7D       		.byte	0x7d
+ 1137 06cd 00       		.sleb128 0
+ 1138 06ce 01       		.byte	0x1
+ 1139 06cf 18       		.uleb128 0x18
+ 1140 06d0 01       		.byte	0x1
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 23
+
+
+ 1141 06d1 EE040000 		.4byte	.LASF94
+ 1142 06d5 01       		.byte	0x1
+ 1143 06d6 28       		.byte	0x28
+ 1144 06d7 01       		.byte	0x1
+ 1145 06d8 77000000 		.4byte	0x77
+ 1146 06dc 00000000 		.4byte	.LFB34
+ 1147 06e0 60000000 		.4byte	.LFE34
+ 1148 06e4 00000000 		.4byte	.LLST0
+ 1149 06e8 01       		.byte	0x1
+ 1150 06e9 19       		.uleb128 0x19
+ 1151 06ea 00000000 		.4byte	.LASF95
+ 1152 06ee 01       		.byte	0x1
+ 1153 06ef 2A       		.byte	0x2a
+ 1154 06f0 7E000000 		.4byte	0x7e
+ 1155 06f4 02       		.byte	0x2
+ 1156 06f5 91       		.byte	0x91
+ 1157 06f6 74       		.sleb128 -12
+ 1158 06f7 00       		.byte	0
+ 1159 06f8 00       		.byte	0
+ 1160              		.section	.debug_abbrev,"",%progbits
+ 1161              	.Ldebug_abbrev0:
+ 1162 0000 01       		.uleb128 0x1
+ 1163 0001 11       		.uleb128 0x11
+ 1164 0002 01       		.byte	0x1
+ 1165 0003 25       		.uleb128 0x25
+ 1166 0004 0E       		.uleb128 0xe
+ 1167 0005 13       		.uleb128 0x13
+ 1168 0006 0B       		.uleb128 0xb
+ 1169 0007 03       		.uleb128 0x3
+ 1170 0008 0E       		.uleb128 0xe
+ 1171 0009 1B       		.uleb128 0x1b
+ 1172 000a 0E       		.uleb128 0xe
+ 1173 000b 55       		.uleb128 0x55
+ 1174 000c 06       		.uleb128 0x6
+ 1175 000d 11       		.uleb128 0x11
+ 1176 000e 01       		.uleb128 0x1
+ 1177 000f 52       		.uleb128 0x52
+ 1178 0010 01       		.uleb128 0x1
+ 1179 0011 10       		.uleb128 0x10
+ 1180 0012 06       		.uleb128 0x6
+ 1181 0013 00       		.byte	0
+ 1182 0014 00       		.byte	0
+ 1183 0015 02       		.uleb128 0x2
+ 1184 0016 24       		.uleb128 0x24
+ 1185 0017 00       		.byte	0
+ 1186 0018 0B       		.uleb128 0xb
+ 1187 0019 0B       		.uleb128 0xb
+ 1188 001a 3E       		.uleb128 0x3e
+ 1189 001b 0B       		.uleb128 0xb
+ 1190 001c 03       		.uleb128 0x3
+ 1191 001d 0E       		.uleb128 0xe
+ 1192 001e 00       		.byte	0
+ 1193 001f 00       		.byte	0
+ 1194 0020 03       		.uleb128 0x3
+ 1195 0021 16       		.uleb128 0x16
+ 1196 0022 00       		.byte	0
+ 1197 0023 03       		.uleb128 0x3
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 24
+
+
+ 1198 0024 0E       		.uleb128 0xe
+ 1199 0025 3A       		.uleb128 0x3a
+ 1200 0026 0B       		.uleb128 0xb
+ 1201 0027 3B       		.uleb128 0x3b
+ 1202 0028 0B       		.uleb128 0xb
+ 1203 0029 49       		.uleb128 0x49
+ 1204 002a 13       		.uleb128 0x13
+ 1205 002b 00       		.byte	0
+ 1206 002c 00       		.byte	0
+ 1207 002d 04       		.uleb128 0x4
+ 1208 002e 24       		.uleb128 0x24
+ 1209 002f 00       		.byte	0
+ 1210 0030 0B       		.uleb128 0xb
+ 1211 0031 0B       		.uleb128 0xb
+ 1212 0032 3E       		.uleb128 0x3e
+ 1213 0033 0B       		.uleb128 0xb
+ 1214 0034 03       		.uleb128 0x3
+ 1215 0035 08       		.uleb128 0x8
+ 1216 0036 00       		.byte	0
+ 1217 0037 00       		.byte	0
+ 1218 0038 05       		.uleb128 0x5
+ 1219 0039 35       		.uleb128 0x35
+ 1220 003a 00       		.byte	0
+ 1221 003b 49       		.uleb128 0x49
+ 1222 003c 13       		.uleb128 0x13
+ 1223 003d 00       		.byte	0
+ 1224 003e 00       		.byte	0
+ 1225 003f 06       		.uleb128 0x6
+ 1226 0040 26       		.uleb128 0x26
+ 1227 0041 00       		.byte	0
+ 1228 0042 49       		.uleb128 0x49
+ 1229 0043 13       		.uleb128 0x13
+ 1230 0044 00       		.byte	0
+ 1231 0045 00       		.byte	0
+ 1232 0046 07       		.uleb128 0x7
+ 1233 0047 13       		.uleb128 0x13
+ 1234 0048 01       		.byte	0x1
+ 1235 0049 0B       		.uleb128 0xb
+ 1236 004a 0B       		.uleb128 0xb
+ 1237 004b 3A       		.uleb128 0x3a
+ 1238 004c 0B       		.uleb128 0xb
+ 1239 004d 3B       		.uleb128 0x3b
+ 1240 004e 05       		.uleb128 0x5
+ 1241 004f 01       		.uleb128 0x1
+ 1242 0050 13       		.uleb128 0x13
+ 1243 0051 00       		.byte	0
+ 1244 0052 00       		.byte	0
+ 1245 0053 08       		.uleb128 0x8
+ 1246 0054 0D       		.uleb128 0xd
+ 1247 0055 00       		.byte	0
+ 1248 0056 03       		.uleb128 0x3
+ 1249 0057 0E       		.uleb128 0xe
+ 1250 0058 3A       		.uleb128 0x3a
+ 1251 0059 0B       		.uleb128 0xb
+ 1252 005a 3B       		.uleb128 0x3b
+ 1253 005b 05       		.uleb128 0x5
+ 1254 005c 49       		.uleb128 0x49
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 25
+
+
+ 1255 005d 13       		.uleb128 0x13
+ 1256 005e 38       		.uleb128 0x38
+ 1257 005f 0A       		.uleb128 0xa
+ 1258 0060 00       		.byte	0
+ 1259 0061 00       		.byte	0
+ 1260 0062 09       		.uleb128 0x9
+ 1261 0063 0D       		.uleb128 0xd
+ 1262 0064 00       		.byte	0
+ 1263 0065 03       		.uleb128 0x3
+ 1264 0066 08       		.uleb128 0x8
+ 1265 0067 3A       		.uleb128 0x3a
+ 1266 0068 0B       		.uleb128 0xb
+ 1267 0069 3B       		.uleb128 0x3b
+ 1268 006a 05       		.uleb128 0x5
+ 1269 006b 49       		.uleb128 0x49
+ 1270 006c 13       		.uleb128 0x13
+ 1271 006d 38       		.uleb128 0x38
+ 1272 006e 0A       		.uleb128 0xa
+ 1273 006f 00       		.byte	0
+ 1274 0070 00       		.byte	0
+ 1275 0071 0A       		.uleb128 0xa
+ 1276 0072 16       		.uleb128 0x16
+ 1277 0073 00       		.byte	0
+ 1278 0074 03       		.uleb128 0x3
+ 1279 0075 0E       		.uleb128 0xe
+ 1280 0076 3A       		.uleb128 0x3a
+ 1281 0077 0B       		.uleb128 0xb
+ 1282 0078 3B       		.uleb128 0x3b
+ 1283 0079 05       		.uleb128 0x5
+ 1284 007a 49       		.uleb128 0x49
+ 1285 007b 13       		.uleb128 0x13
+ 1286 007c 00       		.byte	0
+ 1287 007d 00       		.byte	0
+ 1288 007e 0B       		.uleb128 0xb
+ 1289 007f 34       		.uleb128 0x34
+ 1290 0080 00       		.byte	0
+ 1291 0081 03       		.uleb128 0x3
+ 1292 0082 0E       		.uleb128 0xe
+ 1293 0083 3A       		.uleb128 0x3a
+ 1294 0084 0B       		.uleb128 0xb
+ 1295 0085 3B       		.uleb128 0x3b
+ 1296 0086 0B       		.uleb128 0xb
+ 1297 0087 49       		.uleb128 0x49
+ 1298 0088 13       		.uleb128 0x13
+ 1299 0089 3F       		.uleb128 0x3f
+ 1300 008a 0C       		.uleb128 0xc
+ 1301 008b 3C       		.uleb128 0x3c
+ 1302 008c 0C       		.uleb128 0xc
+ 1303 008d 00       		.byte	0
+ 1304 008e 00       		.byte	0
+ 1305 008f 0C       		.uleb128 0xc
+ 1306 0090 13       		.uleb128 0x13
+ 1307 0091 01       		.byte	0x1
+ 1308 0092 0B       		.uleb128 0xb
+ 1309 0093 05       		.uleb128 0x5
+ 1310 0094 3A       		.uleb128 0x3a
+ 1311 0095 0B       		.uleb128 0xb
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 26
+
+
+ 1312 0096 3B       		.uleb128 0x3b
+ 1313 0097 0B       		.uleb128 0xb
+ 1314 0098 01       		.uleb128 0x1
+ 1315 0099 13       		.uleb128 0x13
+ 1316 009a 00       		.byte	0
+ 1317 009b 00       		.byte	0
+ 1318 009c 0D       		.uleb128 0xd
+ 1319 009d 0D       		.uleb128 0xd
+ 1320 009e 00       		.byte	0
+ 1321 009f 03       		.uleb128 0x3
+ 1322 00a0 0E       		.uleb128 0xe
+ 1323 00a1 3A       		.uleb128 0x3a
+ 1324 00a2 0B       		.uleb128 0xb
+ 1325 00a3 3B       		.uleb128 0x3b
+ 1326 00a4 0B       		.uleb128 0xb
+ 1327 00a5 49       		.uleb128 0x49
+ 1328 00a6 13       		.uleb128 0x13
+ 1329 00a7 38       		.uleb128 0x38
+ 1330 00a8 0A       		.uleb128 0xa
+ 1331 00a9 00       		.byte	0
+ 1332 00aa 00       		.byte	0
+ 1333 00ab 0E       		.uleb128 0xe
+ 1334 00ac 01       		.uleb128 0x1
+ 1335 00ad 01       		.byte	0x1
+ 1336 00ae 49       		.uleb128 0x49
+ 1337 00af 13       		.uleb128 0x13
+ 1338 00b0 01       		.uleb128 0x1
+ 1339 00b1 13       		.uleb128 0x13
+ 1340 00b2 00       		.byte	0
+ 1341 00b3 00       		.byte	0
+ 1342 00b4 0F       		.uleb128 0xf
+ 1343 00b5 21       		.uleb128 0x21
+ 1344 00b6 00       		.byte	0
+ 1345 00b7 49       		.uleb128 0x49
+ 1346 00b8 13       		.uleb128 0x13
+ 1347 00b9 2F       		.uleb128 0x2f
+ 1348 00ba 05       		.uleb128 0x5
+ 1349 00bb 00       		.byte	0
+ 1350 00bc 00       		.byte	0
+ 1351 00bd 10       		.uleb128 0x10
+ 1352 00be 17       		.uleb128 0x17
+ 1353 00bf 01       		.byte	0x1
+ 1354 00c0 0B       		.uleb128 0xb
+ 1355 00c1 0B       		.uleb128 0xb
+ 1356 00c2 3A       		.uleb128 0x3a
+ 1357 00c3 0B       		.uleb128 0xb
+ 1358 00c4 3B       		.uleb128 0x3b
+ 1359 00c5 05       		.uleb128 0x5
+ 1360 00c6 01       		.uleb128 0x1
+ 1361 00c7 13       		.uleb128 0x13
+ 1362 00c8 00       		.byte	0
+ 1363 00c9 00       		.byte	0
+ 1364 00ca 11       		.uleb128 0x11
+ 1365 00cb 0D       		.uleb128 0xd
+ 1366 00cc 00       		.byte	0
+ 1367 00cd 03       		.uleb128 0x3
+ 1368 00ce 0E       		.uleb128 0xe
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 27
+
+
+ 1369 00cf 3A       		.uleb128 0x3a
+ 1370 00d0 0B       		.uleb128 0xb
+ 1371 00d1 3B       		.uleb128 0x3b
+ 1372 00d2 05       		.uleb128 0x5
+ 1373 00d3 49       		.uleb128 0x49
+ 1374 00d4 13       		.uleb128 0x13
+ 1375 00d5 00       		.byte	0
+ 1376 00d6 00       		.byte	0
+ 1377 00d7 12       		.uleb128 0x12
+ 1378 00d8 21       		.uleb128 0x21
+ 1379 00d9 00       		.byte	0
+ 1380 00da 49       		.uleb128 0x49
+ 1381 00db 13       		.uleb128 0x13
+ 1382 00dc 2F       		.uleb128 0x2f
+ 1383 00dd 0B       		.uleb128 0xb
+ 1384 00de 00       		.byte	0
+ 1385 00df 00       		.byte	0
+ 1386 00e0 13       		.uleb128 0x13
+ 1387 00e1 0D       		.uleb128 0xd
+ 1388 00e2 00       		.byte	0
+ 1389 00e3 03       		.uleb128 0x3
+ 1390 00e4 08       		.uleb128 0x8
+ 1391 00e5 3A       		.uleb128 0x3a
+ 1392 00e6 0B       		.uleb128 0xb
+ 1393 00e7 3B       		.uleb128 0x3b
+ 1394 00e8 05       		.uleb128 0x5
+ 1395 00e9 49       		.uleb128 0x49
+ 1396 00ea 13       		.uleb128 0x13
+ 1397 00eb 00       		.byte	0
+ 1398 00ec 00       		.byte	0
+ 1399 00ed 14       		.uleb128 0x14
+ 1400 00ee 13       		.uleb128 0x13
+ 1401 00ef 01       		.byte	0x1
+ 1402 00f0 0B       		.uleb128 0xb
+ 1403 00f1 05       		.uleb128 0x5
+ 1404 00f2 3A       		.uleb128 0x3a
+ 1405 00f3 0B       		.uleb128 0xb
+ 1406 00f4 3B       		.uleb128 0x3b
+ 1407 00f5 05       		.uleb128 0x5
+ 1408 00f6 01       		.uleb128 0x1
+ 1409 00f7 13       		.uleb128 0x13
+ 1410 00f8 00       		.byte	0
+ 1411 00f9 00       		.byte	0
+ 1412 00fa 15       		.uleb128 0x15
+ 1413 00fb 0D       		.uleb128 0xd
+ 1414 00fc 00       		.byte	0
+ 1415 00fd 49       		.uleb128 0x49
+ 1416 00fe 13       		.uleb128 0x13
+ 1417 00ff 38       		.uleb128 0x38
+ 1418 0100 0A       		.uleb128 0xa
+ 1419 0101 00       		.byte	0
+ 1420 0102 00       		.byte	0
+ 1421 0103 16       		.uleb128 0x16
+ 1422 0104 34       		.uleb128 0x34
+ 1423 0105 00       		.byte	0
+ 1424 0106 03       		.uleb128 0x3
+ 1425 0107 0E       		.uleb128 0xe
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 28
+
+
+ 1426 0108 3A       		.uleb128 0x3a
+ 1427 0109 0B       		.uleb128 0xb
+ 1428 010a 3B       		.uleb128 0x3b
+ 1429 010b 0B       		.uleb128 0xb
+ 1430 010c 49       		.uleb128 0x49
+ 1431 010d 13       		.uleb128 0x13
+ 1432 010e 3F       		.uleb128 0x3f
+ 1433 010f 0C       		.uleb128 0xc
+ 1434 0110 02       		.uleb128 0x2
+ 1435 0111 0A       		.uleb128 0xa
+ 1436 0112 00       		.byte	0
+ 1437 0113 00       		.byte	0
+ 1438 0114 17       		.uleb128 0x17
+ 1439 0115 2E       		.uleb128 0x2e
+ 1440 0116 00       		.byte	0
+ 1441 0117 3F       		.uleb128 0x3f
+ 1442 0118 0C       		.uleb128 0xc
+ 1443 0119 03       		.uleb128 0x3
+ 1444 011a 0E       		.uleb128 0xe
+ 1445 011b 3A       		.uleb128 0x3a
+ 1446 011c 0B       		.uleb128 0xb
+ 1447 011d 3B       		.uleb128 0x3b
+ 1448 011e 0B       		.uleb128 0xb
+ 1449 011f 27       		.uleb128 0x27
+ 1450 0120 0C       		.uleb128 0xc
+ 1451 0121 11       		.uleb128 0x11
+ 1452 0122 01       		.uleb128 0x1
+ 1453 0123 12       		.uleb128 0x12
+ 1454 0124 01       		.uleb128 0x1
+ 1455 0125 40       		.uleb128 0x40
+ 1456 0126 0A       		.uleb128 0xa
+ 1457 0127 9742     		.uleb128 0x2117
+ 1458 0129 0C       		.uleb128 0xc
+ 1459 012a 00       		.byte	0
+ 1460 012b 00       		.byte	0
+ 1461 012c 18       		.uleb128 0x18
+ 1462 012d 2E       		.uleb128 0x2e
+ 1463 012e 01       		.byte	0x1
+ 1464 012f 3F       		.uleb128 0x3f
+ 1465 0130 0C       		.uleb128 0xc
+ 1466 0131 03       		.uleb128 0x3
+ 1467 0132 0E       		.uleb128 0xe
+ 1468 0133 3A       		.uleb128 0x3a
+ 1469 0134 0B       		.uleb128 0xb
+ 1470 0135 3B       		.uleb128 0x3b
+ 1471 0136 0B       		.uleb128 0xb
+ 1472 0137 27       		.uleb128 0x27
+ 1473 0138 0C       		.uleb128 0xc
+ 1474 0139 49       		.uleb128 0x49
+ 1475 013a 13       		.uleb128 0x13
+ 1476 013b 11       		.uleb128 0x11
+ 1477 013c 01       		.uleb128 0x1
+ 1478 013d 12       		.uleb128 0x12
+ 1479 013e 01       		.uleb128 0x1
+ 1480 013f 40       		.uleb128 0x40
+ 1481 0140 06       		.uleb128 0x6
+ 1482 0141 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 29
+
+
+ 1483 0143 0C       		.uleb128 0xc
+ 1484 0144 00       		.byte	0
+ 1485 0145 00       		.byte	0
+ 1486 0146 19       		.uleb128 0x19
+ 1487 0147 34       		.uleb128 0x34
+ 1488 0148 00       		.byte	0
+ 1489 0149 03       		.uleb128 0x3
+ 1490 014a 0E       		.uleb128 0xe
+ 1491 014b 3A       		.uleb128 0x3a
+ 1492 014c 0B       		.uleb128 0xb
+ 1493 014d 3B       		.uleb128 0x3b
+ 1494 014e 0B       		.uleb128 0xb
+ 1495 014f 49       		.uleb128 0x49
+ 1496 0150 13       		.uleb128 0x13
+ 1497 0151 02       		.uleb128 0x2
+ 1498 0152 0A       		.uleb128 0xa
+ 1499 0153 00       		.byte	0
+ 1500 0154 00       		.byte	0
+ 1501 0155 00       		.byte	0
+ 1502              		.section	.debug_loc,"",%progbits
+ 1503              	.Ldebug_loc0:
+ 1504              	.LLST0:
+ 1505 0000 00000000 		.4byte	.LFB34
+ 1506 0004 04000000 		.4byte	.LCFI0
+ 1507 0008 0200     		.2byte	0x2
+ 1508 000a 7D       		.byte	0x7d
+ 1509 000b 00       		.sleb128 0
+ 1510 000c 04000000 		.4byte	.LCFI0
+ 1511 0010 60000000 		.4byte	.LFE34
+ 1512 0014 0200     		.2byte	0x2
+ 1513 0016 7D       		.byte	0x7d
+ 1514 0017 10       		.sleb128 16
+ 1515 0018 00000000 		.4byte	0
+ 1516 001c 00000000 		.4byte	0
+ 1517              		.section	.debug_aranges,"",%progbits
+ 1518 0000 24000000 		.4byte	0x24
+ 1519 0004 0200     		.2byte	0x2
+ 1520 0006 00000000 		.4byte	.Ldebug_info0
+ 1521 000a 04       		.byte	0x4
+ 1522 000b 00       		.byte	0
+ 1523 000c 0000     		.2byte	0
+ 1524 000e 0000     		.2byte	0
+ 1525 0010 00000000 		.4byte	.Ltext0
+ 1526 0014 0C000000 		.4byte	.Letext0-.Ltext0
+ 1527 0018 00000000 		.4byte	.LFB34
+ 1528 001c 60000000 		.4byte	.LFE34-.LFB34
+ 1529 0020 00000000 		.4byte	0
+ 1530 0024 00000000 		.4byte	0
+ 1531              		.section	.debug_ranges,"",%progbits
+ 1532              	.Ldebug_ranges0:
+ 1533 0000 00000000 		.4byte	.Ltext0
+ 1534 0004 0C000000 		.4byte	.Letext0
+ 1535 0008 00000000 		.4byte	.LFB34
+ 1536 000c 60000000 		.4byte	.LFE34
+ 1537 0010 00000000 		.4byte	0
+ 1538 0014 00000000 		.4byte	0
+ 1539              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 30
+
+
+ 1540              	.Ldebug_line0:
+ 1541 0000 77010000 		.section	.debug_str,"MS",%progbits,1
+ 1541      02003401 
+ 1541      00000201 
+ 1541      FB0E0D00 
+ 1541      01010101 
+ 1542              	.LASF95:
+ 1543 0000 636F756E 		.ascii	"count\000"
+ 1543      7400
+ 1544              	.LASF58:
+ 1545 0006 44415441 		.ascii	"DATAINRAW\000"
+ 1545      494E5241 
+ 1545      5700
+ 1546              	.LASF21:
+ 1547 0010 524F4D5F 		.ascii	"ROM_SCRUB\000"
+ 1547      53435255 
+ 1547      4200
+ 1548              	.LASF45:
+ 1549 001a 54494D5F 		.ascii	"TIM_RESET\000"
+ 1549      52455345 
+ 1549      5400
+ 1550              	.LASF85:
+ 1551 0024 564F525F 		.ascii	"VOR_GPIO_PERIPHERAL_Type\000"
+ 1551      4750494F 
+ 1551      5F504552 
+ 1551      49504845 
+ 1551      52414C5F 
+ 1552              	.LASF5:
+ 1553 003d 5F5F7569 		.ascii	"__uint8_t\000"
+ 1553      6E74385F 
+ 1553      7400
+ 1554              	.LASF26:
+ 1555 0047 52414D5F 		.ascii	"RAM_TRAP_SYND\000"
+ 1555      54524150 
+ 1555      5F53594E 
+ 1555      4400
+ 1556              	.LASF52:
+ 1557 0055 45465F49 		.ascii	"EF_ID\000"
+ 1557      4400
+ 1558              	.LASF9:
+ 1559 005b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1559      206C6F6E 
+ 1559      6720756E 
+ 1559      7369676E 
+ 1559      65642069 
+ 1560              	.LASF51:
+ 1561 0072 45465F43 		.ascii	"EF_CONFIG\000"
+ 1561      4F4E4649 
+ 1561      4700
+ 1562              	.LASF81:
+ 1563 007c 4952515F 		.ascii	"IRQ_SEN\000"
+ 1563      53454E00 
+ 1564              	.LASF18:
+ 1565 0084 5253545F 		.ascii	"RST_CNTL_ROM\000"
+ 1565      434E544C 
+ 1565      5F524F4D 
+ 1565      00
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 31
+
+
+ 1566              	.LASF61:
+ 1567 0091 44415441 		.ascii	"DATAOUTBYTE\000"
+ 1567      4F555442 
+ 1567      59544500 
+ 1568              	.LASF8:
+ 1569 009d 6C6F6E67 		.ascii	"long long int\000"
+ 1569      206C6F6E 
+ 1569      6720696E 
+ 1569      7400
+ 1570              	.LASF0:
+ 1571 00ab 7369676E 		.ascii	"signed char\000"
+ 1571      65642063 
+ 1571      68617200 
+ 1572              	.LASF82:
+ 1573 00b7 4952515F 		.ascii	"IRQ_EDGE\000"
+ 1573      45444745 
+ 1573      00
+ 1574              	.LASF75:
+ 1575 00c0 50554C53 		.ascii	"PULSEBASE\000"
+ 1575      45424153 
+ 1575      4500
+ 1576              	.LASF90:
+ 1577 00ca 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 1577      43313120 
+ 1577      372E322E 
+ 1577      31203230 
+ 1577      31373039 
+ 1578 00fd 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m0 -mthumb -gdwa"
+ 1578      20726576 
+ 1578      6973696F 
+ 1578      6E203235 
+ 1578      35323034 
+ 1579 0130 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+ 1579      202D4F73 
+ 1579      202D666F 
+ 1579      6D69742D 
+ 1579      6672616D 
+ 1580              	.LASF62:
+ 1581 014e 44415441 		.ascii	"DATAOUTRAW\000"
+ 1581      4F555452 
+ 1581      415700
+ 1582              	.LASF80:
+ 1583 0159 44454C41 		.ascii	"DELAY2BYTE\000"
+ 1583      59324259 
+ 1583      544500
+ 1584              	.LASF4:
+ 1585 0164 6C6F6E67 		.ascii	"long int\000"
+ 1585      20696E74 
+ 1585      00
+ 1586              	.LASF87:
+ 1587 016d 564F525F 		.ascii	"VOR_GPIO_PERIPHERAL_BANK_Type\000"
+ 1587      4750494F 
+ 1587      5F504552 
+ 1587      49504845 
+ 1587      52414C5F 
+ 1588              	.LASF59:
+ 1589 018b 44415441 		.ascii	"DATAINRAWBYTE\000"
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 32
+
+
+ 1589      494E5241 
+ 1589      57425954 
+ 1589      4500
+ 1590              	.LASF72:
+ 1591 0199 44495242 		.ascii	"DIRBYTE\000"
+ 1591      59544500 
+ 1592              	.LASF63:
+ 1593 01a1 44415441 		.ascii	"DATAOUTRAWBYTE\000"
+ 1593      4F555452 
+ 1593      41574259 
+ 1593      544500
+ 1594              	.LASF31:
+ 1595 01b0 52414D5F 		.ascii	"RAM_SBE\000"
+ 1595      53424500 
+ 1596              	.LASF64:
+ 1597 01b8 5345544F 		.ascii	"SETOUT\000"
+ 1597      555400
+ 1598              	.LASF16:
+ 1599 01bf 53797354 		.ascii	"SysTick_Type\000"
+ 1599      69636B5F 
+ 1599      54797065 
+ 1599      00
+ 1600              	.LASF24:
+ 1601 01cc 524F4D5F 		.ascii	"ROM_TRAP_SYND\000"
+ 1601      54524150 
+ 1601      5F53594E 
+ 1601      4400
+ 1602              	.LASF6:
+ 1603 01da 5F5F7569 		.ascii	"__uint32_t\000"
+ 1603      6E743332 
+ 1603      5F7400
+ 1604              	.LASF49:
+ 1605 01e5 4C4F434B 		.ascii	"LOCKUP_RESET\000"
+ 1605      55505F52 
+ 1605      45534554 
+ 1605      00
+ 1606              	.LASF19:
+ 1607 01f2 5253545F 		.ascii	"RST_CNTL_RAM\000"
+ 1607      434E544C 
+ 1607      5F52414D 
+ 1607      00
+ 1608              	.LASF73:
+ 1609 01ff 50554C53 		.ascii	"PULSE\000"
+ 1609      4500
+ 1610              	.LASF10:
+ 1611 0205 756E7369 		.ascii	"unsigned int\000"
+ 1611      676E6564 
+ 1611      20696E74 
+ 1611      00
+ 1612              	.LASF91:
+ 1613 0212 2E5C7372 		.ascii	".\\src\\main.c\000"
+ 1613      635C6D61 
+ 1613      696E2E63 
+ 1613      00
+ 1614              	.LASF32:
+ 1615 021f 52414D5F 		.ascii	"RAM_MBE\000"
+ 1615      4D424500 
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 33
+
+
+ 1616              	.LASF88:
+ 1617 0227 53797374 		.ascii	"SystemCoreClock\000"
+ 1617      656D436F 
+ 1617      7265436C 
+ 1617      6F636B00 
+ 1618              	.LASF56:
+ 1619 0237 44415441 		.ascii	"DATAIN\000"
+ 1619      494E00
+ 1620              	.LASF46:
+ 1621 023e 54494D5F 		.ascii	"TIM_CLK_ENABLE\000"
+ 1621      434C4B5F 
+ 1621      454E4142 
+ 1621      4C4500
+ 1622              	.LASF7:
+ 1623 024d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1623      20756E73 
+ 1623      69676E65 
+ 1623      6420696E 
+ 1623      7400
+ 1624              	.LASF70:
+ 1625 025f 44415441 		.ascii	"DATAMASK\000"
+ 1625      4D41534B 
+ 1625      00
+ 1626              	.LASF3:
+ 1627 0268 73686F72 		.ascii	"short unsigned int\000"
+ 1627      7420756E 
+ 1627      7369676E 
+ 1627      65642069 
+ 1627      6E7400
+ 1628              	.LASF66:
+ 1629 027b 434C524F 		.ascii	"CLROUT\000"
+ 1629      555400
+ 1630              	.LASF89:
+ 1631 0282 6D736563 		.ascii	"msec_tim_timeout\000"
+ 1631      5F74696D 
+ 1631      5F74696D 
+ 1631      656F7574 
+ 1631      00
+ 1632              	.LASF20:
+ 1633 0293 524F4D5F 		.ascii	"ROM_PROT\000"
+ 1633      50524F54 
+ 1633      00
+ 1634              	.LASF33:
+ 1635 029c 524F4D5F 		.ascii	"ROM_SBE\000"
+ 1635      53424500 
+ 1636              	.LASF14:
+ 1637 02a4 4C4F4144 		.ascii	"LOAD\000"
+ 1637      00
+ 1638              	.LASF74:
+ 1639 02a9 50554C53 		.ascii	"PULSEBYTE\000"
+ 1639      45425954 
+ 1639      4500
+ 1640              	.LASF34:
+ 1641 02b3 524F4D5F 		.ascii	"ROM_MBE\000"
+ 1641      4D424500 
+ 1642              	.LASF25:
+ 1643 02bb 52414D5F 		.ascii	"RAM_TRAP_ADDR\000"
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 34
+
+
+ 1643      54524150 
+ 1643      5F414444 
+ 1643      5200
+ 1644              	.LASF78:
+ 1645 02c9 44454C41 		.ascii	"DELAY1BYTE\000"
+ 1645      59314259 
+ 1645      544500
+ 1646              	.LASF44:
+ 1647 02d4 52454652 		.ascii	"REFRESH_CONFIG\000"
+ 1647      4553485F 
+ 1647      434F4E46 
+ 1647      494700
+ 1648              	.LASF50:
+ 1649 02e3 52455345 		.ascii	"RESERVED0\000"
+ 1649      52564544 
+ 1649      3000
+ 1650              	.LASF57:
+ 1651 02ed 44415441 		.ascii	"DATAINBYTE\000"
+ 1651      494E4259 
+ 1651      544500
+ 1652              	.LASF35:
+ 1653 02f8 494F434F 		.ascii	"IOCONFIG_CLKDIV0\000"
+ 1653      4E464947 
+ 1653      5F434C4B 
+ 1653      44495630 
+ 1653      00
+ 1654              	.LASF36:
+ 1655 0309 494F434F 		.ascii	"IOCONFIG_CLKDIV1\000"
+ 1655      4E464947 
+ 1655      5F434C4B 
+ 1655      44495631 
+ 1655      00
+ 1656              	.LASF37:
+ 1657 031a 494F434F 		.ascii	"IOCONFIG_CLKDIV2\000"
+ 1657      4E464947 
+ 1657      5F434C4B 
+ 1657      44495632 
+ 1657      00
+ 1658              	.LASF38:
+ 1659 032b 494F434F 		.ascii	"IOCONFIG_CLKDIV3\000"
+ 1659      4E464947 
+ 1659      5F434C4B 
+ 1659      44495633 
+ 1659      00
+ 1660              	.LASF39:
+ 1661 033c 494F434F 		.ascii	"IOCONFIG_CLKDIV4\000"
+ 1661      4E464947 
+ 1661      5F434C4B 
+ 1661      44495634 
+ 1661      00
+ 1662              	.LASF40:
+ 1663 034d 494F434F 		.ascii	"IOCONFIG_CLKDIV5\000"
+ 1663      4E464947 
+ 1663      5F434C4B 
+ 1663      44495635 
+ 1663      00
+ 1664              	.LASF41:
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 35
+
+
+ 1665 035e 494F434F 		.ascii	"IOCONFIG_CLKDIV6\000"
+ 1665      4E464947 
+ 1665      5F434C4B 
+ 1665      44495636 
+ 1665      00
+ 1666              	.LASF42:
+ 1667 036f 494F434F 		.ascii	"IOCONFIG_CLKDIV7\000"
+ 1667      4E464947 
+ 1667      5F434C4B 
+ 1667      44495637 
+ 1667      00
+ 1668              	.LASF1:
+ 1669 0380 756E7369 		.ascii	"unsigned char\000"
+ 1669      676E6564 
+ 1669      20636861 
+ 1669      7200
+ 1670              	.LASF2:
+ 1671 038e 73686F72 		.ascii	"short int\000"
+ 1671      7420696E 
+ 1671      7400
+ 1672              	.LASF48:
+ 1673 0398 50455249 		.ascii	"PERIPHERAL_CLK_ENABLE\000"
+ 1673      50484552 
+ 1673      414C5F43 
+ 1673      4C4B5F45 
+ 1673      4E41424C 
+ 1674              	.LASF55:
+ 1675 03ae 564F525F 		.ascii	"VOR_SYSCONFIG_Type\000"
+ 1675      53595343 
+ 1675      4F4E4649 
+ 1675      475F5479 
+ 1675      706500
+ 1676              	.LASF17:
+ 1677 03c1 5253545F 		.ascii	"RST_STAT\000"
+ 1677      53544154 
+ 1677      00
+ 1678              	.LASF43:
+ 1679 03ca 524F4D5F 		.ascii	"ROM_RETRIES\000"
+ 1679      52455452 
+ 1679      49455300 
+ 1680              	.LASF12:
+ 1681 03d6 75696E74 		.ascii	"uint32_t\000"
+ 1681      33325F74 
+ 1681      00
+ 1682              	.LASF93:
+ 1683 03df 53797354 		.ascii	"SysTick_Handler\000"
+ 1683      69636B5F 
+ 1683      48616E64 
+ 1683      6C657200 
+ 1684              	.LASF69:
+ 1685 03ef 544F474F 		.ascii	"TOGOUTBYTE\000"
+ 1685      55544259 
+ 1685      544500
+ 1686              	.LASF68:
+ 1687 03fa 544F474F 		.ascii	"TOGOUT\000"
+ 1687      555400
+ 1688              	.LASF23:
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 36
+
+
+ 1689 0401 524F4D5F 		.ascii	"ROM_TRAP_ADDR\000"
+ 1689      54524150 
+ 1689      5F414444 
+ 1689      5200
+ 1690              	.LASF77:
+ 1691 040f 44454C41 		.ascii	"DELAY1\000"
+ 1691      593100
+ 1692              	.LASF79:
+ 1693 0416 44454C41 		.ascii	"DELAY2\000"
+ 1693      593200
+ 1694              	.LASF28:
+ 1695 041d 4952515F 		.ascii	"IRQ_RAW\000"
+ 1695      52415700 
+ 1696              	.LASF67:
+ 1697 0425 434C524F 		.ascii	"CLROUTBYTE\000"
+ 1697      55544259 
+ 1697      544500
+ 1698              	.LASF27:
+ 1699 0430 4952515F 		.ascii	"IRQ_ENB\000"
+ 1699      454E4200 
+ 1700              	.LASF29:
+ 1701 0438 4952515F 		.ascii	"IRQ_END\000"
+ 1701      454E4400 
+ 1702              	.LASF13:
+ 1703 0440 4354524C 		.ascii	"CTRL\000"
+ 1703      00
+ 1704              	.LASF76:
+ 1705 0445 50554C53 		.ascii	"PULSEBASEBYTE\000"
+ 1705      45424153 
+ 1705      45425954 
+ 1705      4500
+ 1706              	.LASF47:
+ 1707 0453 50455249 		.ascii	"PERIPHERAL_RESET\000"
+ 1707      50484552 
+ 1707      414C5F52 
+ 1707      45534554 
+ 1707      00
+ 1708              	.LASF92:
+ 1709 0464 433A5C73 		.ascii	"C:\\software_reb_gcc\\eclipse_2018\\projects\\reb1_"
+ 1709      6F667477 
+ 1709      6172655F 
+ 1709      7265625F 
+ 1709      6763635C 
+ 1710 0493 626C696E 		.ascii	"blink_prj\000"
+ 1710      6B5F7072 
+ 1710      6A00
+ 1711              	.LASF15:
+ 1712 049d 43414C49 		.ascii	"CALIB\000"
+ 1712      4200
+ 1713              	.LASF86:
+ 1714 04a3 42414E4B 		.ascii	"BANK\000"
+ 1714      00
+ 1715              	.LASF53:
+ 1716 04a8 50524F43 		.ascii	"PROCID\000"
+ 1716      494400
+ 1717              	.LASF11:
+ 1718 04af 75696E74 		.ascii	"uint8_t\000"
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 37
+
+
+ 1718      385F7400 
+ 1719              	.LASF83:
+ 1720 04b7 4952515F 		.ascii	"IRQ_EVT\000"
+ 1720      45565400 
+ 1721              	.LASF84:
+ 1722 04bf 45444745 		.ascii	"EDGE_STATUS\000"
+ 1722      5F535441 
+ 1722      54555300 
+ 1723              	.LASF65:
+ 1724 04cb 5345544F 		.ascii	"SETOUTBYTE\000"
+ 1724      55544259 
+ 1724      544500
+ 1725              	.LASF54:
+ 1726 04d6 50455249 		.ascii	"PERID\000"
+ 1726      4400
+ 1727              	.LASF30:
+ 1728 04dc 4952515F 		.ascii	"IRQ_CLR\000"
+ 1728      434C5200 
+ 1729              	.LASF22:
+ 1730 04e4 52414D5F 		.ascii	"RAM_SCRUB\000"
+ 1730      53435255 
+ 1730      4200
+ 1731              	.LASF94:
+ 1732 04ee 6D61696E 		.ascii	"main\000"
+ 1732      00
+ 1733              	.LASF71:
+ 1734 04f3 44415441 		.ascii	"DATAMASKBYTE\000"
+ 1734      4D41534B 
+ 1734      42595445 
+ 1734      00
+ 1735              	.LASF60:
+ 1736 0500 44415441 		.ascii	"DATAOUT\000"
+ 1736      4F555400 
+ 1737              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s 			page 38
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:73     .text.startup:00000000 $t
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:80     .text.startup:00000000 main
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:184    .text.startup:00000054 $d
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:191    .text:00000000 $t
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:198    .text:00000000 SysTick_Handler
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:221    .text:00000008 $d
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:231    .data:00000000 msec_tim_timeout
+C:\Users\cmerritt\AppData\Local\Temp\ccWuhjId.s:227    .data:00000000 $d
+
+NO UNDEFINED SYMBOLS

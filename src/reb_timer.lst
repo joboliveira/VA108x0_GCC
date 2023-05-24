@@ -1,0 +1,2868 @@
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   3              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   4              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   5              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   6              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   7              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   8              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+   9              		.eabi_attribute 34, 0	@ Tag_CPU_unaligned_access
+  10              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  11              		.file	"reb_timer.c"
+  12              	@ GNU C11 (GNU Tools for Arm Embedded Processors 7-2017-q4-major) version 7.2.1 20170904 (release) 
+  13              	@	compiled by GNU C version 5.3.1 20160211, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.
+  14              	
+  15              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  16              	@ options passed:  -I . -I .\common\hdr -I .\driver\hdr -I .\utilities\hdr
+  17              	@ -I .\inc -I .\driver\hdr -I .\hdr -imultilib thumb/v6-m
+  18              	@ -iprefix c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../lib/gcc/arm-none-ea
+  19              	@ -isysroot c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../arm-none-eabi
+  20              	@ -D__USES_INITFINI__ -D RUN_FROM_FLASH=1 .\src\reb_timer.c -mcpu=cortex-m0
+  21              	@ -mthumb -auxbase-strip .\src\reb_timer.o -gdwarf-2 -Os -Wall
+  22              	@ -Wstrict-prototypes -fomit-frame-pointer -fverbose-asm
+  23              	@ options enabled:  -faggressive-loop-optimizations -falign-jumps
+  24              	@ -falign-labels -falign-loops -fauto-inc-dec -fbranch-count-reg
+  25              	@ -fcaller-saves -fchkp-check-incomplete-type -fchkp-check-read
+  26              	@ -fchkp-check-write -fchkp-instrument-calls -fchkp-narrow-bounds
+  27              	@ -fchkp-optimize -fchkp-store-bounds -fchkp-use-static-bounds
+  28              	@ -fchkp-use-static-const-bounds -fchkp-use-wrappers -fcode-hoisting
+  29              	@ -fcombine-stack-adjustments -fcommon -fcompare-elim -fcprop-registers
+  30              	@ -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  31              	@ -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  32              	@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  33              	@ -fexpensive-optimizations -fforward-propagate -ffp-int-builtin-inexact
+  34              	@ -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime -fgnu-unique
+  35              	@ -fguess-branch-probability -fhoist-adjacent-loads -fident -fif-conversion
+  36              	@ -fif-conversion2 -findirect-inlining -finline -finline-atomics
+  37              	@ -finline-functions -finline-functions-called-once
+  38              	@ -finline-small-functions -fipa-bit-cp -fipa-cp -fipa-icf
+  39              	@ -fipa-icf-functions -fipa-icf-variables -fipa-profile -fipa-pure-const
+  40              	@ -fipa-reference -fipa-sra -fipa-vrp -fira-hoist-pressure
+  41              	@ -fira-share-save-slots -fira-share-spill-slots
+  42              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+  43              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  44              	@ -fmath-errno -fmerge-constants -fmerge-debug-strings
+  45              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  46              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
+  47              	@ -freg-struct-return -freorder-blocks -freorder-functions
+  48              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  49              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  50              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  51              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  52              	@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
+  53              	@ -fshow-column -fshrink-wrap -fshrink-wrap-separate -fsigned-zeros
+  54              	@ -fsplit-ivs-in-unroller -fsplit-wide-types -fssa-backprop -fssa-phiopt
+  55              	@ -fstdarg-opt -fstore-merging -fstrict-aliasing -fstrict-overflow
+  56              	@ -fstrict-volatile-bitfields -fsync-libcalls -fthread-jumps
+  57              	@ -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp -ftree-builtin-call-dce
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 2
+
+
+  58              	@ -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+  59              	@ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+  60              	@ -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  61              	@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pre
+  62              	@ -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr
+  63              	@ -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+  64              	@ -ftree-vrp -funit-at-a-time -fvar-tracking -fvar-tracking-assignments
+  65              	@ -fverbose-asm -fzero-initialized-in-bss -mlittle-endian
+  66              	@ -mpic-data-is-text-relative -msched-prolog -mthumb
+  67              	@ -mvectorize-with-neon-quad
+  68              	
+  69              		.text
+  70              	.Ltext0:
+  71              		.cfi_sections	.debug_frame
+  72              		.align	1
+  73              		.global	VOR_TIM0_MSecInitialize
+  74              		.syntax unified
+  75              		.code	16
+  76              		.thumb_func
+  77              		.fpu softvfp
+  78              		.type	VOR_TIM0_MSecInitialize, %function
+  79              	VOR_TIM0_MSecInitialize:
+  80              	.LFB34:
+  81              		.file 1 ".\\src\\reb_timer.c"
+   1:.\src/reb_timer.c **** /***************************************************************************************
+   2:.\src/reb_timer.c ****  * @file     reb_timer.c
+   3:.\src/reb_timer.c ****  * @version  V1.0
+   4:.\src/reb_timer.c ****  * @date     31. March 2016
+   5:.\src/reb_timer.c ****  *
+   6:.\src/reb_timer.c ****  * @note
+   7:.\src/reb_timer.c ****  * VORAGO Technologies 
+   8:.\src/reb_timer.c ****  *
+   9:.\src/reb_timer.c ****  * @note
+  10:.\src/reb_timer.c ****  * Copyright (c) 2013-2016 VORAGO Technologies. 
+  11:.\src/reb_timer.c ****  *
+  12:.\src/reb_timer.c ****  * @par
+  13:.\src/reb_timer.c ****  * BY DOWNLOADING, INSTALLING OR USING THIS SOFTWARE, YOU AGREE TO BE BOUND BY 
+  14:.\src/reb_timer.c ****  * ALL THE TERMS AND CONDITIONS OF THE VORAGO TECHNOLOGIES END USER LICENSE AGREEMENT. 
+  15:.\src/reb_timer.c ****  * THIS SOFTWARE IS PROVIDED "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED
+  16:.\src/reb_timer.c ****  * OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY 
+  17:.\src/reb_timer.c ****  * AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. VORAGO TECHNOLOGIES 
+  18:.\src/reb_timer.c ****  * SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL 
+  19:.\src/reb_timer.c ****  * DAMAGES, FOR ANY REASON WHATSOEVER.
+  20:.\src/reb_timer.c ****  *
+  21:.\src/reb_timer.c ****  ****************************************************************************************/
+  22:.\src/reb_timer.c **** #include <stdbool.h>
+  23:.\src/reb_timer.c **** #include "va108xx.h"
+  24:.\src/reb_timer.c **** #include "reb_timer.h"
+  25:.\src/reb_timer.c **** #include "reb_board.h"
+  26:.\src/reb_timer.c **** #include "irq_va108xx.h"
+  27:.\src/reb_timer.c **** 
+  28:.\src/reb_timer.c **** //  extern ticker  ;
+  29:.\src/reb_timer.c **** 
+  30:.\src/reb_timer.c **** static volatile bool msec_tim_timeout = false, sec_tim_timeout = false; 
+  31:.\src/reb_timer.c **** 
+  32:.\src/reb_timer.c **** int32_t VOR_TIM0_MSecInitialize(uint32_t time_msec) {
+  82              		.loc 1 32 0
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 3
+
+
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              	.LVL0:
+  87              	@ .\src\reb_timer.c:34: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x1;  
+  33:.\src/reb_timer.c **** 	int32_t ret_code = 0;
+  34:.\src/reb_timer.c **** 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x1;  
+  88              		.loc 1 34 0
+  89 0000 8022     		movs	r2, #128	@ tmp115,
+  90 0002 0123     		movs	r3, #1	@ tmp116,
+  91              	@ .\src\reb_timer.c:32: int32_t VOR_TIM0_MSecInitialize(uint32_t time_msec) {
+  32:.\src/reb_timer.c **** 	int32_t ret_code = 0;
+  92              		.loc 1 32 0
+  93 0004 70B5     		push	{r4, r5, r6, lr}	@
+  94              	.LCFI0:
+  95              		.cfi_def_cfa_offset 16
+  96              		.cfi_offset 4, -16
+  97              		.cfi_offset 5, -12
+  98              		.cfi_offset 6, -8
+  99              		.cfi_offset 14, -4
+ 100              	@ .\src\reb_timer.c:35: 	VOR_TIM->BANK[0].CTRL = 0x0; 
+  35:.\src/reb_timer.c **** 	VOR_TIM->BANK[0].CTRL = 0x0; 
+ 101              		.loc 1 35 0
+ 102 0006 0024     		movs	r4, #0	@ tmp119,
+ 103              	@ .\src\reb_timer.c:34: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x1;  
+  34:.\src/reb_timer.c **** 	VOR_TIM->BANK[0].CTRL = 0x0; 
+ 104              		.loc 1 34 0
+ 105 0008 D205     		lsls	r2, r2, #23	@ tmp115, tmp115,
+ 106 000a 516F     		ldr	r1, [r2, #116]	@ _1, MEM[(struct VOR_SYSCONFIG_Type *)1073741824B].TIM_CLK_ENABLE
+ 107              	@ .\src\reb_timer.c:32: int32_t VOR_TIM0_MSecInitialize(uint32_t time_msec) {
+  32:.\src/reb_timer.c **** 	int32_t ret_code = 0;
+ 108              		.loc 1 32 0
+ 109 000c 0600     		movs	r6, r0	@ time_msec, time_msec
+ 110              	@ .\src\reb_timer.c:35: 	VOR_TIM->BANK[0].CTRL = 0x0; 
+ 111              		.loc 1 35 0
+ 112 000e 094D     		ldr	r5, .L2	@ tmp118,
+ 113              	@ .\src\reb_timer.c:34: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x1;  
+  34:.\src/reb_timer.c **** 	VOR_TIM->BANK[0].CTRL = 0x0; 
+ 114              		.loc 1 34 0
+ 115 0010 0B43     		orrs	r3, r1	@ _2, _1
+ 116 0012 5367     		str	r3, [r2, #116]	@ _2, MEM[(struct VOR_SYSCONFIG_Type *)1073741824B].TIM_CLK_ENABLE
+ 117              	@ .\src\reb_timer.c:38: 	VOR_Disable_Irq(VOR_IRQ_TIM, 0); 
+  36:.\src/reb_timer.c **** 	
+  37:.\src/reb_timer.c **** 	/* Disable IRQ for TIM0 module */ 
+  38:.\src/reb_timer.c **** 	VOR_Disable_Irq(VOR_IRQ_TIM, 0); 
+ 118              		.loc 1 38 0
+ 119 0014 2100     		movs	r1, r4	@, tmp119
+ 120              	@ .\src\reb_timer.c:35: 	VOR_TIM->BANK[0].CTRL = 0x0; 
+  35:.\src/reb_timer.c **** 	
+ 121              		.loc 1 35 0
+ 122 0016 2C60     		str	r4, [r5]	@ tmp119, MEM[(struct VOR_TIM_PERIPHERAL_BANK_Type *)1073872896B].BANK[0].CTRL
+ 123              	@ .\src\reb_timer.c:38: 	VOR_Disable_Irq(VOR_IRQ_TIM, 0); 
+ 124              		.loc 1 38 0
+ 125 0018 0220     		movs	r0, #2	@,
+ 126              	.LVL1:
+ 127 001a FFF7FEFF 		bl	VOR_Disable_Irq	@
+ 128              	.LVL2:
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 4
+
+
+ 129              	@ .\src\reb_timer.c:45: 	VOR_TIM->BANK[0].CTRL  = TIM0_CTRL_ENABLE_Msk | TIM0_CTRL_IRQ_ENB_Msk;
+  39:.\src/reb_timer.c **** 
+  40:.\src/reb_timer.c ****   /* Initialize TIM w/ specified period */ 	
+  41:.\src/reb_timer.c **** //  CEM  	VOR_TIM->BANK[0].RST_VALUE = time_msec*(SystemCoreClock/1000);
+  42:.\src/reb_timer.c **** 	VOR_TIM->BANK[0].RST_VALUE = time_msec*(50000);
+  43:.\src/reb_timer.c **** 		
+  44:.\src/reb_timer.c **** 	/* Enable TIM and interrupt */ 
+  45:.\src/reb_timer.c **** 	VOR_TIM->BANK[0].CTRL  = TIM0_CTRL_ENABLE_Msk | TIM0_CTRL_IRQ_ENB_Msk;
+ 130              		.loc 1 45 0
+ 131 001e 1123     		movs	r3, #17	@ tmp123,
+ 132              	@ .\src\reb_timer.c:42: 	VOR_TIM->BANK[0].RST_VALUE = time_msec*(50000);
+  42:.\src/reb_timer.c **** 		
+ 133              		.loc 1 42 0
+ 134 0020 0548     		ldr	r0, .L2+4	@ tmp120,
+ 135              	@ .\src\reb_timer.c:48: 	VOR_Enable_Irq(VOR_IRQ_TIM, 0);
+  46:.\src/reb_timer.c **** 	
+  47:.\src/reb_timer.c **** 	/* Enable IRQ for TIM0 module */ 
+  48:.\src/reb_timer.c **** 	VOR_Enable_Irq(VOR_IRQ_TIM, 0);
+ 136              		.loc 1 48 0
+ 137 0022 2100     		movs	r1, r4	@, tmp119
+ 138              	@ .\src\reb_timer.c:42: 	VOR_TIM->BANK[0].RST_VALUE = time_msec*(50000);
+  42:.\src/reb_timer.c **** 		
+ 139              		.loc 1 42 0
+ 140 0024 7043     		muls	r0, r6	@ _3, time_msec
+ 141 0026 6860     		str	r0, [r5, #4]	@ _3, MEM[(struct VOR_TIM_PERIPHERAL_BANK_Type *)1073872896B].BANK[0].RST_VALUE
+ 142              	@ .\src\reb_timer.c:45: 	VOR_TIM->BANK[0].CTRL  = TIM0_CTRL_ENABLE_Msk | TIM0_CTRL_IRQ_ENB_Msk;
+  45:.\src/reb_timer.c **** 	
+ 143              		.loc 1 45 0
+ 144 0028 2B60     		str	r3, [r5]	@ tmp123, MEM[(struct VOR_TIM_PERIPHERAL_BANK_Type *)1073872896B].BANK[0].CTRL
+ 145              	@ .\src\reb_timer.c:48: 	VOR_Enable_Irq(VOR_IRQ_TIM, 0);
+ 146              		.loc 1 48 0
+ 147 002a 0220     		movs	r0, #2	@,
+ 148 002c FFF7FEFF 		bl	VOR_Enable_Irq	@
+ 149              	.LVL3:
+ 150              	@ .\src\reb_timer.c:51: }
+  49:.\src/reb_timer.c **** 		
+  50:.\src/reb_timer.c **** 	return ret_code;
+  51:.\src/reb_timer.c **** }
+ 151              		.loc 1 51 0
+ 152              		@ sp needed	@
+ 153 0030 2000     		movs	r0, r4	@, tmp119
+ 154              	.LVL4:
+ 155 0032 70BD     		pop	{r4, r5, r6, pc}
+ 156              	.L3:
+ 157              		.align	2
+ 158              	.L2:
+ 159 0034 00000240 		.word	1073872896
+ 160 0038 50C30000 		.word	50000
+ 161              		.cfi_endproc
+ 162              	.LFE34:
+ 163              		.size	VOR_TIM0_MSecInitialize, .-VOR_TIM0_MSecInitialize
+ 164              		.align	1
+ 165              		.global	VOR_TIM1_SecInitialize
+ 166              		.syntax unified
+ 167              		.code	16
+ 168              		.thumb_func
+ 169              		.fpu softvfp
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 5
+
+
+ 170              		.type	VOR_TIM1_SecInitialize, %function
+ 171              	VOR_TIM1_SecInitialize:
+ 172              	.LFB35:
+  52:.\src/reb_timer.c **** 
+  53:.\src/reb_timer.c **** int32_t VOR_TIM1_SecInitialize(uint32_t time_sec) {
+ 173              		.loc 1 53 0
+ 174              		.cfi_startproc
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 177              	.LVL5:
+ 178              	@ .\src\reb_timer.c:55: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x2;  
+  54:.\src/reb_timer.c **** 	int32_t ret_code = 0;
+  55:.\src/reb_timer.c **** 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x2;  
+ 179              		.loc 1 55 0
+ 180 003c 8022     		movs	r2, #128	@ tmp114,
+ 181              	@ .\src\reb_timer.c:53: int32_t VOR_TIM1_SecInitialize(uint32_t time_sec) {
+  53:.\src/reb_timer.c **** 	int32_t ret_code = 0;
+ 182              		.loc 1 53 0
+ 183 003e F8B5     		push	{r3, r4, r5, r6, r7, lr}	@
+ 184              	.LCFI1:
+ 185              		.cfi_def_cfa_offset 24
+ 186              		.cfi_offset 3, -24
+ 187              		.cfi_offset 4, -20
+ 188              		.cfi_offset 5, -16
+ 189              		.cfi_offset 6, -12
+ 190              		.cfi_offset 7, -8
+ 191              		.cfi_offset 14, -4
+ 192              	@ .\src\reb_timer.c:55: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x2;  
+ 193              		.loc 1 55 0
+ 194 0040 0224     		movs	r4, #2	@ tmp115,
+ 195              	@ .\src\reb_timer.c:56: 	VOR_TIM->BANK[1].CTRL = 0x0;
+  56:.\src/reb_timer.c **** 	VOR_TIM->BANK[1].CTRL = 0x0;
+ 196              		.loc 1 56 0
+ 197 0042 8027     		movs	r7, #128	@ tmp118,
+ 198 0044 0026     		movs	r6, #0	@ tmp119,
+ 199              	@ .\src\reb_timer.c:55: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x2;  
+  55:.\src/reb_timer.c **** 	VOR_TIM->BANK[1].CTRL = 0x0;
+ 200              		.loc 1 55 0
+ 201 0046 D205     		lsls	r2, r2, #23	@ tmp114, tmp114,
+ 202 0048 536F     		ldr	r3, [r2, #116]	@ _1, MEM[(struct VOR_SYSCONFIG_Type *)1073741824B].TIM_CLK_ENABLE
+ 203              	@ .\src\reb_timer.c:56: 	VOR_TIM->BANK[1].CTRL = 0x0;
+ 204              		.loc 1 56 0
+ 205 004a 0A4D     		ldr	r5, .L5	@ tmp117,
+ 206              	@ .\src\reb_timer.c:55: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x2;  
+  55:.\src/reb_timer.c **** 	VOR_TIM->BANK[1].CTRL = 0x0;
+ 207              		.loc 1 55 0
+ 208 004c 2343     		orrs	r3, r4	@ _2, tmp115
+ 209              	@ .\src\reb_timer.c:56: 	VOR_TIM->BANK[1].CTRL = 0x0;
+ 210              		.loc 1 56 0
+ 211 004e 7F01     		lsls	r7, r7, #5	@ tmp118, tmp118,
+ 212              	@ .\src\reb_timer.c:55: 	VOR_SYSCONFIG->TIM_CLK_ENABLE |= 0x2;  
+  55:.\src/reb_timer.c **** 	VOR_TIM->BANK[1].CTRL = 0x0;
+ 213              		.loc 1 55 0
+ 214 0050 5367     		str	r3, [r2, #116]	@ _2, MEM[(struct VOR_SYSCONFIG_Type *)1073741824B].TIM_CLK_ENABLE
+ 215              	@ .\src\reb_timer.c:59: 	VOR_Disable_Irq(VOR_IRQ_TIM, 1); 
+  57:.\src/reb_timer.c **** 
+  58:.\src/reb_timer.c **** 	/* Enable IRQ for TIM1 module */ 
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 6
+
+
+  59:.\src/reb_timer.c **** 	VOR_Disable_Irq(VOR_IRQ_TIM, 1); 
+ 216              		.loc 1 59 0
+ 217 0052 0121     		movs	r1, #1	@,
+ 218              	@ .\src\reb_timer.c:56: 	VOR_TIM->BANK[1].CTRL = 0x0;
+  56:.\src/reb_timer.c **** 
+ 219              		.loc 1 56 0
+ 220 0054 EE51     		str	r6, [r5, r7]	@ tmp119, MEM[(struct VOR_TIM_PERIPHERAL_BANK_Type *)1073872896B].BANK[1].CTRL
+ 221              	@ .\src\reb_timer.c:59: 	VOR_Disable_Irq(VOR_IRQ_TIM, 1); 
+ 222              		.loc 1 59 0
+ 223 0056 2000     		movs	r0, r4	@, tmp115
+ 224              	.LVL6:
+ 225 0058 FFF7FEFF 		bl	VOR_Disable_Irq	@
+ 226              	.LVL7:
+ 227              	@ .\src\reb_timer.c:63: 	VOR_TIM->BANK[1].RST_VALUE = 50000000;
+  60:.\src/reb_timer.c **** 
+  61:.\src/reb_timer.c ****   /* Initialize TIM w/ specified period */ 	
+  62:.\src/reb_timer.c **** // CEM  	VOR_TIM->BANK[1].RST_VALUE = time_sec*SystemCoreClock;
+  63:.\src/reb_timer.c **** 	VOR_TIM->BANK[1].RST_VALUE = 50000000;
+ 228              		.loc 1 63 0
+ 229 005c 064A     		ldr	r2, .L5+4	@ tmp122,
+ 230 005e 074B     		ldr	r3, .L5+8	@ tmp121,
+ 231              	@ .\src\reb_timer.c:68: 	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+  64:.\src/reb_timer.c **** 	/* Enable TIM and interrupt */ 
+  65:.\src/reb_timer.c **** 	VOR_TIM->BANK[1].CTRL  = TIM1_CTRL_ENABLE_Msk | TIM1_CTRL_IRQ_ENB_Msk;
+  66:.\src/reb_timer.c **** 	
+  67:.\src/reb_timer.c **** 	/* Enable IRQ for TIM1 module */ 
+  68:.\src/reb_timer.c **** 	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+ 232              		.loc 1 68 0
+ 233 0060 0121     		movs	r1, #1	@,
+ 234              	@ .\src\reb_timer.c:63: 	VOR_TIM->BANK[1].RST_VALUE = 50000000;
+  63:.\src/reb_timer.c **** 	/* Enable TIM and interrupt */ 
+ 235              		.loc 1 63 0
+ 236 0062 EA50     		str	r2, [r5, r3]	@ tmp122, MEM[(struct VOR_TIM_PERIPHERAL_BANK_Type *)1073872896B].BANK[1].RST_VAL
+ 237              	@ .\src\reb_timer.c:65: 	VOR_TIM->BANK[1].CTRL  = TIM1_CTRL_ENABLE_Msk | TIM1_CTRL_IRQ_ENB_Msk;
+  65:.\src/reb_timer.c **** 	
+ 238              		.loc 1 65 0
+ 239 0064 1123     		movs	r3, #17	@ tmp125,
+ 240              	@ .\src\reb_timer.c:68: 	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+ 241              		.loc 1 68 0
+ 242 0066 2000     		movs	r0, r4	@, tmp115
+ 243              	@ .\src\reb_timer.c:65: 	VOR_TIM->BANK[1].CTRL  = TIM1_CTRL_ENABLE_Msk | TIM1_CTRL_IRQ_ENB_Msk;
+  65:.\src/reb_timer.c **** 	
+ 244              		.loc 1 65 0
+ 245 0068 EB51     		str	r3, [r5, r7]	@ tmp125, MEM[(struct VOR_TIM_PERIPHERAL_BANK_Type *)1073872896B].BANK[1].CTRL
+ 246              	@ .\src\reb_timer.c:68: 	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+ 247              		.loc 1 68 0
+ 248 006a FFF7FEFF 		bl	VOR_Enable_Irq	@
+ 249              	.LVL8:
+ 250              	@ .\src\reb_timer.c:71: }
+  69:.\src/reb_timer.c **** 		
+  70:.\src/reb_timer.c **** 	return ret_code;
+  71:.\src/reb_timer.c **** }
+ 251              		.loc 1 71 0
+ 252              		@ sp needed	@
+ 253 006e 3000     		movs	r0, r6	@, tmp119
+ 254 0070 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 255              	.L6:
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 7
+
+
+ 256 0072 C046     		.align	2
+ 257              	.L5:
+ 258 0074 00000240 		.word	1073872896
+ 259 0078 80F0FA02 		.word	50000000
+ 260 007c 04100000 		.word	4100
+ 261              		.cfi_endproc
+ 262              	.LFE35:
+ 263              		.size	VOR_TIM1_SecInitialize, .-VOR_TIM1_SecInitialize
+ 264              		.align	1
+ 265              		.global	OC0_IRQHandler
+ 266              		.syntax unified
+ 267              		.code	16
+ 268              		.thumb_func
+ 269              		.fpu softvfp
+ 270              		.type	OC0_IRQHandler, %function
+ 271              	OC0_IRQHandler:
+ 272              	.LFB36:
+  72:.\src/reb_timer.c **** 
+  73:.\src/reb_timer.c **** void OC0_IRQHandler(void) {
+ 273              		.loc 1 73 0
+ 274              		.cfi_startproc
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277 0080 10B5     		push	{r4, lr}	@
+ 278              	.LCFI2:
+ 279              		.cfi_def_cfa_offset 8
+ 280              		.cfi_offset 4, -8
+ 281              		.cfi_offset 14, -4
+ 282              	@ .\src\reb_timer.c:75:   VOR_Disable_Irq(VOR_IRQ_TIM, 0); 
+  74:.\src/reb_timer.c **** 	/* Disable IRQ for TIM0 module */ 
+  75:.\src/reb_timer.c ****   VOR_Disable_Irq(VOR_IRQ_TIM, 0); 
+ 283              		.loc 1 75 0
+ 284 0082 0021     		movs	r1, #0	@,
+ 285 0084 0220     		movs	r0, #2	@,
+ 286 0086 FFF7FEFF 		bl	VOR_Disable_Irq	@
+ 287              	.LVL9:
+ 288              	@ .\src\reb_timer.c:77: 	msec_tim_timeout = 1  ;  /*  CEM  true;    */
+  76:.\src/reb_timer.c **** 	
+  77:.\src/reb_timer.c **** 	msec_tim_timeout = 1  ;  /*  CEM  true;    */
+ 289              		.loc 1 77 0
+ 290 008a 0122     		movs	r2, #1	@ tmp111,
+ 291 008c 034B     		ldr	r3, .L8	@ tmp110,
+ 292              	@ .\src\reb_timer.c:81: 	VOR_Enable_Irq(VOR_IRQ_TIM, 0); 
+  78:.\src/reb_timer.c **** 
+  79:.\src/reb_timer.c **** 
+  80:.\src/reb_timer.c **** 	/* Enable IRQ for TIM0 module */ 
+  81:.\src/reb_timer.c **** 	VOR_Enable_Irq(VOR_IRQ_TIM, 0); 
+ 293              		.loc 1 81 0
+ 294 008e 0021     		movs	r1, #0	@,
+ 295 0090 0220     		movs	r0, #2	@,
+ 296              	@ .\src\reb_timer.c:77: 	msec_tim_timeout = 1  ;  /*  CEM  true;    */
+  77:.\src/reb_timer.c **** 
+ 297              		.loc 1 77 0
+ 298 0092 1A70     		strb	r2, [r3]	@ tmp111, msec_tim_timeout
+ 299              	@ .\src\reb_timer.c:82: }
+  82:.\src/reb_timer.c **** }
+ 300              		.loc 1 82 0
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 8
+
+
+ 301              		@ sp needed	@
+ 302              	@ .\src\reb_timer.c:81: 	VOR_Enable_Irq(VOR_IRQ_TIM, 0); 
+  81:.\src/reb_timer.c **** }
+ 303              		.loc 1 81 0
+ 304 0094 FFF7FEFF 		bl	VOR_Enable_Irq	@
+ 305              	.LVL10:
+ 306              	@ .\src\reb_timer.c:82: }
+ 307              		.loc 1 82 0
+ 308 0098 10BD     		pop	{r4, pc}
+ 309              	.L9:
+ 310 009a C046     		.align	2
+ 311              	.L8:
+ 312 009c 00000000 		.word	.LANCHOR0
+ 313              		.cfi_endproc
+ 314              	.LFE36:
+ 315              		.size	OC0_IRQHandler, .-OC0_IRQHandler
+ 316              		.align	1
+ 317              		.global	VOR_GPIO_IRQHandler
+ 318              		.syntax unified
+ 319              		.code	16
+ 320              		.thumb_func
+ 321              		.fpu softvfp
+ 322              		.type	VOR_GPIO_IRQHandler, %function
+ 323              	VOR_GPIO_IRQHandler:
+ 324              	.LFB37:
+  83:.\src/reb_timer.c **** 
+  84:.\src/reb_timer.c **** void VOR_GPIO_IRQHandler(void) {
+ 325              		.loc 1 84 0
+ 326              		.cfi_startproc
+ 327              		@ args = 0, pretend = 0, frame = 0
+ 328              		@ frame_needed = 0, uses_anonymous_args = 0
+ 329              		@ link register save eliminated.
+ 330              	@ .\src\reb_timer.c:86: 	sec_tim_timeout = 1  ;    /*   added as debug help.  Delete this later  */
+  85:.\src/reb_timer.c **** 
+  86:.\src/reb_timer.c **** 	sec_tim_timeout = 1  ;    /*   added as debug help.  Delete this later  */
+ 331              		.loc 1 86 0
+ 332 00a0 0122     		movs	r2, #1	@ tmp111,
+ 333 00a2 014B     		ldr	r3, .L11	@ tmp110,
+ 334              	@ .\src\reb_timer.c:88: }
+  87:.\src/reb_timer.c **** 
+  88:.\src/reb_timer.c **** }
+ 335              		.loc 1 88 0
+ 336              		@ sp needed	@
+ 337              	@ .\src\reb_timer.c:86: 	sec_tim_timeout = 1  ;    /*   added as debug help.  Delete this later  */
+  86:.\src/reb_timer.c **** 
+ 338              		.loc 1 86 0
+ 339 00a4 5A70     		strb	r2, [r3, #1]	@ tmp111, sec_tim_timeout
+ 340              	@ .\src\reb_timer.c:88: }
+ 341              		.loc 1 88 0
+ 342 00a6 7047     		bx	lr
+ 343              	.L12:
+ 344              		.align	2
+ 345              	.L11:
+ 346 00a8 00000000 		.word	.LANCHOR0
+ 347              		.cfi_endproc
+ 348              	.LFE37:
+ 349              		.size	VOR_GPIO_IRQHandler, .-VOR_GPIO_IRQHandler
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 9
+
+
+ 350              		.align	1
+ 351              		.global	VOR_TIM1_IRQHandler
+ 352              		.syntax unified
+ 353              		.code	16
+ 354              		.thumb_func
+ 355              		.fpu softvfp
+ 356              		.type	VOR_TIM1_IRQHandler, %function
+ 357              	VOR_TIM1_IRQHandler:
+ 358              	.LFB38:
+  89:.\src/reb_timer.c **** 
+  90:.\src/reb_timer.c **** void VOR_TIM1_IRQHandler(void) {
+ 359              		.loc 1 90 0
+ 360              		.cfi_startproc
+ 361              		@ args = 0, pretend = 0, frame = 0
+ 362              		@ frame_needed = 0, uses_anonymous_args = 0
+ 363 00ac 10B5     		push	{r4, lr}	@
+ 364              	.LCFI3:
+ 365              		.cfi_def_cfa_offset 8
+ 366              		.cfi_offset 4, -8
+ 367              		.cfi_offset 14, -4
+ 368              	@ .\src\reb_timer.c:92:    VOR_Disable_Irq(VOR_IRQ_TIM, 1);
+  91:.\src/reb_timer.c **** 	/* Disable IRQ for TIM1 module */ 
+  92:.\src/reb_timer.c ****    VOR_Disable_Irq(VOR_IRQ_TIM, 1);
+ 369              		.loc 1 92 0
+ 370 00ae 0121     		movs	r1, #1	@,
+ 371 00b0 0220     		movs	r0, #2	@,
+ 372 00b2 FFF7FEFF 		bl	VOR_Disable_Irq	@
+ 373              	.LVL11:
+ 374              	@ .\src\reb_timer.c:94: 	sec_tim_timeout = 1  ;  /*  CEM  true;    */
+  93:.\src/reb_timer.c **** 	
+  94:.\src/reb_timer.c **** 	sec_tim_timeout = 1  ;  /*  CEM  true;    */
+ 375              		.loc 1 94 0
+ 376 00b6 0121     		movs	r1, #1	@ tmp111,
+ 377 00b8 024B     		ldr	r3, .L14	@ tmp110,
+ 378              	@ .\src\reb_timer.c:97:  	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+  95:.\src/reb_timer.c **** 	
+  96:.\src/reb_timer.c **** 	/* Enable IRQ for TIM1 module */ 
+  97:.\src/reb_timer.c ****  	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+ 379              		.loc 1 97 0
+ 380 00ba 0220     		movs	r0, #2	@,
+ 381              	@ .\src\reb_timer.c:94: 	sec_tim_timeout = 1  ;  /*  CEM  true;    */
+  94:.\src/reb_timer.c **** 	
+ 382              		.loc 1 94 0
+ 383 00bc 5970     		strb	r1, [r3, #1]	@ tmp111, sec_tim_timeout
+ 384              	@ .\src\reb_timer.c:98: }
+  98:.\src/reb_timer.c **** }
+ 385              		.loc 1 98 0
+ 386              		@ sp needed	@
+ 387              	@ .\src\reb_timer.c:97:  	VOR_Enable_Irq(VOR_IRQ_TIM, 1);
+  97:.\src/reb_timer.c **** }
+ 388              		.loc 1 97 0
+ 389 00be FFF7FEFF 		bl	VOR_Enable_Irq	@
+ 390              	.LVL12:
+ 391              	@ .\src\reb_timer.c:98: }
+ 392              		.loc 1 98 0
+ 393 00c2 10BD     		pop	{r4, pc}
+ 394              	.L15:
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 10
+
+
+ 395              		.align	2
+ 396              	.L14:
+ 397 00c4 00000000 		.word	.LANCHOR0
+ 398              		.cfi_endproc
+ 399              	.LFE38:
+ 400              		.size	VOR_TIM1_IRQHandler, .-VOR_TIM1_IRQHandler
+ 401              		.align	1
+ 402              		.global	SysTick_Handler
+ 403              		.syntax unified
+ 404              		.code	16
+ 405              		.thumb_func
+ 406              		.fpu softvfp
+ 407              		.type	SysTick_Handler, %function
+ 408              	SysTick_Handler:
+ 409              	.LFB45:
+ 410              		.cfi_startproc
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 0, uses_anonymous_args = 0
+ 413              		@ link register save eliminated.
+ 414 00c8 0122     		movs	r2, #1	@ tmp111,
+ 415 00ca 014B     		ldr	r3, .L17	@ tmp110,
+ 416              		@ sp needed	@
+ 417 00cc 5A70     		strb	r2, [r3, #1]	@ tmp111, sec_tim_timeout
+ 418 00ce 7047     		bx	lr
+ 419              	.L18:
+ 420              		.align	2
+ 421              	.L17:
+ 422 00d0 00000000 		.word	.LANCHOR0
+ 423              		.cfi_endproc
+ 424              	.LFE45:
+ 425              		.size	SysTick_Handler, .-SysTick_Handler
+ 426              		.align	1
+ 427              		.global	VOR_TIM0_MSecExpired
+ 428              		.syntax unified
+ 429              		.code	16
+ 430              		.thumb_func
+ 431              		.fpu softvfp
+ 432              		.type	VOR_TIM0_MSecExpired, %function
+ 433              	VOR_TIM0_MSecExpired:
+ 434              	.LFB40:
+  99:.\src/reb_timer.c **** 
+ 100:.\src/reb_timer.c **** /*   added to show SysTick Exception firing     */
+ 101:.\src/reb_timer.c **** void SysTick_Handler(void)
+ 102:.\src/reb_timer.c **** {
+ 103:.\src/reb_timer.c **** 	sec_tim_timeout = 1  ;
+ 104:.\src/reb_timer.c **** 	//  ticker ++  ;
+ 105:.\src/reb_timer.c **** }
+ 106:.\src/reb_timer.c **** 
+ 107:.\src/reb_timer.c **** bool VOR_TIM0_MSecExpired(void) {
+ 435              		.loc 1 107 0
+ 436              		.cfi_startproc
+ 437              		@ args = 0, pretend = 0, frame = 0
+ 438              		@ frame_needed = 0, uses_anonymous_args = 0
+ 439              		@ link register save eliminated.
+ 440              	@ .\src\reb_timer.c:108: 	return msec_tim_timeout ? 1: 0;   /*  CEM   true: false   */
+ 108:.\src/reb_timer.c **** 	return msec_tim_timeout ? 1: 0;   /*  CEM   true: false   */
+ 441              		.loc 1 108 0
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 11
+
+
+ 442 00d4 014B     		ldr	r3, .L20	@ tmp111,
+ 443              	@ .\src\reb_timer.c:109: }
+ 109:.\src/reb_timer.c **** }
+ 444              		.loc 1 109 0
+ 445              		@ sp needed	@
+ 446              	@ .\src\reb_timer.c:108: 	return msec_tim_timeout ? 1: 0;   /*  CEM   true: false   */
+ 108:.\src/reb_timer.c **** 	return msec_tim_timeout ? 1: 0;   /*  CEM   true: false   */
+ 447              		.loc 1 108 0
+ 448 00d6 1878     		ldrb	r0, [r3]	@ msec_tim_timeout, msec_tim_timeout
+ 449 00d8 C0B2     		uxtb	r0, r0	@ <retval>, msec_tim_timeout
+ 450              	@ .\src\reb_timer.c:109: }
+ 451              		.loc 1 109 0
+ 452 00da 7047     		bx	lr
+ 453              	.L21:
+ 454              		.align	2
+ 455              	.L20:
+ 456 00dc 00000000 		.word	.LANCHOR0
+ 457              		.cfi_endproc
+ 458              	.LFE40:
+ 459              		.size	VOR_TIM0_MSecExpired, .-VOR_TIM0_MSecExpired
+ 460              		.align	1
+ 461              		.global	VOR_TIM0_MSecClear
+ 462              		.syntax unified
+ 463              		.code	16
+ 464              		.thumb_func
+ 465              		.fpu softvfp
+ 466              		.type	VOR_TIM0_MSecClear, %function
+ 467              	VOR_TIM0_MSecClear:
+ 468              	.LFB41:
+ 110:.\src/reb_timer.c **** 
+ 111:.\src/reb_timer.c **** void VOR_TIM0_MSecClear(void) {
+ 469              		.loc 1 111 0
+ 470              		.cfi_startproc
+ 471              		@ args = 0, pretend = 0, frame = 0
+ 472              		@ frame_needed = 0, uses_anonymous_args = 0
+ 473              		@ link register save eliminated.
+ 474              	@ .\src\reb_timer.c:112: 	msec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 112:.\src/reb_timer.c **** 	msec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 475              		.loc 1 112 0
+ 476 00e0 0022     		movs	r2, #0	@ tmp111,
+ 477 00e2 014B     		ldr	r3, .L23	@ tmp110,
+ 478              	@ .\src\reb_timer.c:113: }
+ 113:.\src/reb_timer.c **** }
+ 479              		.loc 1 113 0
+ 480              		@ sp needed	@
+ 481              	@ .\src\reb_timer.c:112: 	msec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 112:.\src/reb_timer.c **** 	msec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 482              		.loc 1 112 0
+ 483 00e4 1A70     		strb	r2, [r3]	@ tmp111, msec_tim_timeout
+ 484              	@ .\src\reb_timer.c:113: }
+ 485              		.loc 1 113 0
+ 486 00e6 7047     		bx	lr
+ 487              	.L24:
+ 488              		.align	2
+ 489              	.L23:
+ 490 00e8 00000000 		.word	.LANCHOR0
+ 491              		.cfi_endproc
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 12
+
+
+ 492              	.LFE41:
+ 493              		.size	VOR_TIM0_MSecClear, .-VOR_TIM0_MSecClear
+ 494              		.align	1
+ 495              		.global	VOR_TIM1_SecExpired
+ 496              		.syntax unified
+ 497              		.code	16
+ 498              		.thumb_func
+ 499              		.fpu softvfp
+ 500              		.type	VOR_TIM1_SecExpired, %function
+ 501              	VOR_TIM1_SecExpired:
+ 502              	.LFB42:
+ 114:.\src/reb_timer.c **** 
+ 115:.\src/reb_timer.c **** bool VOR_TIM1_SecExpired(void) {
+ 503              		.loc 1 115 0
+ 504              		.cfi_startproc
+ 505              		@ args = 0, pretend = 0, frame = 0
+ 506              		@ frame_needed = 0, uses_anonymous_args = 0
+ 507              		@ link register save eliminated.
+ 508              	@ .\src\reb_timer.c:116: 	return sec_tim_timeout ? 1: 0; /*  CEM   true: false   */
+ 116:.\src/reb_timer.c **** 	return sec_tim_timeout ? 1: 0; /*  CEM   true: false   */
+ 509              		.loc 1 116 0
+ 510 00ec 014B     		ldr	r3, .L26	@ tmp111,
+ 511              	@ .\src\reb_timer.c:117: }
+ 117:.\src/reb_timer.c **** }
+ 512              		.loc 1 117 0
+ 513              		@ sp needed	@
+ 514              	@ .\src\reb_timer.c:116: 	return sec_tim_timeout ? 1: 0; /*  CEM   true: false   */
+ 116:.\src/reb_timer.c **** 	return sec_tim_timeout ? 1: 0; /*  CEM   true: false   */
+ 515              		.loc 1 116 0
+ 516 00ee 5878     		ldrb	r0, [r3, #1]	@ sec_tim_timeout, sec_tim_timeout
+ 517 00f0 C0B2     		uxtb	r0, r0	@ <retval>, sec_tim_timeout
+ 518              	@ .\src\reb_timer.c:117: }
+ 519              		.loc 1 117 0
+ 520 00f2 7047     		bx	lr
+ 521              	.L27:
+ 522              		.align	2
+ 523              	.L26:
+ 524 00f4 00000000 		.word	.LANCHOR0
+ 525              		.cfi_endproc
+ 526              	.LFE42:
+ 527              		.size	VOR_TIM1_SecExpired, .-VOR_TIM1_SecExpired
+ 528              		.align	1
+ 529              		.global	VOR_TIM1_SecClear
+ 530              		.syntax unified
+ 531              		.code	16
+ 532              		.thumb_func
+ 533              		.fpu softvfp
+ 534              		.type	VOR_TIM1_SecClear, %function
+ 535              	VOR_TIM1_SecClear:
+ 536              	.LFB43:
+ 118:.\src/reb_timer.c **** 
+ 119:.\src/reb_timer.c **** void VOR_TIM1_SecClear(void) {
+ 537              		.loc 1 119 0
+ 538              		.cfi_startproc
+ 539              		@ args = 0, pretend = 0, frame = 0
+ 540              		@ frame_needed = 0, uses_anonymous_args = 0
+ 541              		@ link register save eliminated.
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 13
+
+
+ 542              	@ .\src\reb_timer.c:120: 	sec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 120:.\src/reb_timer.c **** 	sec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 543              		.loc 1 120 0
+ 544 00f8 0022     		movs	r2, #0	@ tmp111,
+ 545 00fa 014B     		ldr	r3, .L29	@ tmp110,
+ 546              	@ .\src\reb_timer.c:121: }
+ 121:.\src/reb_timer.c **** }
+ 547              		.loc 1 121 0
+ 548              		@ sp needed	@
+ 549              	@ .\src\reb_timer.c:120: 	sec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 120:.\src/reb_timer.c **** 	sec_tim_timeout = 0  ;  /*  CEM  false;    */
+ 550              		.loc 1 120 0
+ 551 00fc 5A70     		strb	r2, [r3, #1]	@ tmp111, sec_tim_timeout
+ 552              	@ .\src\reb_timer.c:121: }
+ 553              		.loc 1 121 0
+ 554 00fe 7047     		bx	lr
+ 555              	.L30:
+ 556              		.align	2
+ 557              	.L29:
+ 558 0100 00000000 		.word	.LANCHOR0
+ 559              		.cfi_endproc
+ 560              	.LFE43:
+ 561              		.size	VOR_TIM1_SecClear, .-VOR_TIM1_SecClear
+ 562              		.bss
+ 563              		.set	.LANCHOR0,. + 0
+ 564              		.type	msec_tim_timeout, %object
+ 565              		.size	msec_tim_timeout, 1
+ 566              	msec_tim_timeout:
+ 567 0000 00       		.space	1
+ 568              		.type	sec_tim_timeout, %object
+ 569              		.size	sec_tim_timeout, 1
+ 570              	sec_tim_timeout:
+ 571 0001 00       		.space	1
+ 572              		.text
+ 573              	.Letext0:
+ 574              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 575              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 576              		.file 4 ".\\common\\hdr/va108xx.h"
+ 577              		.file 5 ".\\common\\hdr/irq_va108xx.h"
+ 578              		.file 6 ".\\common\\hdr/system_va108xx.h"
+ 579              		.section	.debug_info,"",%progbits
+ 580              	.Ldebug_info0:
+ 581 0000 8D060000 		.4byte	0x68d
+ 582 0004 0200     		.2byte	0x2
+ 583 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 584 000a 04       		.byte	0x4
+ 585 000b 01       		.uleb128 0x1
+ 586 000c E2000000 		.4byte	.LASF89
+ 587 0010 0C       		.byte	0xc
+ 588 0011 46020000 		.4byte	.LASF90
+ 589 0015 8A000000 		.4byte	.LASF91
+ 590 0019 00000000 		.4byte	.Ltext0
+ 591 001d 04010000 		.4byte	.Letext0
+ 592 0021 00000000 		.4byte	.Ldebug_line0
+ 593 0025 02       		.uleb128 0x2
+ 594 0026 01       		.byte	0x1
+ 595 0027 06       		.byte	0x6
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 14
+
+
+ 596 0028 D6000000 		.4byte	.LASF0
+ 597 002c 02       		.uleb128 0x2
+ 598 002d 01       		.byte	0x1
+ 599 002e 08       		.byte	0x8
+ 600 002f FE030000 		.4byte	.LASF1
+ 601 0033 02       		.uleb128 0x2
+ 602 0034 02       		.byte	0x2
+ 603 0035 05       		.byte	0x5
+ 604 0036 0C040000 		.4byte	.LASF2
+ 605 003a 02       		.uleb128 0x2
+ 606 003b 02       		.byte	0x2
+ 607 003c 07       		.byte	0x7
+ 608 003d 73020000 		.4byte	.LASF3
+ 609 0041 03       		.uleb128 0x3
+ 610 0042 B5040000 		.4byte	.LASF5
+ 611 0046 02       		.byte	0x2
+ 612 0047 4D       		.byte	0x4d
+ 613 0048 4C000000 		.4byte	0x4c
+ 614 004c 02       		.uleb128 0x2
+ 615 004d 04       		.byte	0x4
+ 616 004e 05       		.byte	0x5
+ 617 004f 79010000 		.4byte	.LASF4
+ 618 0053 03       		.uleb128 0x3
+ 619 0054 D2010000 		.4byte	.LASF6
+ 620 0058 02       		.byte	0x2
+ 621 0059 4F       		.byte	0x4f
+ 622 005a 5E000000 		.4byte	0x5e
+ 623 005e 02       		.uleb128 0x2
+ 624 005f 04       		.byte	0x4
+ 625 0060 07       		.byte	0x7
+ 626 0061 34020000 		.4byte	.LASF7
+ 627 0065 02       		.uleb128 0x2
+ 628 0066 08       		.byte	0x8
+ 629 0067 05       		.byte	0x5
+ 630 0068 C8000000 		.4byte	.LASF8
+ 631 006c 02       		.uleb128 0x2
+ 632 006d 08       		.byte	0x8
+ 633 006e 07       		.byte	0x7
+ 634 006f 49000000 		.4byte	.LASF9
+ 635 0073 04       		.uleb128 0x4
+ 636 0074 04       		.byte	0x4
+ 637 0075 05       		.byte	0x5
+ 638 0076 696E7400 		.ascii	"int\000"
+ 639 007a 02       		.uleb128 0x2
+ 640 007b 04       		.byte	0x4
+ 641 007c 07       		.byte	0x7
+ 642 007d F7010000 		.4byte	.LASF10
+ 643 0081 03       		.uleb128 0x3
+ 644 0082 F6030000 		.4byte	.LASF11
+ 645 0086 03       		.byte	0x3
+ 646 0087 2C       		.byte	0x2c
+ 647 0088 41000000 		.4byte	0x41
+ 648 008c 03       		.uleb128 0x3
+ 649 008d 85040000 		.4byte	.LASF12
+ 650 0091 03       		.byte	0x3
+ 651 0092 30       		.byte	0x30
+ 652 0093 53000000 		.4byte	0x53
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 15
+
+
+ 653 0097 05       		.uleb128 0x5
+ 654 0098 8C000000 		.4byte	0x8c
+ 655 009c 06       		.uleb128 0x6
+ 656 009d 97000000 		.4byte	0x97
+ 657 00a1 07       		.uleb128 0x7
+ 658 00a2 0C020000 		.4byte	.LASF92
+ 659 00a6 06       		.byte	0x6
+ 660 00a7 B2       		.byte	0xb2
+ 661 00a8 8C000000 		.4byte	0x8c
+ 662 00ac 01       		.byte	0x1
+ 663 00ad 01       		.byte	0x1
+ 664 00ae 08       		.uleb128 0x8
+ 665 00af 0010     		.2byte	0x1000
+ 666 00b1 04       		.byte	0x4
+ 667 00b2 9C       		.byte	0x9c
+ 668 00b3 D2020000 		.4byte	0x2d2
+ 669 00b7 09       		.uleb128 0x9
+ 670 00b8 70040000 		.4byte	.LASF13
+ 671 00bc 04       		.byte	0x4
+ 672 00bd 9D       		.byte	0x9d
+ 673 00be 97000000 		.4byte	0x97
+ 674 00c2 02       		.byte	0x2
+ 675 00c3 23       		.byte	0x23
+ 676 00c4 00       		.uleb128 0
+ 677 00c5 09       		.uleb128 0x9
+ 678 00c6 7D000000 		.4byte	.LASF14
+ 679 00ca 04       		.byte	0x4
+ 680 00cb 9E       		.byte	0x9e
+ 681 00cc 97000000 		.4byte	0x97
+ 682 00d0 02       		.byte	0x2
+ 683 00d1 23       		.byte	0x23
+ 684 00d2 04       		.uleb128 0x4
+ 685 00d3 09       		.uleb128 0x9
+ 686 00d4 EA010000 		.4byte	.LASF15
+ 687 00d8 04       		.byte	0x4
+ 688 00d9 9F       		.byte	0x9f
+ 689 00da 97000000 		.4byte	0x97
+ 690 00de 02       		.byte	0x2
+ 691 00df 23       		.byte	0x23
+ 692 00e0 08       		.uleb128 0x8
+ 693 00e1 09       		.uleb128 0x9
+ 694 00e2 DE020000 		.4byte	.LASF16
+ 695 00e6 04       		.byte	0x4
+ 696 00e7 A0       		.byte	0xa0
+ 697 00e8 97000000 		.4byte	0x97
+ 698 00ec 02       		.byte	0x2
+ 699 00ed 23       		.byte	0x23
+ 700 00ee 0C       		.uleb128 0xc
+ 701 00ef 09       		.uleb128 0x9
+ 702 00f0 15000000 		.4byte	.LASF17
+ 703 00f4 04       		.byte	0x4
+ 704 00f5 A1       		.byte	0xa1
+ 705 00f6 97000000 		.4byte	0x97
+ 706 00fa 02       		.byte	0x2
+ 707 00fb 23       		.byte	0x23
+ 708 00fc 10       		.uleb128 0x10
+ 709 00fd 09       		.uleb128 0x9
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 16
+
+
+ 710 00fe 89050000 		.4byte	.LASF18
+ 711 0102 04       		.byte	0x4
+ 712 0103 A2       		.byte	0xa2
+ 713 0104 97000000 		.4byte	0x97
+ 714 0108 02       		.byte	0x2
+ 715 0109 23       		.byte	0x23
+ 716 010a 14       		.uleb128 0x14
+ 717 010b 09       		.uleb128 0x9
+ 718 010c A7040000 		.4byte	.LASF19
+ 719 0110 04       		.byte	0x4
+ 720 0111 A3       		.byte	0xa3
+ 721 0112 97000000 		.4byte	0x97
+ 722 0116 02       		.byte	0x2
+ 723 0117 23       		.byte	0x23
+ 724 0118 18       		.uleb128 0x18
+ 725 0119 09       		.uleb128 0x9
+ 726 011a C4010000 		.4byte	.LASF20
+ 727 011e 04       		.byte	0x4
+ 728 011f A4       		.byte	0xa4
+ 729 0120 97000000 		.4byte	0x97
+ 730 0124 02       		.byte	0x2
+ 731 0125 23       		.byte	0x23
+ 732 0126 1C       		.uleb128 0x1c
+ 733 0127 09       		.uleb128 0x9
+ 734 0128 09030000 		.4byte	.LASF21
+ 735 012c 04       		.byte	0x4
+ 736 012d A5       		.byte	0xa5
+ 737 012e 97000000 		.4byte	0x97
+ 738 0132 02       		.byte	0x2
+ 739 0133 23       		.byte	0x23
+ 740 0134 20       		.uleb128 0x20
+ 741 0135 09       		.uleb128 0x9
+ 742 0136 35000000 		.4byte	.LASF22
+ 743 013a 04       		.byte	0x4
+ 744 013b A6       		.byte	0xa6
+ 745 013c 97000000 		.4byte	0x97
+ 746 0140 02       		.byte	0x2
+ 747 0141 23       		.byte	0x23
+ 748 0142 24       		.uleb128 0x24
+ 749 0143 09       		.uleb128 0x9
+ 750 0144 D1040000 		.4byte	.LASF23
+ 751 0148 04       		.byte	0x4
+ 752 0149 A7       		.byte	0xa7
+ 753 014a 97000000 		.4byte	0x97
+ 754 014e 02       		.byte	0x2
+ 755 014f 23       		.byte	0x23
+ 756 0150 28       		.uleb128 0x28
+ 757 0151 09       		.uleb128 0x9
+ 758 0152 BF040000 		.4byte	.LASF24
+ 759 0156 04       		.byte	0x4
+ 760 0157 A8       		.byte	0xa8
+ 761 0158 9C000000 		.4byte	0x9c
+ 762 015c 02       		.byte	0x2
+ 763 015d 23       		.byte	0x23
+ 764 015e 2C       		.uleb128 0x2c
+ 765 015f 09       		.uleb128 0x9
+ 766 0160 D9040000 		.4byte	.LASF25
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 17
+
+
+ 767 0164 04       		.byte	0x4
+ 768 0165 A9       		.byte	0xa9
+ 769 0166 9C000000 		.4byte	0x9c
+ 770 016a 02       		.byte	0x2
+ 771 016b 23       		.byte	0x23
+ 772 016c 30       		.uleb128 0x30
+ 773 016d 09       		.uleb128 0x9
+ 774 016e 81050000 		.4byte	.LASF26
+ 775 0172 04       		.byte	0x4
+ 776 0173 AA       		.byte	0xaa
+ 777 0174 97000000 		.4byte	0x97
+ 778 0178 02       		.byte	0x2
+ 779 0179 23       		.byte	0x23
+ 780 017a 34       		.uleb128 0x34
+ 781 017b 09       		.uleb128 0x9
+ 782 017c BC010000 		.4byte	.LASF27
+ 783 0180 04       		.byte	0x4
+ 784 0181 AB       		.byte	0xab
+ 785 0182 97000000 		.4byte	0x97
+ 786 0186 02       		.byte	0x2
+ 787 0187 23       		.byte	0x23
+ 788 0188 38       		.uleb128 0x38
+ 789 0189 09       		.uleb128 0x9
+ 790 018a 04020000 		.4byte	.LASF28
+ 791 018e 04       		.byte	0x4
+ 792 018f AC       		.byte	0xac
+ 793 0190 97000000 		.4byte	0x97
+ 794 0194 02       		.byte	0x2
+ 795 0195 23       		.byte	0x23
+ 796 0196 3C       		.uleb128 0x3c
+ 797 0197 09       		.uleb128 0x9
+ 798 0198 F9020000 		.4byte	.LASF29
+ 799 019c 04       		.byte	0x4
+ 800 019d AD       		.byte	0xad
+ 801 019e 97000000 		.4byte	0x97
+ 802 01a2 02       		.byte	0x2
+ 803 01a3 23       		.byte	0x23
+ 804 01a4 40       		.uleb128 0x40
+ 805 01a5 09       		.uleb128 0x9
+ 806 01a6 01030000 		.4byte	.LASF30
+ 807 01aa 04       		.byte	0x4
+ 808 01ab AE       		.byte	0xae
+ 809 01ac 97000000 		.4byte	0x97
+ 810 01b0 02       		.byte	0x2
+ 811 01b1 23       		.byte	0x23
+ 812 01b2 44       		.uleb128 0x44
+ 813 01b3 09       		.uleb128 0x9
+ 814 01b4 68030000 		.4byte	.LASF31
+ 815 01b8 04       		.byte	0x4
+ 816 01b9 AF       		.byte	0xaf
+ 817 01ba 9C000000 		.4byte	0x9c
+ 818 01be 02       		.byte	0x2
+ 819 01bf 23       		.byte	0x23
+ 820 01c0 48       		.uleb128 0x48
+ 821 01c1 09       		.uleb128 0x9
+ 822 01c2 79030000 		.4byte	.LASF32
+ 823 01c6 04       		.byte	0x4
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 18
+
+
+ 824 01c7 B0       		.byte	0xb0
+ 825 01c8 97000000 		.4byte	0x97
+ 826 01cc 02       		.byte	0x2
+ 827 01cd 23       		.byte	0x23
+ 828 01ce 4C       		.uleb128 0x4c
+ 829 01cf 09       		.uleb128 0x9
+ 830 01d0 8A030000 		.4byte	.LASF33
+ 831 01d4 04       		.byte	0x4
+ 832 01d5 B1       		.byte	0xb1
+ 833 01d6 97000000 		.4byte	0x97
+ 834 01da 02       		.byte	0x2
+ 835 01db 23       		.byte	0x23
+ 836 01dc 50       		.uleb128 0x50
+ 837 01dd 09       		.uleb128 0x9
+ 838 01de 9B030000 		.4byte	.LASF34
+ 839 01e2 04       		.byte	0x4
+ 840 01e3 B2       		.byte	0xb2
+ 841 01e4 97000000 		.4byte	0x97
+ 842 01e8 02       		.byte	0x2
+ 843 01e9 23       		.byte	0x23
+ 844 01ea 54       		.uleb128 0x54
+ 845 01eb 09       		.uleb128 0x9
+ 846 01ec AC030000 		.4byte	.LASF35
+ 847 01f0 04       		.byte	0x4
+ 848 01f1 B3       		.byte	0xb3
+ 849 01f2 97000000 		.4byte	0x97
+ 850 01f6 02       		.byte	0x2
+ 851 01f7 23       		.byte	0x23
+ 852 01f8 58       		.uleb128 0x58
+ 853 01f9 09       		.uleb128 0x9
+ 854 01fa BD030000 		.4byte	.LASF36
+ 855 01fe 04       		.byte	0x4
+ 856 01ff B4       		.byte	0xb4
+ 857 0200 97000000 		.4byte	0x97
+ 858 0204 02       		.byte	0x2
+ 859 0205 23       		.byte	0x23
+ 860 0206 5C       		.uleb128 0x5c
+ 861 0207 09       		.uleb128 0x9
+ 862 0208 CE030000 		.4byte	.LASF37
+ 863 020c 04       		.byte	0x4
+ 864 020d B5       		.byte	0xb5
+ 865 020e 97000000 		.4byte	0x97
+ 866 0212 02       		.byte	0x2
+ 867 0213 23       		.byte	0x23
+ 868 0214 60       		.uleb128 0x60
+ 869 0215 09       		.uleb128 0x9
+ 870 0216 DF030000 		.4byte	.LASF38
+ 871 021a 04       		.byte	0x4
+ 872 021b B6       		.byte	0xb6
+ 873 021c 97000000 		.4byte	0x97
+ 874 0220 02       		.byte	0x2
+ 875 0221 23       		.byte	0x23
+ 876 0222 64       		.uleb128 0x64
+ 877 0223 09       		.uleb128 0x9
+ 878 0224 79040000 		.4byte	.LASF39
+ 879 0228 04       		.byte	0x4
+ 880 0229 B7       		.byte	0xb7
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 19
+
+
+ 881 022a 9C000000 		.4byte	0x9c
+ 882 022e 02       		.byte	0x2
+ 883 022f 23       		.byte	0x23
+ 884 0230 68       		.uleb128 0x68
+ 885 0231 09       		.uleb128 0x9
+ 886 0232 26030000 		.4byte	.LASF40
+ 887 0236 04       		.byte	0x4
+ 888 0237 B8       		.byte	0xb8
+ 889 0238 97000000 		.4byte	0x97
+ 890 023c 02       		.byte	0x2
+ 891 023d 23       		.byte	0x23
+ 892 023e 6C       		.uleb128 0x6c
+ 893 023f 09       		.uleb128 0x9
+ 894 0240 2B000000 		.4byte	.LASF41
+ 895 0244 04       		.byte	0x4
+ 896 0245 B9       		.byte	0xb9
+ 897 0246 97000000 		.4byte	0x97
+ 898 024a 02       		.byte	0x2
+ 899 024b 23       		.byte	0x23
+ 900 024c 70       		.uleb128 0x70
+ 901 024d 09       		.uleb128 0x9
+ 902 024e 1C020000 		.4byte	.LASF42
+ 903 0252 04       		.byte	0x4
+ 904 0253 BA       		.byte	0xba
+ 905 0254 97000000 		.4byte	0x97
+ 906 0258 02       		.byte	0x2
+ 907 0259 23       		.byte	0x23
+ 908 025a 74       		.uleb128 0x74
+ 909 025b 09       		.uleb128 0x9
+ 910 025c E6040000 		.4byte	.LASF43
+ 911 0260 04       		.byte	0x4
+ 912 0261 BB       		.byte	0xbb
+ 913 0262 97000000 		.4byte	0x97
+ 914 0266 02       		.byte	0x2
+ 915 0267 23       		.byte	0x23
+ 916 0268 78       		.uleb128 0x78
+ 917 0269 09       		.uleb128 0x9
+ 918 026a 16040000 		.4byte	.LASF44
+ 919 026e 04       		.byte	0x4
+ 920 026f BC       		.byte	0xbc
+ 921 0270 97000000 		.4byte	0x97
+ 922 0274 02       		.byte	0x2
+ 923 0275 23       		.byte	0x23
+ 924 0276 7C       		.uleb128 0x7c
+ 925 0277 09       		.uleb128 0x9
+ 926 0278 DD010000 		.4byte	.LASF45
+ 927 027c 04       		.byte	0x4
+ 928 027d BD       		.byte	0xbd
+ 929 027e 97000000 		.4byte	0x97
+ 930 0282 03       		.byte	0x3
+ 931 0283 23       		.byte	0x23
+ 932 0284 8001     		.uleb128 0x80
+ 933 0286 09       		.uleb128 0x9
+ 934 0287 5E030000 		.4byte	.LASF46
+ 935 028b 04       		.byte	0x4
+ 936 028c BE       		.byte	0xbe
+ 937 028d E8020000 		.4byte	0x2e8
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 20
+
+
+ 938 0291 03       		.byte	0x3
+ 939 0292 23       		.byte	0x23
+ 940 0293 8401     		.uleb128 0x84
+ 941 0295 09       		.uleb128 0x9
+ 942 0296 60000000 		.4byte	.LASF47
+ 943 029a 04       		.byte	0x4
+ 944 029b BF       		.byte	0xbf
+ 945 029c 9C000000 		.4byte	0x9c
+ 946 02a0 03       		.byte	0x3
+ 947 02a1 23       		.byte	0x23
+ 948 02a2 F01F     		.uleb128 0xff0
+ 949 02a4 09       		.uleb128 0x9
+ 950 02a5 43000000 		.4byte	.LASF48
+ 951 02a9 04       		.byte	0x4
+ 952 02aa C0       		.byte	0xc0
+ 953 02ab 9C000000 		.4byte	0x9c
+ 954 02af 03       		.byte	0x3
+ 955 02b0 23       		.byte	0x23
+ 956 02b1 F41F     		.uleb128 0xff4
+ 957 02b3 09       		.uleb128 0x9
+ 958 02b4 FC040000 		.4byte	.LASF49
+ 959 02b8 04       		.byte	0x4
+ 960 02b9 C1       		.byte	0xc1
+ 961 02ba 9C000000 		.4byte	0x9c
+ 962 02be 03       		.byte	0x3
+ 963 02bf 23       		.byte	0x23
+ 964 02c0 F81F     		.uleb128 0xff8
+ 965 02c2 09       		.uleb128 0x9
+ 966 02c3 6F050000 		.4byte	.LASF50
+ 967 02c7 04       		.byte	0x4
+ 968 02c8 C2       		.byte	0xc2
+ 969 02c9 9C000000 		.4byte	0x9c
+ 970 02cd 03       		.byte	0x3
+ 971 02ce 23       		.byte	0x23
+ 972 02cf FC1F     		.uleb128 0xffc
+ 973 02d1 00       		.byte	0
+ 974 02d2 0A       		.uleb128 0xa
+ 975 02d3 9C000000 		.4byte	0x9c
+ 976 02d7 E3020000 		.4byte	0x2e3
+ 977 02db 0B       		.uleb128 0xb
+ 978 02dc 7A000000 		.4byte	0x7a
+ 979 02e0 DA03     		.2byte	0x3da
+ 980 02e2 00       		.byte	0
+ 981 02e3 06       		.uleb128 0x6
+ 982 02e4 D2020000 		.4byte	0x2d2
+ 983 02e8 05       		.uleb128 0x5
+ 984 02e9 E3020000 		.4byte	0x2e3
+ 985 02ed 03       		.uleb128 0x3
+ 986 02ee 5D040000 		.4byte	.LASF51
+ 987 02f2 04       		.byte	0x4
+ 988 02f3 C3       		.byte	0xc3
+ 989 02f4 AE000000 		.4byte	0xae
+ 990 02f8 0C       		.uleb128 0xc
+ 991 02f9 04       		.byte	0x4
+ 992 02fa 04       		.byte	0x4
+ 993 02fb 8201     		.2byte	0x182
+ 994 02fd 1A030000 		.4byte	0x31a
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 21
+
+
+ 995 0301 0D       		.uleb128 0xd
+ 996 0302 14050000 		.4byte	.LASF52
+ 997 0306 04       		.byte	0x4
+ 998 0307 8301     		.2byte	0x183
+ 999 0309 97000000 		.4byte	0x97
+ 1000 030d 0D       		.uleb128 0xd
+ 1001 030e C7040000 		.4byte	.LASF53
+ 1002 0312 04       		.byte	0x4
+ 1003 0313 8401     		.2byte	0x184
+ 1004 0315 97000000 		.4byte	0x97
+ 1005 0319 00       		.byte	0
+ 1006 031a 0E       		.uleb128 0xe
+ 1007 031b 0010     		.2byte	0x1000
+ 1008 031d 04       		.byte	0x4
+ 1009 031e 7701     		.2byte	0x177
+ 1010 0320 D3030000 		.4byte	0x3d3
+ 1011 0324 0F       		.uleb128 0xf
+ 1012 0325 E1040000 		.4byte	.LASF54
+ 1013 0329 04       		.byte	0x4
+ 1014 032a 7801     		.2byte	0x178
+ 1015 032c 97000000 		.4byte	0x97
+ 1016 0330 02       		.byte	0x2
+ 1017 0331 23       		.byte	0x23
+ 1018 0332 00       		.uleb128 0
+ 1019 0333 0F       		.uleb128 0xf
+ 1020 0334 65050000 		.4byte	.LASF55
+ 1021 0338 04       		.byte	0x4
+ 1022 0339 7901     		.2byte	0x179
+ 1023 033b 97000000 		.4byte	0x97
+ 1024 033f 02       		.byte	0x2
+ 1025 0340 23       		.byte	0x23
+ 1026 0341 04       		.uleb128 0x4
+ 1027 0342 0F       		.uleb128 0xf
+ 1028 0343 6F010000 		.4byte	.LASF56
+ 1029 0347 04       		.byte	0x4
+ 1030 0348 7A01     		.2byte	0x17a
+ 1031 034a 97000000 		.4byte	0x97
+ 1032 034e 02       		.byte	0x2
+ 1033 034f 23       		.byte	0x23
+ 1034 0350 08       		.uleb128 0x8
+ 1035 0351 0F       		.uleb128 0xf
+ 1036 0352 A1010000 		.4byte	.LASF57
+ 1037 0356 04       		.byte	0x4
+ 1038 0357 7B01     		.2byte	0x17b
+ 1039 0359 97000000 		.4byte	0x97
+ 1040 035d 02       		.byte	0x2
+ 1041 035e 23       		.byte	0x23
+ 1042 035f 0C       		.uleb128 0xc
+ 1043 0360 0F       		.uleb128 0xf
+ 1044 0361 66010000 		.4byte	.LASF58
+ 1045 0365 04       		.byte	0x4
+ 1046 0366 7C01     		.2byte	0x17c
+ 1047 0368 97000000 		.4byte	0x97
+ 1048 036c 02       		.byte	0x2
+ 1049 036d 23       		.byte	0x23
+ 1050 036e 10       		.uleb128 0x10
+ 1051 036f 0F       		.uleb128 0xf
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 22
+
+
+ 1052 0370 58020000 		.4byte	.LASF59
+ 1053 0374 04       		.byte	0x4
+ 1054 0375 7E01     		.2byte	0x17e
+ 1055 0377 97000000 		.4byte	0x97
+ 1056 037b 02       		.byte	0x2
+ 1057 037c 23       		.byte	0x23
+ 1058 037d 14       		.uleb128 0x14
+ 1059 037e 0F       		.uleb128 0xf
+ 1060 037f 61020000 		.4byte	.LASF60
+ 1061 0383 04       		.byte	0x4
+ 1062 0384 7F01     		.2byte	0x17f
+ 1063 0386 97000000 		.4byte	0x97
+ 1064 038a 02       		.byte	0x2
+ 1065 038b 23       		.byte	0x23
+ 1066 038c 18       		.uleb128 0x18
+ 1067 038d 0F       		.uleb128 0xf
+ 1068 038e 6A020000 		.4byte	.LASF61
+ 1069 0392 04       		.byte	0x4
+ 1070 0393 8001     		.2byte	0x180
+ 1071 0395 97000000 		.4byte	0x97
+ 1072 0399 02       		.byte	0x2
+ 1073 039a 23       		.byte	0x23
+ 1074 039b 1C       		.uleb128 0x1c
+ 1075 039c 10       		.uleb128 0x10
+ 1076 039d F8020000 		.4byte	0x2f8
+ 1077 03a1 02       		.byte	0x2
+ 1078 03a2 23       		.byte	0x23
+ 1079 03a3 20       		.uleb128 0x20
+ 1080 03a4 0F       		.uleb128 0xf
+ 1081 03a5 82010000 		.4byte	.LASF62
+ 1082 03a9 04       		.byte	0x4
+ 1083 03aa 8601     		.2byte	0x186
+ 1084 03ac 97000000 		.4byte	0x97
+ 1085 03b0 02       		.byte	0x2
+ 1086 03b1 23       		.byte	0x23
+ 1087 03b2 24       		.uleb128 0x24
+ 1088 03b3 0F       		.uleb128 0xf
+ 1089 03b4 5E030000 		.4byte	.LASF46
+ 1090 03b8 04       		.byte	0x4
+ 1091 03b9 8701     		.2byte	0x187
+ 1092 03bb E9030000 		.4byte	0x3e9
+ 1093 03bf 02       		.byte	0x2
+ 1094 03c0 23       		.byte	0x23
+ 1095 03c1 28       		.uleb128 0x28
+ 1096 03c2 0F       		.uleb128 0xf
+ 1097 03c3 6F050000 		.4byte	.LASF50
+ 1098 03c7 04       		.byte	0x4
+ 1099 03c8 8801     		.2byte	0x188
+ 1100 03ca 9C000000 		.4byte	0x9c
+ 1101 03ce 03       		.byte	0x3
+ 1102 03cf 23       		.byte	0x23
+ 1103 03d0 FC1F     		.uleb128 0xffc
+ 1104 03d2 00       		.byte	0
+ 1105 03d3 0A       		.uleb128 0xa
+ 1106 03d4 9C000000 		.4byte	0x9c
+ 1107 03d8 E4030000 		.4byte	0x3e4
+ 1108 03dc 0B       		.uleb128 0xb
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 23
+
+
+ 1109 03dd 7A000000 		.4byte	0x7a
+ 1110 03e1 F403     		.2byte	0x3f4
+ 1111 03e3 00       		.byte	0
+ 1112 03e4 06       		.uleb128 0x6
+ 1113 03e5 D3030000 		.4byte	0x3d3
+ 1114 03e9 05       		.uleb128 0x5
+ 1115 03ea E4030000 		.4byte	0x3e4
+ 1116 03ee 11       		.uleb128 0x11
+ 1117 03ef 36040000 		.4byte	.LASF63
+ 1118 03f3 04       		.byte	0x4
+ 1119 03f4 8901     		.2byte	0x189
+ 1120 03f6 1A030000 		.4byte	0x31a
+ 1121 03fa 12       		.uleb128 0x12
+ 1122 03fb 00800100 		.4byte	0x18000
+ 1123 03ff 04       		.byte	0x4
+ 1124 0400 0602     		.2byte	0x206
+ 1125 0402 16040000 		.4byte	0x416
+ 1126 0406 0F       		.uleb128 0xf
+ 1127 0407 F7040000 		.4byte	.LASF64
+ 1128 040b 04       		.byte	0x4
+ 1129 040c 0702     		.2byte	0x207
+ 1130 040e 16040000 		.4byte	0x416
+ 1131 0412 02       		.byte	0x2
+ 1132 0413 23       		.byte	0x23
+ 1133 0414 00       		.uleb128 0
+ 1134 0415 00       		.byte	0
+ 1135 0416 0A       		.uleb128 0xa
+ 1136 0417 EE030000 		.4byte	0x3ee
+ 1137 041b 26040000 		.4byte	0x426
+ 1138 041f 13       		.uleb128 0x13
+ 1139 0420 7A000000 		.4byte	0x7a
+ 1140 0424 17       		.byte	0x17
+ 1141 0425 00       		.byte	0
+ 1142 0426 11       		.uleb128 0x11
+ 1143 0427 C1020000 		.4byte	.LASF65
+ 1144 042b 04       		.byte	0x4
+ 1145 042c 0802     		.2byte	0x208
+ 1146 042e FA030000 		.4byte	0x3fa
+ 1147 0432 14       		.uleb128 0x14
+ 1148 0433 07       		.byte	0x7
+ 1149 0434 01       		.byte	0x1
+ 1150 0435 2C000000 		.4byte	0x2c
+ 1151 0439 05       		.byte	0x5
+ 1152 043a 1C       		.byte	0x1c
+ 1153 043b 6A040000 		.4byte	0x46a
+ 1154 043f 15       		.uleb128 0x15
+ 1155 0440 42030000 		.4byte	.LASF66
+ 1156 0444 00       		.byte	0
+ 1157 0445 15       		.uleb128 0x15
+ 1158 0446 50030000 		.4byte	.LASF67
+ 1159 044a 01       		.byte	0x1
+ 1160 044b 15       		.uleb128 0x15
+ 1161 044c 75050000 		.4byte	.LASF68
+ 1162 0450 02       		.byte	0x2
+ 1163 0451 15       		.uleb128 0x15
+ 1164 0452 35030000 		.4byte	.LASF69
+ 1165 0456 03       		.byte	0x3
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 24
+
+
+ 1166 0457 15       		.uleb128 0x15
+ 1167 0458 1F000000 		.4byte	.LASF70
+ 1168 045c 04       		.byte	0x4
+ 1169 045d 15       		.uleb128 0x15
+ 1170 045e 17030000 		.4byte	.LASF71
+ 1171 0462 05       		.byte	0x5
+ 1172 0463 15       		.uleb128 0x15
+ 1173 0464 B2020000 		.4byte	.LASF72
+ 1174 0468 06       		.byte	0x6
+ 1175 0469 00       		.byte	0
+ 1176 046a 16       		.uleb128 0x16
+ 1177 046b 03050000 		.4byte	.LASF74
+ 1178 046f 01       		.byte	0x1
+ 1179 0470 1E       		.byte	0x1e
+ 1180 0471 82040000 		.4byte	0x482
+ 1181 0475 05       		.byte	0x5
+ 1182 0476 03       		.byte	0x3
+ 1183 0477 00000000 		.4byte	msec_tim_timeout
+ 1184 047b 02       		.uleb128 0x2
+ 1185 047c 01       		.byte	0x1
+ 1186 047d 02       		.byte	0x2
+ 1187 047e F0030000 		.4byte	.LASF73
+ 1188 0482 05       		.uleb128 0x5
+ 1189 0483 7B040000 		.4byte	0x47b
+ 1190 0487 16       		.uleb128 0x16
+ 1191 0488 55050000 		.4byte	.LASF75
+ 1192 048c 01       		.byte	0x1
+ 1193 048d 1E       		.byte	0x1e
+ 1194 048e 82040000 		.4byte	0x482
+ 1195 0492 05       		.byte	0x5
+ 1196 0493 03       		.byte	0x3
+ 1197 0494 01000000 		.4byte	sec_tim_timeout
+ 1198 0498 17       		.uleb128 0x17
+ 1199 0499 01       		.byte	0x1
+ 1200 049a E7020000 		.4byte	.LASF76
+ 1201 049e 01       		.byte	0x1
+ 1202 049f 77       		.byte	0x77
+ 1203 04a0 01       		.byte	0x1
+ 1204 04a1 F8000000 		.4byte	.LFB43
+ 1205 04a5 04010000 		.4byte	.LFE43
+ 1206 04a9 02       		.byte	0x2
+ 1207 04aa 7D       		.byte	0x7d
+ 1208 04ab 00       		.sleb128 0
+ 1209 04ac 01       		.byte	0x1
+ 1210 04ad 18       		.uleb128 0x18
+ 1211 04ae 01       		.byte	0x1
+ 1212 04af A8010000 		.4byte	.LASF78
+ 1213 04b3 01       		.byte	0x1
+ 1214 04b4 73       		.byte	0x73
+ 1215 04b5 01       		.byte	0x1
+ 1216 04b6 7B040000 		.4byte	0x47b
+ 1217 04ba EC000000 		.4byte	.LFB42
+ 1218 04be F8000000 		.4byte	.LFE42
+ 1219 04c2 02       		.byte	0x2
+ 1220 04c3 7D       		.byte	0x7d
+ 1221 04c4 00       		.sleb128 0
+ 1222 04c5 01       		.byte	0x1
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 25
+
+
+ 1223 04c6 17       		.uleb128 0x17
+ 1224 04c7 01       		.byte	0x1
+ 1225 04c8 6A000000 		.4byte	.LASF77
+ 1226 04cc 01       		.byte	0x1
+ 1227 04cd 6F       		.byte	0x6f
+ 1228 04ce 01       		.byte	0x1
+ 1229 04cf E0000000 		.4byte	.LFB41
+ 1230 04d3 EC000000 		.4byte	.LFE41
+ 1231 04d7 02       		.byte	0x2
+ 1232 04d8 7D       		.byte	0x7d
+ 1233 04d9 00       		.sleb128 0
+ 1234 04da 01       		.byte	0x1
+ 1235 04db 18       		.uleb128 0x18
+ 1236 04dc 01       		.byte	0x1
+ 1237 04dd 00000000 		.4byte	.LASF79
+ 1238 04e1 01       		.byte	0x1
+ 1239 04e2 6B       		.byte	0x6b
+ 1240 04e3 01       		.byte	0x1
+ 1241 04e4 7B040000 		.4byte	0x47b
+ 1242 04e8 D4000000 		.4byte	.LFB40
+ 1243 04ec E0000000 		.4byte	.LFE40
+ 1244 04f0 02       		.byte	0x2
+ 1245 04f1 7D       		.byte	0x7d
+ 1246 04f2 00       		.sleb128 0
+ 1247 04f3 01       		.byte	0x1
+ 1248 04f4 19       		.uleb128 0x19
+ 1249 04f5 01       		.byte	0x1
+ 1250 04f6 97040000 		.4byte	.LASF93
+ 1251 04fa 01       		.byte	0x1
+ 1252 04fb 65       		.byte	0x65
+ 1253 04fc 01       		.byte	0x1
+ 1254 04fd 1A       		.uleb128 0x1a
+ 1255 04fe 01       		.byte	0x1
+ 1256 04ff 8D010000 		.4byte	.LASF80
+ 1257 0503 01       		.byte	0x1
+ 1258 0504 5A       		.byte	0x5a
+ 1259 0505 01       		.byte	0x1
+ 1260 0506 AC000000 		.4byte	.LFB38
+ 1261 050a C8000000 		.4byte	.LFE38
+ 1262 050e 00000000 		.4byte	.LLST5
+ 1263 0512 01       		.byte	0x1
+ 1264 0513 44050000 		.4byte	0x544
+ 1265 0517 1B       		.uleb128 0x1b
+ 1266 0518 B6000000 		.4byte	.LVL11
+ 1267 051c 76060000 		.4byte	0x676
+ 1268 0520 2F050000 		.4byte	0x52f
+ 1269 0524 1C       		.uleb128 0x1c
+ 1270 0525 01       		.byte	0x1
+ 1271 0526 50       		.byte	0x50
+ 1272 0527 01       		.byte	0x1
+ 1273 0528 32       		.byte	0x32
+ 1274 0529 1C       		.uleb128 0x1c
+ 1275 052a 01       		.byte	0x1
+ 1276 052b 51       		.byte	0x51
+ 1277 052c 01       		.byte	0x1
+ 1278 052d 31       		.byte	0x31
+ 1279 052e 00       		.byte	0
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 26
+
+
+ 1280 052f 1D       		.uleb128 0x1d
+ 1281 0530 C2000000 		.4byte	.LVL12
+ 1282 0534 83060000 		.4byte	0x683
+ 1283 0538 1C       		.uleb128 0x1c
+ 1284 0539 01       		.byte	0x1
+ 1285 053a 50       		.byte	0x50
+ 1286 053b 01       		.byte	0x1
+ 1287 053c 32       		.byte	0x32
+ 1288 053d 1C       		.uleb128 0x1c
+ 1289 053e 01       		.byte	0x1
+ 1290 053f 51       		.byte	0x51
+ 1291 0540 01       		.byte	0x1
+ 1292 0541 31       		.byte	0x31
+ 1293 0542 00       		.byte	0
+ 1294 0543 00       		.byte	0
+ 1295 0544 1E       		.uleb128 0x1e
+ 1296 0545 01       		.byte	0x1
+ 1297 0546 9E020000 		.4byte	.LASF94
+ 1298 054a 01       		.byte	0x1
+ 1299 054b 54       		.byte	0x54
+ 1300 054c 01       		.byte	0x1
+ 1301 054d 01       		.byte	0x1
+ 1302 054e 1A       		.uleb128 0x1a
+ 1303 054f 01       		.byte	0x1
+ 1304 0550 4E040000 		.4byte	.LASF81
+ 1305 0554 01       		.byte	0x1
+ 1306 0555 49       		.byte	0x49
+ 1307 0556 01       		.byte	0x1
+ 1308 0557 80000000 		.4byte	.LFB36
+ 1309 055b A0000000 		.4byte	.LFE36
+ 1310 055f 20000000 		.4byte	.LLST4
+ 1311 0563 01       		.byte	0x1
+ 1312 0564 95050000 		.4byte	0x595
+ 1313 0568 1B       		.uleb128 0x1b
+ 1314 0569 8A000000 		.4byte	.LVL9
+ 1315 056d 76060000 		.4byte	0x676
+ 1316 0571 80050000 		.4byte	0x580
+ 1317 0575 1C       		.uleb128 0x1c
+ 1318 0576 01       		.byte	0x1
+ 1319 0577 50       		.byte	0x50
+ 1320 0578 01       		.byte	0x1
+ 1321 0579 32       		.byte	0x32
+ 1322 057a 1C       		.uleb128 0x1c
+ 1323 057b 01       		.byte	0x1
+ 1324 057c 51       		.byte	0x51
+ 1325 057d 01       		.byte	0x1
+ 1326 057e 30       		.byte	0x30
+ 1327 057f 00       		.byte	0
+ 1328 0580 1D       		.uleb128 0x1d
+ 1329 0581 98000000 		.4byte	.LVL10
+ 1330 0585 83060000 		.4byte	0x683
+ 1331 0589 1C       		.uleb128 0x1c
+ 1332 058a 01       		.byte	0x1
+ 1333 058b 50       		.byte	0x50
+ 1334 058c 01       		.byte	0x1
+ 1335 058d 32       		.byte	0x32
+ 1336 058e 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 27
+
+
+ 1337 058f 01       		.byte	0x1
+ 1338 0590 51       		.byte	0x51
+ 1339 0591 01       		.byte	0x1
+ 1340 0592 30       		.byte	0x30
+ 1341 0593 00       		.byte	0
+ 1342 0594 00       		.byte	0
+ 1343 0595 1F       		.uleb128 0x1f
+ 1344 0596 01       		.byte	0x1
+ 1345 0597 2F050000 		.4byte	.LASF83
+ 1346 059b 01       		.byte	0x1
+ 1347 059c 35       		.byte	0x35
+ 1348 059d 01       		.byte	0x1
+ 1349 059e 81000000 		.4byte	0x81
+ 1350 05a2 3C000000 		.4byte	.LFB35
+ 1351 05a6 80000000 		.4byte	.LFE35
+ 1352 05aa 40000000 		.4byte	.LLST2
+ 1353 05ae 01       		.byte	0x1
+ 1354 05af FD050000 		.4byte	0x5fd
+ 1355 05b3 20       		.uleb128 0x20
+ 1356 05b4 2B020000 		.4byte	.LASF85
+ 1357 05b8 01       		.byte	0x1
+ 1358 05b9 35       		.byte	0x35
+ 1359 05ba 8C000000 		.4byte	0x8c
+ 1360 05be 60000000 		.4byte	.LLST3
+ 1361 05c2 21       		.uleb128 0x21
+ 1362 05c3 8E040000 		.4byte	.LASF82
+ 1363 05c7 01       		.byte	0x1
+ 1364 05c8 36       		.byte	0x36
+ 1365 05c9 81000000 		.4byte	0x81
+ 1366 05cd 00       		.byte	0
+ 1367 05ce 1B       		.uleb128 0x1b
+ 1368 05cf 5C000000 		.4byte	.LVL7
+ 1369 05d3 76060000 		.4byte	0x676
+ 1370 05d7 E7050000 		.4byte	0x5e7
+ 1371 05db 1C       		.uleb128 0x1c
+ 1372 05dc 01       		.byte	0x1
+ 1373 05dd 50       		.byte	0x50
+ 1374 05de 02       		.byte	0x2
+ 1375 05df 74       		.byte	0x74
+ 1376 05e0 00       		.sleb128 0
+ 1377 05e1 1C       		.uleb128 0x1c
+ 1378 05e2 01       		.byte	0x1
+ 1379 05e3 51       		.byte	0x51
+ 1380 05e4 01       		.byte	0x1
+ 1381 05e5 31       		.byte	0x31
+ 1382 05e6 00       		.byte	0
+ 1383 05e7 1D       		.uleb128 0x1d
+ 1384 05e8 6E000000 		.4byte	.LVL8
+ 1385 05ec 83060000 		.4byte	0x683
+ 1386 05f0 1C       		.uleb128 0x1c
+ 1387 05f1 01       		.byte	0x1
+ 1388 05f2 50       		.byte	0x50
+ 1389 05f3 02       		.byte	0x2
+ 1390 05f4 74       		.byte	0x74
+ 1391 05f5 00       		.sleb128 0
+ 1392 05f6 1C       		.uleb128 0x1c
+ 1393 05f7 01       		.byte	0x1
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 28
+
+
+ 1394 05f8 51       		.byte	0x51
+ 1395 05f9 01       		.byte	0x1
+ 1396 05fa 31       		.byte	0x31
+ 1397 05fb 00       		.byte	0
+ 1398 05fc 00       		.byte	0
+ 1399 05fd 1F       		.uleb128 0x1f
+ 1400 05fe 01       		.byte	0x1
+ 1401 05ff 86020000 		.4byte	.LASF84
+ 1402 0603 01       		.byte	0x1
+ 1403 0604 20       		.byte	0x20
+ 1404 0605 01       		.byte	0x1
+ 1405 0606 81000000 		.4byte	0x81
+ 1406 060a 00000000 		.4byte	.LFB34
+ 1407 060e 3C000000 		.4byte	.LFE34
+ 1408 0612 81000000 		.4byte	.LLST0
+ 1409 0616 01       		.byte	0x1
+ 1410 0617 65060000 		.4byte	0x665
+ 1411 061b 20       		.uleb128 0x20
+ 1412 061c 2C040000 		.4byte	.LASF86
+ 1413 0620 01       		.byte	0x1
+ 1414 0621 20       		.byte	0x20
+ 1415 0622 8C000000 		.4byte	0x8c
+ 1416 0626 A1000000 		.4byte	.LLST1
+ 1417 062a 21       		.uleb128 0x21
+ 1418 062b 8E040000 		.4byte	.LASF82
+ 1419 062f 01       		.byte	0x1
+ 1420 0630 21       		.byte	0x21
+ 1421 0631 81000000 		.4byte	0x81
+ 1422 0635 00       		.byte	0
+ 1423 0636 1B       		.uleb128 0x1b
+ 1424 0637 1E000000 		.4byte	.LVL2
+ 1425 063b 76060000 		.4byte	0x676
+ 1426 063f 4F060000 		.4byte	0x64f
+ 1427 0643 1C       		.uleb128 0x1c
+ 1428 0644 01       		.byte	0x1
+ 1429 0645 50       		.byte	0x50
+ 1430 0646 01       		.byte	0x1
+ 1431 0647 32       		.byte	0x32
+ 1432 0648 1C       		.uleb128 0x1c
+ 1433 0649 01       		.byte	0x1
+ 1434 064a 51       		.byte	0x51
+ 1435 064b 02       		.byte	0x2
+ 1436 064c 74       		.byte	0x74
+ 1437 064d 00       		.sleb128 0
+ 1438 064e 00       		.byte	0
+ 1439 064f 1D       		.uleb128 0x1d
+ 1440 0650 30000000 		.4byte	.LVL3
+ 1441 0654 83060000 		.4byte	0x683
+ 1442 0658 1C       		.uleb128 0x1c
+ 1443 0659 01       		.byte	0x1
+ 1444 065a 50       		.byte	0x50
+ 1445 065b 01       		.byte	0x1
+ 1446 065c 32       		.byte	0x32
+ 1447 065d 1C       		.uleb128 0x1c
+ 1448 065e 01       		.byte	0x1
+ 1449 065f 51       		.byte	0x51
+ 1450 0660 02       		.byte	0x2
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 29
+
+
+ 1451 0661 74       		.byte	0x74
+ 1452 0662 00       		.sleb128 0
+ 1453 0663 00       		.byte	0
+ 1454 0664 00       		.byte	0
+ 1455 0665 22       		.uleb128 0x22
+ 1456 0666 44050000 		.4byte	0x544
+ 1457 066a A0000000 		.4byte	.LFB37
+ 1458 066e AC000000 		.4byte	.LFE37
+ 1459 0672 02       		.byte	0x2
+ 1460 0673 7D       		.byte	0x7d
+ 1461 0674 00       		.sleb128 0
+ 1462 0675 01       		.byte	0x1
+ 1463 0676 23       		.uleb128 0x23
+ 1464 0677 01       		.byte	0x1
+ 1465 0678 01       		.byte	0x1
+ 1466 0679 1F050000 		.4byte	.LASF87
+ 1467 067d 1F050000 		.4byte	.LASF87
+ 1468 0681 05       		.byte	0x5
+ 1469 0682 2E       		.byte	0x2e
+ 1470 0683 23       		.uleb128 0x23
+ 1471 0684 01       		.byte	0x1
+ 1472 0685 01       		.byte	0x1
+ 1473 0686 46050000 		.4byte	.LASF88
+ 1474 068a 46050000 		.4byte	.LASF88
+ 1475 068e 05       		.byte	0x5
+ 1476 068f 37       		.byte	0x37
+ 1477 0690 00       		.byte	0
+ 1478              		.section	.debug_abbrev,"",%progbits
+ 1479              	.Ldebug_abbrev0:
+ 1480 0000 01       		.uleb128 0x1
+ 1481 0001 11       		.uleb128 0x11
+ 1482 0002 01       		.byte	0x1
+ 1483 0003 25       		.uleb128 0x25
+ 1484 0004 0E       		.uleb128 0xe
+ 1485 0005 13       		.uleb128 0x13
+ 1486 0006 0B       		.uleb128 0xb
+ 1487 0007 03       		.uleb128 0x3
+ 1488 0008 0E       		.uleb128 0xe
+ 1489 0009 1B       		.uleb128 0x1b
+ 1490 000a 0E       		.uleb128 0xe
+ 1491 000b 11       		.uleb128 0x11
+ 1492 000c 01       		.uleb128 0x1
+ 1493 000d 12       		.uleb128 0x12
+ 1494 000e 01       		.uleb128 0x1
+ 1495 000f 10       		.uleb128 0x10
+ 1496 0010 06       		.uleb128 0x6
+ 1497 0011 00       		.byte	0
+ 1498 0012 00       		.byte	0
+ 1499 0013 02       		.uleb128 0x2
+ 1500 0014 24       		.uleb128 0x24
+ 1501 0015 00       		.byte	0
+ 1502 0016 0B       		.uleb128 0xb
+ 1503 0017 0B       		.uleb128 0xb
+ 1504 0018 3E       		.uleb128 0x3e
+ 1505 0019 0B       		.uleb128 0xb
+ 1506 001a 03       		.uleb128 0x3
+ 1507 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 30
+
+
+ 1508 001c 00       		.byte	0
+ 1509 001d 00       		.byte	0
+ 1510 001e 03       		.uleb128 0x3
+ 1511 001f 16       		.uleb128 0x16
+ 1512 0020 00       		.byte	0
+ 1513 0021 03       		.uleb128 0x3
+ 1514 0022 0E       		.uleb128 0xe
+ 1515 0023 3A       		.uleb128 0x3a
+ 1516 0024 0B       		.uleb128 0xb
+ 1517 0025 3B       		.uleb128 0x3b
+ 1518 0026 0B       		.uleb128 0xb
+ 1519 0027 49       		.uleb128 0x49
+ 1520 0028 13       		.uleb128 0x13
+ 1521 0029 00       		.byte	0
+ 1522 002a 00       		.byte	0
+ 1523 002b 04       		.uleb128 0x4
+ 1524 002c 24       		.uleb128 0x24
+ 1525 002d 00       		.byte	0
+ 1526 002e 0B       		.uleb128 0xb
+ 1527 002f 0B       		.uleb128 0xb
+ 1528 0030 3E       		.uleb128 0x3e
+ 1529 0031 0B       		.uleb128 0xb
+ 1530 0032 03       		.uleb128 0x3
+ 1531 0033 08       		.uleb128 0x8
+ 1532 0034 00       		.byte	0
+ 1533 0035 00       		.byte	0
+ 1534 0036 05       		.uleb128 0x5
+ 1535 0037 35       		.uleb128 0x35
+ 1536 0038 00       		.byte	0
+ 1537 0039 49       		.uleb128 0x49
+ 1538 003a 13       		.uleb128 0x13
+ 1539 003b 00       		.byte	0
+ 1540 003c 00       		.byte	0
+ 1541 003d 06       		.uleb128 0x6
+ 1542 003e 26       		.uleb128 0x26
+ 1543 003f 00       		.byte	0
+ 1544 0040 49       		.uleb128 0x49
+ 1545 0041 13       		.uleb128 0x13
+ 1546 0042 00       		.byte	0
+ 1547 0043 00       		.byte	0
+ 1548 0044 07       		.uleb128 0x7
+ 1549 0045 34       		.uleb128 0x34
+ 1550 0046 00       		.byte	0
+ 1551 0047 03       		.uleb128 0x3
+ 1552 0048 0E       		.uleb128 0xe
+ 1553 0049 3A       		.uleb128 0x3a
+ 1554 004a 0B       		.uleb128 0xb
+ 1555 004b 3B       		.uleb128 0x3b
+ 1556 004c 0B       		.uleb128 0xb
+ 1557 004d 49       		.uleb128 0x49
+ 1558 004e 13       		.uleb128 0x13
+ 1559 004f 3F       		.uleb128 0x3f
+ 1560 0050 0C       		.uleb128 0xc
+ 1561 0051 3C       		.uleb128 0x3c
+ 1562 0052 0C       		.uleb128 0xc
+ 1563 0053 00       		.byte	0
+ 1564 0054 00       		.byte	0
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 31
+
+
+ 1565 0055 08       		.uleb128 0x8
+ 1566 0056 13       		.uleb128 0x13
+ 1567 0057 01       		.byte	0x1
+ 1568 0058 0B       		.uleb128 0xb
+ 1569 0059 05       		.uleb128 0x5
+ 1570 005a 3A       		.uleb128 0x3a
+ 1571 005b 0B       		.uleb128 0xb
+ 1572 005c 3B       		.uleb128 0x3b
+ 1573 005d 0B       		.uleb128 0xb
+ 1574 005e 01       		.uleb128 0x1
+ 1575 005f 13       		.uleb128 0x13
+ 1576 0060 00       		.byte	0
+ 1577 0061 00       		.byte	0
+ 1578 0062 09       		.uleb128 0x9
+ 1579 0063 0D       		.uleb128 0xd
+ 1580 0064 00       		.byte	0
+ 1581 0065 03       		.uleb128 0x3
+ 1582 0066 0E       		.uleb128 0xe
+ 1583 0067 3A       		.uleb128 0x3a
+ 1584 0068 0B       		.uleb128 0xb
+ 1585 0069 3B       		.uleb128 0x3b
+ 1586 006a 0B       		.uleb128 0xb
+ 1587 006b 49       		.uleb128 0x49
+ 1588 006c 13       		.uleb128 0x13
+ 1589 006d 38       		.uleb128 0x38
+ 1590 006e 0A       		.uleb128 0xa
+ 1591 006f 00       		.byte	0
+ 1592 0070 00       		.byte	0
+ 1593 0071 0A       		.uleb128 0xa
+ 1594 0072 01       		.uleb128 0x1
+ 1595 0073 01       		.byte	0x1
+ 1596 0074 49       		.uleb128 0x49
+ 1597 0075 13       		.uleb128 0x13
+ 1598 0076 01       		.uleb128 0x1
+ 1599 0077 13       		.uleb128 0x13
+ 1600 0078 00       		.byte	0
+ 1601 0079 00       		.byte	0
+ 1602 007a 0B       		.uleb128 0xb
+ 1603 007b 21       		.uleb128 0x21
+ 1604 007c 00       		.byte	0
+ 1605 007d 49       		.uleb128 0x49
+ 1606 007e 13       		.uleb128 0x13
+ 1607 007f 2F       		.uleb128 0x2f
+ 1608 0080 05       		.uleb128 0x5
+ 1609 0081 00       		.byte	0
+ 1610 0082 00       		.byte	0
+ 1611 0083 0C       		.uleb128 0xc
+ 1612 0084 17       		.uleb128 0x17
+ 1613 0085 01       		.byte	0x1
+ 1614 0086 0B       		.uleb128 0xb
+ 1615 0087 0B       		.uleb128 0xb
+ 1616 0088 3A       		.uleb128 0x3a
+ 1617 0089 0B       		.uleb128 0xb
+ 1618 008a 3B       		.uleb128 0x3b
+ 1619 008b 05       		.uleb128 0x5
+ 1620 008c 01       		.uleb128 0x1
+ 1621 008d 13       		.uleb128 0x13
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 32
+
+
+ 1622 008e 00       		.byte	0
+ 1623 008f 00       		.byte	0
+ 1624 0090 0D       		.uleb128 0xd
+ 1625 0091 0D       		.uleb128 0xd
+ 1626 0092 00       		.byte	0
+ 1627 0093 03       		.uleb128 0x3
+ 1628 0094 0E       		.uleb128 0xe
+ 1629 0095 3A       		.uleb128 0x3a
+ 1630 0096 0B       		.uleb128 0xb
+ 1631 0097 3B       		.uleb128 0x3b
+ 1632 0098 05       		.uleb128 0x5
+ 1633 0099 49       		.uleb128 0x49
+ 1634 009a 13       		.uleb128 0x13
+ 1635 009b 00       		.byte	0
+ 1636 009c 00       		.byte	0
+ 1637 009d 0E       		.uleb128 0xe
+ 1638 009e 13       		.uleb128 0x13
+ 1639 009f 01       		.byte	0x1
+ 1640 00a0 0B       		.uleb128 0xb
+ 1641 00a1 05       		.uleb128 0x5
+ 1642 00a2 3A       		.uleb128 0x3a
+ 1643 00a3 0B       		.uleb128 0xb
+ 1644 00a4 3B       		.uleb128 0x3b
+ 1645 00a5 05       		.uleb128 0x5
+ 1646 00a6 01       		.uleb128 0x1
+ 1647 00a7 13       		.uleb128 0x13
+ 1648 00a8 00       		.byte	0
+ 1649 00a9 00       		.byte	0
+ 1650 00aa 0F       		.uleb128 0xf
+ 1651 00ab 0D       		.uleb128 0xd
+ 1652 00ac 00       		.byte	0
+ 1653 00ad 03       		.uleb128 0x3
+ 1654 00ae 0E       		.uleb128 0xe
+ 1655 00af 3A       		.uleb128 0x3a
+ 1656 00b0 0B       		.uleb128 0xb
+ 1657 00b1 3B       		.uleb128 0x3b
+ 1658 00b2 05       		.uleb128 0x5
+ 1659 00b3 49       		.uleb128 0x49
+ 1660 00b4 13       		.uleb128 0x13
+ 1661 00b5 38       		.uleb128 0x38
+ 1662 00b6 0A       		.uleb128 0xa
+ 1663 00b7 00       		.byte	0
+ 1664 00b8 00       		.byte	0
+ 1665 00b9 10       		.uleb128 0x10
+ 1666 00ba 0D       		.uleb128 0xd
+ 1667 00bb 00       		.byte	0
+ 1668 00bc 49       		.uleb128 0x49
+ 1669 00bd 13       		.uleb128 0x13
+ 1670 00be 38       		.uleb128 0x38
+ 1671 00bf 0A       		.uleb128 0xa
+ 1672 00c0 00       		.byte	0
+ 1673 00c1 00       		.byte	0
+ 1674 00c2 11       		.uleb128 0x11
+ 1675 00c3 16       		.uleb128 0x16
+ 1676 00c4 00       		.byte	0
+ 1677 00c5 03       		.uleb128 0x3
+ 1678 00c6 0E       		.uleb128 0xe
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 33
+
+
+ 1679 00c7 3A       		.uleb128 0x3a
+ 1680 00c8 0B       		.uleb128 0xb
+ 1681 00c9 3B       		.uleb128 0x3b
+ 1682 00ca 05       		.uleb128 0x5
+ 1683 00cb 49       		.uleb128 0x49
+ 1684 00cc 13       		.uleb128 0x13
+ 1685 00cd 00       		.byte	0
+ 1686 00ce 00       		.byte	0
+ 1687 00cf 12       		.uleb128 0x12
+ 1688 00d0 13       		.uleb128 0x13
+ 1689 00d1 01       		.byte	0x1
+ 1690 00d2 0B       		.uleb128 0xb
+ 1691 00d3 06       		.uleb128 0x6
+ 1692 00d4 3A       		.uleb128 0x3a
+ 1693 00d5 0B       		.uleb128 0xb
+ 1694 00d6 3B       		.uleb128 0x3b
+ 1695 00d7 05       		.uleb128 0x5
+ 1696 00d8 01       		.uleb128 0x1
+ 1697 00d9 13       		.uleb128 0x13
+ 1698 00da 00       		.byte	0
+ 1699 00db 00       		.byte	0
+ 1700 00dc 13       		.uleb128 0x13
+ 1701 00dd 21       		.uleb128 0x21
+ 1702 00de 00       		.byte	0
+ 1703 00df 49       		.uleb128 0x49
+ 1704 00e0 13       		.uleb128 0x13
+ 1705 00e1 2F       		.uleb128 0x2f
+ 1706 00e2 0B       		.uleb128 0xb
+ 1707 00e3 00       		.byte	0
+ 1708 00e4 00       		.byte	0
+ 1709 00e5 14       		.uleb128 0x14
+ 1710 00e6 04       		.uleb128 0x4
+ 1711 00e7 01       		.byte	0x1
+ 1712 00e8 3E       		.uleb128 0x3e
+ 1713 00e9 0B       		.uleb128 0xb
+ 1714 00ea 0B       		.uleb128 0xb
+ 1715 00eb 0B       		.uleb128 0xb
+ 1716 00ec 49       		.uleb128 0x49
+ 1717 00ed 13       		.uleb128 0x13
+ 1718 00ee 3A       		.uleb128 0x3a
+ 1719 00ef 0B       		.uleb128 0xb
+ 1720 00f0 3B       		.uleb128 0x3b
+ 1721 00f1 0B       		.uleb128 0xb
+ 1722 00f2 01       		.uleb128 0x1
+ 1723 00f3 13       		.uleb128 0x13
+ 1724 00f4 00       		.byte	0
+ 1725 00f5 00       		.byte	0
+ 1726 00f6 15       		.uleb128 0x15
+ 1727 00f7 28       		.uleb128 0x28
+ 1728 00f8 00       		.byte	0
+ 1729 00f9 03       		.uleb128 0x3
+ 1730 00fa 0E       		.uleb128 0xe
+ 1731 00fb 1C       		.uleb128 0x1c
+ 1732 00fc 0B       		.uleb128 0xb
+ 1733 00fd 00       		.byte	0
+ 1734 00fe 00       		.byte	0
+ 1735 00ff 16       		.uleb128 0x16
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 34
+
+
+ 1736 0100 34       		.uleb128 0x34
+ 1737 0101 00       		.byte	0
+ 1738 0102 03       		.uleb128 0x3
+ 1739 0103 0E       		.uleb128 0xe
+ 1740 0104 3A       		.uleb128 0x3a
+ 1741 0105 0B       		.uleb128 0xb
+ 1742 0106 3B       		.uleb128 0x3b
+ 1743 0107 0B       		.uleb128 0xb
+ 1744 0108 49       		.uleb128 0x49
+ 1745 0109 13       		.uleb128 0x13
+ 1746 010a 02       		.uleb128 0x2
+ 1747 010b 0A       		.uleb128 0xa
+ 1748 010c 00       		.byte	0
+ 1749 010d 00       		.byte	0
+ 1750 010e 17       		.uleb128 0x17
+ 1751 010f 2E       		.uleb128 0x2e
+ 1752 0110 00       		.byte	0
+ 1753 0111 3F       		.uleb128 0x3f
+ 1754 0112 0C       		.uleb128 0xc
+ 1755 0113 03       		.uleb128 0x3
+ 1756 0114 0E       		.uleb128 0xe
+ 1757 0115 3A       		.uleb128 0x3a
+ 1758 0116 0B       		.uleb128 0xb
+ 1759 0117 3B       		.uleb128 0x3b
+ 1760 0118 0B       		.uleb128 0xb
+ 1761 0119 27       		.uleb128 0x27
+ 1762 011a 0C       		.uleb128 0xc
+ 1763 011b 11       		.uleb128 0x11
+ 1764 011c 01       		.uleb128 0x1
+ 1765 011d 12       		.uleb128 0x12
+ 1766 011e 01       		.uleb128 0x1
+ 1767 011f 40       		.uleb128 0x40
+ 1768 0120 0A       		.uleb128 0xa
+ 1769 0121 9742     		.uleb128 0x2117
+ 1770 0123 0C       		.uleb128 0xc
+ 1771 0124 00       		.byte	0
+ 1772 0125 00       		.byte	0
+ 1773 0126 18       		.uleb128 0x18
+ 1774 0127 2E       		.uleb128 0x2e
+ 1775 0128 00       		.byte	0
+ 1776 0129 3F       		.uleb128 0x3f
+ 1777 012a 0C       		.uleb128 0xc
+ 1778 012b 03       		.uleb128 0x3
+ 1779 012c 0E       		.uleb128 0xe
+ 1780 012d 3A       		.uleb128 0x3a
+ 1781 012e 0B       		.uleb128 0xb
+ 1782 012f 3B       		.uleb128 0x3b
+ 1783 0130 0B       		.uleb128 0xb
+ 1784 0131 27       		.uleb128 0x27
+ 1785 0132 0C       		.uleb128 0xc
+ 1786 0133 49       		.uleb128 0x49
+ 1787 0134 13       		.uleb128 0x13
+ 1788 0135 11       		.uleb128 0x11
+ 1789 0136 01       		.uleb128 0x1
+ 1790 0137 12       		.uleb128 0x12
+ 1791 0138 01       		.uleb128 0x1
+ 1792 0139 40       		.uleb128 0x40
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 35
+
+
+ 1793 013a 0A       		.uleb128 0xa
+ 1794 013b 9742     		.uleb128 0x2117
+ 1795 013d 0C       		.uleb128 0xc
+ 1796 013e 00       		.byte	0
+ 1797 013f 00       		.byte	0
+ 1798 0140 19       		.uleb128 0x19
+ 1799 0141 2E       		.uleb128 0x2e
+ 1800 0142 00       		.byte	0
+ 1801 0143 3F       		.uleb128 0x3f
+ 1802 0144 0C       		.uleb128 0xc
+ 1803 0145 03       		.uleb128 0x3
+ 1804 0146 0E       		.uleb128 0xe
+ 1805 0147 3A       		.uleb128 0x3a
+ 1806 0148 0B       		.uleb128 0xb
+ 1807 0149 3B       		.uleb128 0x3b
+ 1808 014a 0B       		.uleb128 0xb
+ 1809 014b 27       		.uleb128 0x27
+ 1810 014c 0C       		.uleb128 0xc
+ 1811 014d 00       		.byte	0
+ 1812 014e 00       		.byte	0
+ 1813 014f 1A       		.uleb128 0x1a
+ 1814 0150 2E       		.uleb128 0x2e
+ 1815 0151 01       		.byte	0x1
+ 1816 0152 3F       		.uleb128 0x3f
+ 1817 0153 0C       		.uleb128 0xc
+ 1818 0154 03       		.uleb128 0x3
+ 1819 0155 0E       		.uleb128 0xe
+ 1820 0156 3A       		.uleb128 0x3a
+ 1821 0157 0B       		.uleb128 0xb
+ 1822 0158 3B       		.uleb128 0x3b
+ 1823 0159 0B       		.uleb128 0xb
+ 1824 015a 27       		.uleb128 0x27
+ 1825 015b 0C       		.uleb128 0xc
+ 1826 015c 11       		.uleb128 0x11
+ 1827 015d 01       		.uleb128 0x1
+ 1828 015e 12       		.uleb128 0x12
+ 1829 015f 01       		.uleb128 0x1
+ 1830 0160 40       		.uleb128 0x40
+ 1831 0161 06       		.uleb128 0x6
+ 1832 0162 9742     		.uleb128 0x2117
+ 1833 0164 0C       		.uleb128 0xc
+ 1834 0165 01       		.uleb128 0x1
+ 1835 0166 13       		.uleb128 0x13
+ 1836 0167 00       		.byte	0
+ 1837 0168 00       		.byte	0
+ 1838 0169 1B       		.uleb128 0x1b
+ 1839 016a 898201   		.uleb128 0x4109
+ 1840 016d 01       		.byte	0x1
+ 1841 016e 11       		.uleb128 0x11
+ 1842 016f 01       		.uleb128 0x1
+ 1843 0170 31       		.uleb128 0x31
+ 1844 0171 13       		.uleb128 0x13
+ 1845 0172 01       		.uleb128 0x1
+ 1846 0173 13       		.uleb128 0x13
+ 1847 0174 00       		.byte	0
+ 1848 0175 00       		.byte	0
+ 1849 0176 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 36
+
+
+ 1850 0177 8A8201   		.uleb128 0x410a
+ 1851 017a 00       		.byte	0
+ 1852 017b 02       		.uleb128 0x2
+ 1853 017c 0A       		.uleb128 0xa
+ 1854 017d 9142     		.uleb128 0x2111
+ 1855 017f 0A       		.uleb128 0xa
+ 1856 0180 00       		.byte	0
+ 1857 0181 00       		.byte	0
+ 1858 0182 1D       		.uleb128 0x1d
+ 1859 0183 898201   		.uleb128 0x4109
+ 1860 0186 01       		.byte	0x1
+ 1861 0187 11       		.uleb128 0x11
+ 1862 0188 01       		.uleb128 0x1
+ 1863 0189 31       		.uleb128 0x31
+ 1864 018a 13       		.uleb128 0x13
+ 1865 018b 00       		.byte	0
+ 1866 018c 00       		.byte	0
+ 1867 018d 1E       		.uleb128 0x1e
+ 1868 018e 2E       		.uleb128 0x2e
+ 1869 018f 00       		.byte	0
+ 1870 0190 3F       		.uleb128 0x3f
+ 1871 0191 0C       		.uleb128 0xc
+ 1872 0192 03       		.uleb128 0x3
+ 1873 0193 0E       		.uleb128 0xe
+ 1874 0194 3A       		.uleb128 0x3a
+ 1875 0195 0B       		.uleb128 0xb
+ 1876 0196 3B       		.uleb128 0x3b
+ 1877 0197 0B       		.uleb128 0xb
+ 1878 0198 27       		.uleb128 0x27
+ 1879 0199 0C       		.uleb128 0xc
+ 1880 019a 20       		.uleb128 0x20
+ 1881 019b 0B       		.uleb128 0xb
+ 1882 019c 00       		.byte	0
+ 1883 019d 00       		.byte	0
+ 1884 019e 1F       		.uleb128 0x1f
+ 1885 019f 2E       		.uleb128 0x2e
+ 1886 01a0 01       		.byte	0x1
+ 1887 01a1 3F       		.uleb128 0x3f
+ 1888 01a2 0C       		.uleb128 0xc
+ 1889 01a3 03       		.uleb128 0x3
+ 1890 01a4 0E       		.uleb128 0xe
+ 1891 01a5 3A       		.uleb128 0x3a
+ 1892 01a6 0B       		.uleb128 0xb
+ 1893 01a7 3B       		.uleb128 0x3b
+ 1894 01a8 0B       		.uleb128 0xb
+ 1895 01a9 27       		.uleb128 0x27
+ 1896 01aa 0C       		.uleb128 0xc
+ 1897 01ab 49       		.uleb128 0x49
+ 1898 01ac 13       		.uleb128 0x13
+ 1899 01ad 11       		.uleb128 0x11
+ 1900 01ae 01       		.uleb128 0x1
+ 1901 01af 12       		.uleb128 0x12
+ 1902 01b0 01       		.uleb128 0x1
+ 1903 01b1 40       		.uleb128 0x40
+ 1904 01b2 06       		.uleb128 0x6
+ 1905 01b3 9742     		.uleb128 0x2117
+ 1906 01b5 0C       		.uleb128 0xc
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 37
+
+
+ 1907 01b6 01       		.uleb128 0x1
+ 1908 01b7 13       		.uleb128 0x13
+ 1909 01b8 00       		.byte	0
+ 1910 01b9 00       		.byte	0
+ 1911 01ba 20       		.uleb128 0x20
+ 1912 01bb 05       		.uleb128 0x5
+ 1913 01bc 00       		.byte	0
+ 1914 01bd 03       		.uleb128 0x3
+ 1915 01be 0E       		.uleb128 0xe
+ 1916 01bf 3A       		.uleb128 0x3a
+ 1917 01c0 0B       		.uleb128 0xb
+ 1918 01c1 3B       		.uleb128 0x3b
+ 1919 01c2 0B       		.uleb128 0xb
+ 1920 01c3 49       		.uleb128 0x49
+ 1921 01c4 13       		.uleb128 0x13
+ 1922 01c5 02       		.uleb128 0x2
+ 1923 01c6 06       		.uleb128 0x6
+ 1924 01c7 00       		.byte	0
+ 1925 01c8 00       		.byte	0
+ 1926 01c9 21       		.uleb128 0x21
+ 1927 01ca 34       		.uleb128 0x34
+ 1928 01cb 00       		.byte	0
+ 1929 01cc 03       		.uleb128 0x3
+ 1930 01cd 0E       		.uleb128 0xe
+ 1931 01ce 3A       		.uleb128 0x3a
+ 1932 01cf 0B       		.uleb128 0xb
+ 1933 01d0 3B       		.uleb128 0x3b
+ 1934 01d1 0B       		.uleb128 0xb
+ 1935 01d2 49       		.uleb128 0x49
+ 1936 01d3 13       		.uleb128 0x13
+ 1937 01d4 1C       		.uleb128 0x1c
+ 1938 01d5 0B       		.uleb128 0xb
+ 1939 01d6 00       		.byte	0
+ 1940 01d7 00       		.byte	0
+ 1941 01d8 22       		.uleb128 0x22
+ 1942 01d9 2E       		.uleb128 0x2e
+ 1943 01da 00       		.byte	0
+ 1944 01db 31       		.uleb128 0x31
+ 1945 01dc 13       		.uleb128 0x13
+ 1946 01dd 11       		.uleb128 0x11
+ 1947 01de 01       		.uleb128 0x1
+ 1948 01df 12       		.uleb128 0x12
+ 1949 01e0 01       		.uleb128 0x1
+ 1950 01e1 40       		.uleb128 0x40
+ 1951 01e2 0A       		.uleb128 0xa
+ 1952 01e3 9742     		.uleb128 0x2117
+ 1953 01e5 0C       		.uleb128 0xc
+ 1954 01e6 00       		.byte	0
+ 1955 01e7 00       		.byte	0
+ 1956 01e8 23       		.uleb128 0x23
+ 1957 01e9 2E       		.uleb128 0x2e
+ 1958 01ea 00       		.byte	0
+ 1959 01eb 3F       		.uleb128 0x3f
+ 1960 01ec 0C       		.uleb128 0xc
+ 1961 01ed 3C       		.uleb128 0x3c
+ 1962 01ee 0C       		.uleb128 0xc
+ 1963 01ef 8740     		.uleb128 0x2007
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 38
+
+
+ 1964 01f1 0E       		.uleb128 0xe
+ 1965 01f2 03       		.uleb128 0x3
+ 1966 01f3 0E       		.uleb128 0xe
+ 1967 01f4 3A       		.uleb128 0x3a
+ 1968 01f5 0B       		.uleb128 0xb
+ 1969 01f6 3B       		.uleb128 0x3b
+ 1970 01f7 0B       		.uleb128 0xb
+ 1971 01f8 00       		.byte	0
+ 1972 01f9 00       		.byte	0
+ 1973 01fa 00       		.byte	0
+ 1974              		.section	.debug_loc,"",%progbits
+ 1975              	.Ldebug_loc0:
+ 1976              	.LLST5:
+ 1977 0000 AC000000 		.4byte	.LFB38-.Ltext0
+ 1978 0004 AE000000 		.4byte	.LCFI3-.Ltext0
+ 1979 0008 0200     		.2byte	0x2
+ 1980 000a 7D       		.byte	0x7d
+ 1981 000b 00       		.sleb128 0
+ 1982 000c AE000000 		.4byte	.LCFI3-.Ltext0
+ 1983 0010 C8000000 		.4byte	.LFE38-.Ltext0
+ 1984 0014 0200     		.2byte	0x2
+ 1985 0016 7D       		.byte	0x7d
+ 1986 0017 08       		.sleb128 8
+ 1987 0018 00000000 		.4byte	0
+ 1988 001c 00000000 		.4byte	0
+ 1989              	.LLST4:
+ 1990 0020 80000000 		.4byte	.LFB36-.Ltext0
+ 1991 0024 82000000 		.4byte	.LCFI2-.Ltext0
+ 1992 0028 0200     		.2byte	0x2
+ 1993 002a 7D       		.byte	0x7d
+ 1994 002b 00       		.sleb128 0
+ 1995 002c 82000000 		.4byte	.LCFI2-.Ltext0
+ 1996 0030 A0000000 		.4byte	.LFE36-.Ltext0
+ 1997 0034 0200     		.2byte	0x2
+ 1998 0036 7D       		.byte	0x7d
+ 1999 0037 08       		.sleb128 8
+ 2000 0038 00000000 		.4byte	0
+ 2001 003c 00000000 		.4byte	0
+ 2002              	.LLST2:
+ 2003 0040 3C000000 		.4byte	.LFB35-.Ltext0
+ 2004 0044 40000000 		.4byte	.LCFI1-.Ltext0
+ 2005 0048 0200     		.2byte	0x2
+ 2006 004a 7D       		.byte	0x7d
+ 2007 004b 00       		.sleb128 0
+ 2008 004c 40000000 		.4byte	.LCFI1-.Ltext0
+ 2009 0050 80000000 		.4byte	.LFE35-.Ltext0
+ 2010 0054 0200     		.2byte	0x2
+ 2011 0056 7D       		.byte	0x7d
+ 2012 0057 18       		.sleb128 24
+ 2013 0058 00000000 		.4byte	0
+ 2014 005c 00000000 		.4byte	0
+ 2015              	.LLST3:
+ 2016 0060 3C000000 		.4byte	.LVL5-.Ltext0
+ 2017 0064 58000000 		.4byte	.LVL6-.Ltext0
+ 2018 0068 0100     		.2byte	0x1
+ 2019 006a 50       		.byte	0x50
+ 2020 006b 58000000 		.4byte	.LVL6-.Ltext0
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 39
+
+
+ 2021 006f 80000000 		.4byte	.LFE35-.Ltext0
+ 2022 0073 0400     		.2byte	0x4
+ 2023 0075 F3       		.byte	0xf3
+ 2024 0076 01       		.uleb128 0x1
+ 2025 0077 50       		.byte	0x50
+ 2026 0078 9F       		.byte	0x9f
+ 2027 0079 00000000 		.4byte	0
+ 2028 007d 00000000 		.4byte	0
+ 2029              	.LLST0:
+ 2030 0081 00000000 		.4byte	.LFB34-.Ltext0
+ 2031 0085 06000000 		.4byte	.LCFI0-.Ltext0
+ 2032 0089 0200     		.2byte	0x2
+ 2033 008b 7D       		.byte	0x7d
+ 2034 008c 00       		.sleb128 0
+ 2035 008d 06000000 		.4byte	.LCFI0-.Ltext0
+ 2036 0091 3C000000 		.4byte	.LFE34-.Ltext0
+ 2037 0095 0200     		.2byte	0x2
+ 2038 0097 7D       		.byte	0x7d
+ 2039 0098 10       		.sleb128 16
+ 2040 0099 00000000 		.4byte	0
+ 2041 009d 00000000 		.4byte	0
+ 2042              	.LLST1:
+ 2043 00a1 00000000 		.4byte	.LVL0-.Ltext0
+ 2044 00a5 1A000000 		.4byte	.LVL1-.Ltext0
+ 2045 00a9 0100     		.2byte	0x1
+ 2046 00ab 50       		.byte	0x50
+ 2047 00ac 1A000000 		.4byte	.LVL1-.Ltext0
+ 2048 00b0 32000000 		.4byte	.LVL4-.Ltext0
+ 2049 00b4 0100     		.2byte	0x1
+ 2050 00b6 56       		.byte	0x56
+ 2051 00b7 32000000 		.4byte	.LVL4-.Ltext0
+ 2052 00bb 3C000000 		.4byte	.LFE34-.Ltext0
+ 2053 00bf 0400     		.2byte	0x4
+ 2054 00c1 F3       		.byte	0xf3
+ 2055 00c2 01       		.uleb128 0x1
+ 2056 00c3 50       		.byte	0x50
+ 2057 00c4 9F       		.byte	0x9f
+ 2058 00c5 00000000 		.4byte	0
+ 2059 00c9 00000000 		.4byte	0
+ 2060              		.section	.debug_aranges,"",%progbits
+ 2061 0000 1C000000 		.4byte	0x1c
+ 2062 0004 0200     		.2byte	0x2
+ 2063 0006 00000000 		.4byte	.Ldebug_info0
+ 2064 000a 04       		.byte	0x4
+ 2065 000b 00       		.byte	0
+ 2066 000c 0000     		.2byte	0
+ 2067 000e 0000     		.2byte	0
+ 2068 0010 00000000 		.4byte	.Ltext0
+ 2069 0014 04010000 		.4byte	.Letext0-.Ltext0
+ 2070 0018 00000000 		.4byte	0
+ 2071 001c 00000000 		.4byte	0
+ 2072              		.section	.debug_line,"",%progbits
+ 2073              	.Ldebug_line0:
+ 2074 0000 A4010000 		.section	.debug_str,"MS",%progbits,1
+ 2074      02003C01 
+ 2074      00000201 
+ 2074      FB0E0D00 
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 40
+
+
+ 2074      01010101 
+ 2075              	.LASF79:
+ 2076 0000 564F525F 		.ascii	"VOR_TIM0_MSecExpired\000"
+ 2076      54494D30 
+ 2076      5F4D5365 
+ 2076      63457870 
+ 2076      69726564 
+ 2077              	.LASF17:
+ 2078 0015 524F4D5F 		.ascii	"ROM_SCRUB\000"
+ 2078      53435255 
+ 2078      4200
+ 2079              	.LASF70:
+ 2080 001f 564F525F 		.ascii	"VOR_IRQ_SPI\000"
+ 2080      4952515F 
+ 2080      53504900 
+ 2081              	.LASF41:
+ 2082 002b 54494D5F 		.ascii	"TIM_RESET\000"
+ 2082      52455345 
+ 2082      5400
+ 2083              	.LASF22:
+ 2084 0035 52414D5F 		.ascii	"RAM_TRAP_SYND\000"
+ 2084      54524150 
+ 2084      5F53594E 
+ 2084      4400
+ 2085              	.LASF48:
+ 2086 0043 45465F49 		.ascii	"EF_ID\000"
+ 2086      4400
+ 2087              	.LASF9:
+ 2088 0049 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2088      206C6F6E 
+ 2088      6720756E 
+ 2088      7369676E 
+ 2088      65642069 
+ 2089              	.LASF47:
+ 2090 0060 45465F43 		.ascii	"EF_CONFIG\000"
+ 2090      4F4E4649 
+ 2090      4700
+ 2091              	.LASF77:
+ 2092 006a 564F525F 		.ascii	"VOR_TIM0_MSecClear\000"
+ 2092      54494D30 
+ 2092      5F4D5365 
+ 2092      63436C65 
+ 2092      617200
+ 2093              	.LASF14:
+ 2094 007d 5253545F 		.ascii	"RST_CNTL_ROM\000"
+ 2094      434E544C 
+ 2094      5F524F4D 
+ 2094      00
+ 2095              	.LASF91:
+ 2096 008a 433A5C44 		.ascii	"C:\\Development\\New_Mar8\\Workspace-Vorago - REB1\\"
+ 2096      6576656C 
+ 2096      6F706D65 
+ 2096      6E745C4E 
+ 2096      65775F4D 
+ 2097 00ba 766F7261 		.ascii	"vorago_try311\000"
+ 2097      676F5F74 
+ 2097      72793331 
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 41
+
+
+ 2097      3100
+ 2098              	.LASF8:
+ 2099 00c8 6C6F6E67 		.ascii	"long long int\000"
+ 2099      206C6F6E 
+ 2099      6720696E 
+ 2099      7400
+ 2100              	.LASF0:
+ 2101 00d6 7369676E 		.ascii	"signed char\000"
+ 2101      65642063 
+ 2101      68617200 
+ 2102              	.LASF89:
+ 2103 00e2 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 2103      43313120 
+ 2103      372E322E 
+ 2103      31203230 
+ 2103      31373039 
+ 2104 0115 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m0 -mthumb -gdwa"
+ 2104      20726576 
+ 2104      6973696F 
+ 2104      6E203235 
+ 2104      35323034 
+ 2105 0148 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+ 2105      202D4F73 
+ 2105      202D666F 
+ 2105      6D69742D 
+ 2105      6672616D 
+ 2106              	.LASF58:
+ 2107 0166 4353445F 		.ascii	"CSD_CTRL\000"
+ 2107      4354524C 
+ 2107      00
+ 2108              	.LASF56:
+ 2109 016f 434E545F 		.ascii	"CNT_VALUE\000"
+ 2109      56414C55 
+ 2109      4500
+ 2110              	.LASF4:
+ 2111 0179 6C6F6E67 		.ascii	"long int\000"
+ 2111      20696E74 
+ 2111      00
+ 2112              	.LASF62:
+ 2113 0182 50574D42 		.ascii	"PWMB_VALUE\000"
+ 2113      5F56414C 
+ 2113      554500
+ 2114              	.LASF80:
+ 2115 018d 564F525F 		.ascii	"VOR_TIM1_IRQHandler\000"
+ 2115      54494D31 
+ 2115      5F495251 
+ 2115      48616E64 
+ 2115      6C657200 
+ 2116              	.LASF57:
+ 2117 01a1 454E4142 		.ascii	"ENABLE\000"
+ 2117      4C4500
+ 2118              	.LASF78:
+ 2119 01a8 564F525F 		.ascii	"VOR_TIM1_SecExpired\000"
+ 2119      54494D31 
+ 2119      5F536563 
+ 2119      45787069 
+ 2119      72656400 
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 42
+
+
+ 2120              	.LASF27:
+ 2121 01bc 52414D5F 		.ascii	"RAM_SBE\000"
+ 2121      53424500 
+ 2122              	.LASF20:
+ 2123 01c4 524F4D5F 		.ascii	"ROM_TRAP_SYND\000"
+ 2123      54524150 
+ 2123      5F53594E 
+ 2123      4400
+ 2124              	.LASF6:
+ 2125 01d2 5F5F7569 		.ascii	"__uint32_t\000"
+ 2125      6E743332 
+ 2125      5F7400
+ 2126              	.LASF45:
+ 2127 01dd 4C4F434B 		.ascii	"LOCKUP_RESET\000"
+ 2127      55505F52 
+ 2127      45534554 
+ 2127      00
+ 2128              	.LASF15:
+ 2129 01ea 5253545F 		.ascii	"RST_CNTL_RAM\000"
+ 2129      434E544C 
+ 2129      5F52414D 
+ 2129      00
+ 2130              	.LASF10:
+ 2131 01f7 756E7369 		.ascii	"unsigned int\000"
+ 2131      676E6564 
+ 2131      20696E74 
+ 2131      00
+ 2132              	.LASF28:
+ 2133 0204 52414D5F 		.ascii	"RAM_MBE\000"
+ 2133      4D424500 
+ 2134              	.LASF92:
+ 2135 020c 53797374 		.ascii	"SystemCoreClock\000"
+ 2135      656D436F 
+ 2135      7265436C 
+ 2135      6F636B00 
+ 2136              	.LASF42:
+ 2137 021c 54494D5F 		.ascii	"TIM_CLK_ENABLE\000"
+ 2137      434C4B5F 
+ 2137      454E4142 
+ 2137      4C4500
+ 2138              	.LASF85:
+ 2139 022b 74696D65 		.ascii	"time_sec\000"
+ 2139      5F736563 
+ 2139      00
+ 2140              	.LASF7:
+ 2141 0234 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2141      20756E73 
+ 2141      69676E65 
+ 2141      6420696E 
+ 2141      7400
+ 2142              	.LASF90:
+ 2143 0246 2E5C7372 		.ascii	".\\src\\reb_timer.c\000"
+ 2143      635C7265 
+ 2143      625F7469 
+ 2143      6D65722E 
+ 2143      6300
+ 2144              	.LASF59:
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 43
+
+
+ 2145 0258 43415343 		.ascii	"CASCADE0\000"
+ 2145      41444530 
+ 2145      00
+ 2146              	.LASF60:
+ 2147 0261 43415343 		.ascii	"CASCADE1\000"
+ 2147      41444531 
+ 2147      00
+ 2148              	.LASF61:
+ 2149 026a 43415343 		.ascii	"CASCADE2\000"
+ 2149      41444532 
+ 2149      00
+ 2150              	.LASF3:
+ 2151 0273 73686F72 		.ascii	"short unsigned int\000"
+ 2151      7420756E 
+ 2151      7369676E 
+ 2151      65642069 
+ 2151      6E7400
+ 2152              	.LASF84:
+ 2153 0286 564F525F 		.ascii	"VOR_TIM0_MSecInitialize\000"
+ 2153      54494D30 
+ 2153      5F4D5365 
+ 2153      63496E69 
+ 2153      7469616C 
+ 2154              	.LASF94:
+ 2155 029e 564F525F 		.ascii	"VOR_GPIO_IRQHandler\000"
+ 2155      4750494F 
+ 2155      5F495251 
+ 2155      48616E64 
+ 2155      6C657200 
+ 2156              	.LASF72:
+ 2157 02b2 564F525F 		.ascii	"VOR_IRQ_I2C_SL\000"
+ 2157      4952515F 
+ 2157      4932435F 
+ 2157      534C00
+ 2158              	.LASF65:
+ 2159 02c1 564F525F 		.ascii	"VOR_TIM_PERIPHERAL_BANK_Type\000"
+ 2159      54494D5F 
+ 2159      50455249 
+ 2159      50484552 
+ 2159      414C5F42 
+ 2160              	.LASF16:
+ 2161 02de 524F4D5F 		.ascii	"ROM_PROT\000"
+ 2161      50524F54 
+ 2161      00
+ 2162              	.LASF76:
+ 2163 02e7 564F525F 		.ascii	"VOR_TIM1_SecClear\000"
+ 2163      54494D31 
+ 2163      5F536563 
+ 2163      436C6561 
+ 2163      7200
+ 2164              	.LASF29:
+ 2165 02f9 524F4D5F 		.ascii	"ROM_SBE\000"
+ 2165      53424500 
+ 2166              	.LASF30:
+ 2167 0301 524F4D5F 		.ascii	"ROM_MBE\000"
+ 2167      4D424500 
+ 2168              	.LASF21:
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 44
+
+
+ 2169 0309 52414D5F 		.ascii	"RAM_TRAP_ADDR\000"
+ 2169      54524150 
+ 2169      5F414444 
+ 2169      5200
+ 2170              	.LASF71:
+ 2171 0317 564F525F 		.ascii	"VOR_IRQ_I2C_MS\000"
+ 2171      4952515F 
+ 2171      4932435F 
+ 2171      4D5300
+ 2172              	.LASF40:
+ 2173 0326 52454652 		.ascii	"REFRESH_CONFIG\000"
+ 2173      4553485F 
+ 2173      434F4E46 
+ 2173      494700
+ 2174              	.LASF69:
+ 2175 0335 564F525F 		.ascii	"VOR_IRQ_UART\000"
+ 2175      4952515F 
+ 2175      55415254 
+ 2175      00
+ 2176              	.LASF66:
+ 2177 0342 564F525F 		.ascii	"VOR_IRQ_GPIOA\000"
+ 2177      4952515F 
+ 2177      4750494F 
+ 2177      4100
+ 2178              	.LASF67:
+ 2179 0350 564F525F 		.ascii	"VOR_IRQ_GPIOB\000"
+ 2179      4952515F 
+ 2179      4750494F 
+ 2179      4200
+ 2180              	.LASF46:
+ 2181 035e 52455345 		.ascii	"RESERVED0\000"
+ 2181      52564544 
+ 2181      3000
+ 2182              	.LASF31:
+ 2183 0368 494F434F 		.ascii	"IOCONFIG_CLKDIV0\000"
+ 2183      4E464947 
+ 2183      5F434C4B 
+ 2183      44495630 
+ 2183      00
+ 2184              	.LASF32:
+ 2185 0379 494F434F 		.ascii	"IOCONFIG_CLKDIV1\000"
+ 2185      4E464947 
+ 2185      5F434C4B 
+ 2185      44495631 
+ 2185      00
+ 2186              	.LASF33:
+ 2187 038a 494F434F 		.ascii	"IOCONFIG_CLKDIV2\000"
+ 2187      4E464947 
+ 2187      5F434C4B 
+ 2187      44495632 
+ 2187      00
+ 2188              	.LASF34:
+ 2189 039b 494F434F 		.ascii	"IOCONFIG_CLKDIV3\000"
+ 2189      4E464947 
+ 2189      5F434C4B 
+ 2189      44495633 
+ 2189      00
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 45
+
+
+ 2190              	.LASF35:
+ 2191 03ac 494F434F 		.ascii	"IOCONFIG_CLKDIV4\000"
+ 2191      4E464947 
+ 2191      5F434C4B 
+ 2191      44495634 
+ 2191      00
+ 2192              	.LASF36:
+ 2193 03bd 494F434F 		.ascii	"IOCONFIG_CLKDIV5\000"
+ 2193      4E464947 
+ 2193      5F434C4B 
+ 2193      44495635 
+ 2193      00
+ 2194              	.LASF37:
+ 2195 03ce 494F434F 		.ascii	"IOCONFIG_CLKDIV6\000"
+ 2195      4E464947 
+ 2195      5F434C4B 
+ 2195      44495636 
+ 2195      00
+ 2196              	.LASF38:
+ 2197 03df 494F434F 		.ascii	"IOCONFIG_CLKDIV7\000"
+ 2197      4E464947 
+ 2197      5F434C4B 
+ 2197      44495637 
+ 2197      00
+ 2198              	.LASF73:
+ 2199 03f0 5F426F6F 		.ascii	"_Bool\000"
+ 2199      6C00
+ 2200              	.LASF11:
+ 2201 03f6 696E7433 		.ascii	"int32_t\000"
+ 2201      325F7400 
+ 2202              	.LASF1:
+ 2203 03fe 756E7369 		.ascii	"unsigned char\000"
+ 2203      676E6564 
+ 2203      20636861 
+ 2203      7200
+ 2204              	.LASF2:
+ 2205 040c 73686F72 		.ascii	"short int\000"
+ 2205      7420696E 
+ 2205      7400
+ 2206              	.LASF44:
+ 2207 0416 50455249 		.ascii	"PERIPHERAL_CLK_ENABLE\000"
+ 2207      50484552 
+ 2207      414C5F43 
+ 2207      4C4B5F45 
+ 2207      4E41424C 
+ 2208              	.LASF86:
+ 2209 042c 74696D65 		.ascii	"time_msec\000"
+ 2209      5F6D7365 
+ 2209      6300
+ 2210              	.LASF63:
+ 2211 0436 564F525F 		.ascii	"VOR_TIM_PERIPHERAL_Type\000"
+ 2211      54494D5F 
+ 2211      50455249 
+ 2211      50484552 
+ 2211      414C5F54 
+ 2212              	.LASF81:
+ 2213 044e 4F43305F 		.ascii	"OC0_IRQHandler\000"
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 46
+
+
+ 2213      49525148 
+ 2213      616E646C 
+ 2213      657200
+ 2214              	.LASF51:
+ 2215 045d 564F525F 		.ascii	"VOR_SYSCONFIG_Type\000"
+ 2215      53595343 
+ 2215      4F4E4649 
+ 2215      475F5479 
+ 2215      706500
+ 2216              	.LASF13:
+ 2217 0470 5253545F 		.ascii	"RST_STAT\000"
+ 2217      53544154 
+ 2217      00
+ 2218              	.LASF39:
+ 2219 0479 524F4D5F 		.ascii	"ROM_RETRIES\000"
+ 2219      52455452 
+ 2219      49455300 
+ 2220              	.LASF12:
+ 2221 0485 75696E74 		.ascii	"uint32_t\000"
+ 2221      33325F74 
+ 2221      00
+ 2222              	.LASF82:
+ 2223 048e 7265745F 		.ascii	"ret_code\000"
+ 2223      636F6465 
+ 2223      00
+ 2224              	.LASF93:
+ 2225 0497 53797354 		.ascii	"SysTick_Handler\000"
+ 2225      69636B5F 
+ 2225      48616E64 
+ 2225      6C657200 
+ 2226              	.LASF19:
+ 2227 04a7 524F4D5F 		.ascii	"ROM_TRAP_ADDR\000"
+ 2227      54524150 
+ 2227      5F414444 
+ 2227      5200
+ 2228              	.LASF5:
+ 2229 04b5 5F5F696E 		.ascii	"__int32_t\000"
+ 2229      7433325F 
+ 2229      7400
+ 2230              	.LASF24:
+ 2231 04bf 4952515F 		.ascii	"IRQ_RAW\000"
+ 2231      52415700 
+ 2232              	.LASF53:
+ 2233 04c7 50574D5F 		.ascii	"PWM_VALUE\000"
+ 2233      56414C55 
+ 2233      4500
+ 2234              	.LASF23:
+ 2235 04d1 4952515F 		.ascii	"IRQ_ENB\000"
+ 2235      454E4200 
+ 2236              	.LASF25:
+ 2237 04d9 4952515F 		.ascii	"IRQ_END\000"
+ 2237      454E4400 
+ 2238              	.LASF54:
+ 2239 04e1 4354524C 		.ascii	"CTRL\000"
+ 2239      00
+ 2240              	.LASF43:
+ 2241 04e6 50455249 		.ascii	"PERIPHERAL_RESET\000"
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 47
+
+
+ 2241      50484552 
+ 2241      414C5F52 
+ 2241      45534554 
+ 2241      00
+ 2242              	.LASF64:
+ 2243 04f7 42414E4B 		.ascii	"BANK\000"
+ 2243      00
+ 2244              	.LASF49:
+ 2245 04fc 50524F43 		.ascii	"PROCID\000"
+ 2245      494400
+ 2246              	.LASF74:
+ 2247 0503 6D736563 		.ascii	"msec_tim_timeout\000"
+ 2247      5F74696D 
+ 2247      5F74696D 
+ 2247      656F7574 
+ 2247      00
+ 2248              	.LASF52:
+ 2249 0514 50574D41 		.ascii	"PWMA_VALUE\000"
+ 2249      5F56414C 
+ 2249      554500
+ 2250              	.LASF87:
+ 2251 051f 564F525F 		.ascii	"VOR_Disable_Irq\000"
+ 2251      44697361 
+ 2251      626C655F 
+ 2251      49727100 
+ 2252              	.LASF83:
+ 2253 052f 564F525F 		.ascii	"VOR_TIM1_SecInitialize\000"
+ 2253      54494D31 
+ 2253      5F536563 
+ 2253      496E6974 
+ 2253      69616C69 
+ 2254              	.LASF88:
+ 2255 0546 564F525F 		.ascii	"VOR_Enable_Irq\000"
+ 2255      456E6162 
+ 2255      6C655F49 
+ 2255      727100
+ 2256              	.LASF75:
+ 2257 0555 7365635F 		.ascii	"sec_tim_timeout\000"
+ 2257      74696D5F 
+ 2257      74696D65 
+ 2257      6F757400 
+ 2258              	.LASF55:
+ 2259 0565 5253545F 		.ascii	"RST_VALUE\000"
+ 2259      56414C55 
+ 2259      4500
+ 2260              	.LASF50:
+ 2261 056f 50455249 		.ascii	"PERID\000"
+ 2261      4400
+ 2262              	.LASF68:
+ 2263 0575 564F525F 		.ascii	"VOR_IRQ_TIM\000"
+ 2263      4952515F 
+ 2263      54494D00 
+ 2264              	.LASF26:
+ 2265 0581 4952515F 		.ascii	"IRQ_CLR\000"
+ 2265      434C5200 
+ 2266              	.LASF18:
+ 2267 0589 52414D5F 		.ascii	"RAM_SCRUB\000"
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 48
+
+
+ 2267      53435255 
+ 2267      4200
+ 2268              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s 			page 49
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 reb_timer.c
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:72     .text:00000000 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:79     .text:00000000 VOR_TIM0_MSecInitialize
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:159    .text:00000034 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:164    .text:0000003c $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:171    .text:0000003c VOR_TIM1_SecInitialize
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:258    .text:00000074 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:264    .text:00000080 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:271    .text:00000080 OC0_IRQHandler
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:312    .text:0000009c $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:316    .text:000000a0 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:323    .text:000000a0 VOR_GPIO_IRQHandler
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:346    .text:000000a8 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:350    .text:000000ac $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:357    .text:000000ac VOR_TIM1_IRQHandler
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:397    .text:000000c4 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:401    .text:000000c8 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:408    .text:000000c8 SysTick_Handler
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:422    .text:000000d0 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:426    .text:000000d4 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:433    .text:000000d4 VOR_TIM0_MSecExpired
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:456    .text:000000dc $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:460    .text:000000e0 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:467    .text:000000e0 VOR_TIM0_MSecClear
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:490    .text:000000e8 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:494    .text:000000ec $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:501    .text:000000ec VOR_TIM1_SecExpired
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:524    .text:000000f4 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:528    .text:000000f8 $t
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:535    .text:000000f8 VOR_TIM1_SecClear
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:558    .text:00000100 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:566    .bss:00000000 msec_tim_timeout
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:567    .bss:00000000 $d
+C:\Users\claym\AppData\Local\Temp\cc7EnPk0.s:570    .bss:00000001 sec_tim_timeout
+
+UNDEFINED SYMBOLS
+VOR_Disable_Irq
+VOR_Enable_Irq

@@ -1,0 +1,613 @@
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   3              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   4              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   5              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   6              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   7              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   8              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+   9              		.eabi_attribute 34, 0	@ Tag_CPU_unaligned_access
+  10              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  11              		.file	"system_va108xx.c"
+  12              	@ GNU C11 (GNU Tools for Arm Embedded Processors 7-2017-q4-major) version 7.2.1 20170904 (release) 
+  13              	@	compiled by GNU C version 5.3.1 20160211, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.
+  14              	
+  15              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  16              	@ options passed:  -I . -I .\common\hdr -I .\driver\hdr -I .\utilities\hdr
+  17              	@ -I .\inc -I .\driver\hdr -I .\hdr -imultilib thumb/v6-m
+  18              	@ -iprefix c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../lib/gcc/arm-none-ea
+  19              	@ -isysroot c:\program files (x86)\gnu tools arm embedded\7 2017-q4-major\bin\../arm-none-eabi
+  20              	@ -D__USES_INITFINI__ -D RUN_FROM_FLASH=1 .\common\src\system_va108xx.c
+  21              	@ -mcpu=cortex-m0 -mthumb -auxbase-strip .\common\src\system_va108xx.o
+  22              	@ -gdwarf-2 -Os -Wall -Wstrict-prototypes -fomit-frame-pointer
+  23              	@ -fverbose-asm
+  24              	@ options enabled:  -faggressive-loop-optimizations -falign-jumps
+  25              	@ -falign-labels -falign-loops -fauto-inc-dec -fbranch-count-reg
+  26              	@ -fcaller-saves -fchkp-check-incomplete-type -fchkp-check-read
+  27              	@ -fchkp-check-write -fchkp-instrument-calls -fchkp-narrow-bounds
+  28              	@ -fchkp-optimize -fchkp-store-bounds -fchkp-use-static-bounds
+  29              	@ -fchkp-use-static-const-bounds -fchkp-use-wrappers -fcode-hoisting
+  30              	@ -fcombine-stack-adjustments -fcommon -fcompare-elim -fcprop-registers
+  31              	@ -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  32              	@ -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  33              	@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  34              	@ -fexpensive-optimizations -fforward-propagate -ffp-int-builtin-inexact
+  35              	@ -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime -fgnu-unique
+  36              	@ -fguess-branch-probability -fhoist-adjacent-loads -fident -fif-conversion
+  37              	@ -fif-conversion2 -findirect-inlining -finline -finline-atomics
+  38              	@ -finline-functions -finline-functions-called-once
+  39              	@ -finline-small-functions -fipa-bit-cp -fipa-cp -fipa-icf
+  40              	@ -fipa-icf-functions -fipa-icf-variables -fipa-profile -fipa-pure-const
+  41              	@ -fipa-reference -fipa-sra -fipa-vrp -fira-hoist-pressure
+  42              	@ -fira-share-save-slots -fira-share-spill-slots
+  43              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+  44              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  45              	@ -fmath-errno -fmerge-constants -fmerge-debug-strings
+  46              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  47              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
+  48              	@ -freg-struct-return -freorder-blocks -freorder-functions
+  49              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  50              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  51              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  52              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  53              	@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
+  54              	@ -fshow-column -fshrink-wrap -fshrink-wrap-separate -fsigned-zeros
+  55              	@ -fsplit-ivs-in-unroller -fsplit-wide-types -fssa-backprop -fssa-phiopt
+  56              	@ -fstdarg-opt -fstore-merging -fstrict-aliasing -fstrict-overflow
+  57              	@ -fstrict-volatile-bitfields -fsync-libcalls -fthread-jumps
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 2
+
+
+  58              	@ -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp -ftree-builtin-call-dce
+  59              	@ -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop -ftree-cselim
+  60              	@ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+  61              	@ -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  62              	@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pre
+  63              	@ -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr
+  64              	@ -ftree-sra -ftree-switch-conversion -ftree-tail-merge -ftree-ter
+  65              	@ -ftree-vrp -funit-at-a-time -fvar-tracking -fvar-tracking-assignments
+  66              	@ -fverbose-asm -fzero-initialized-in-bss -mlittle-endian
+  67              	@ -mpic-data-is-text-relative -msched-prolog -mthumb
+  68              	@ -mvectorize-with-neon-quad
+  69              	
+  70              		.text
+  71              	.Ltext0:
+  72              		.cfi_sections	.debug_frame
+  73              		.align	1
+  74              		.global	SystemCoreClockUpdate
+  75              		.syntax unified
+  76              		.code	16
+  77              		.thumb_func
+  78              		.fpu softvfp
+  79              		.type	SystemCoreClockUpdate, %function
+  80              	SystemCoreClockUpdate:
+  81              	.LFB37:
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85              		@ link register save eliminated.
+  86 0000 014B     		ldr	r3, .L2	@ tmp110,
+  87 0002 024A     		ldr	r2, .L2+4	@ tmp111,
+  88              		@ sp needed	@
+  89 0004 1A60     		str	r2, [r3]	@ tmp111, SystemCoreClock
+  90 0006 7047     		bx	lr
+  91              	.L3:
+  92              		.align	2
+  93              	.L2:
+  94 0008 00000000 		.word	.LANCHOR0
+  95 000c 80F0FA02 		.word	50000000
+  96              		.cfi_endproc
+  97              	.LFE37:
+  98              		.size	SystemCoreClockUpdate, .-SystemCoreClockUpdate
+  99              		.align	1
+ 100              		.global	SystemInit
+ 101              		.syntax unified
+ 102              		.code	16
+ 103              		.thumb_func
+ 104              		.fpu softvfp
+ 105              		.type	SystemInit, %function
+ 106              	SystemInit:
+ 107              	.LFB35:
+ 108              		.file 1 ".\\common\\src\\system_va108xx.c"
+   1:.\common\src/system_va108xx.c **** /**************************************************************************//**
+   2:.\common\src/system_va108xx.c ****  * @file     system_ARMCM0.c
+   3:.\common\src/system_va108xx.c ****  * @brief    CMSIS Device System Source File for
+   4:.\common\src/system_va108xx.c ****  *           ARMCM0 Device Series
+   5:.\common\src/system_va108xx.c ****  * @version  V1.07
+   6:.\common\src/system_va108xx.c ****  * @date     30. January 2012
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 3
+
+
+   7:.\common\src/system_va108xx.c ****  *
+   8:.\common\src/system_va108xx.c ****  * @note
+   9:.\common\src/system_va108xx.c ****  * Copyright (C) 2012 ARM Limited. All rights reserved.
+  10:.\common\src/system_va108xx.c ****  *
+  11:.\common\src/system_va108xx.c ****  * @par
+  12:.\common\src/system_va108xx.c ****  * ARM Limited (ARM) is supplying this software for use with Cortex-M
+  13:.\common\src/system_va108xx.c ****  * processor based microcontrollers.  This file can be freely distributed
+  14:.\common\src/system_va108xx.c ****  * within development tools that are supporting such ARM based processors.
+  15:.\common\src/system_va108xx.c ****  *
+  16:.\common\src/system_va108xx.c ****  * @par
+  17:.\common\src/system_va108xx.c ****  * THIS SOFTWARE IS PROVIDED "AS IS".  NO WARRANTIES, WHETHER EXPRESS, IMPLIED
+  18:.\common\src/system_va108xx.c ****  * OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF
+  19:.\common\src/system_va108xx.c ****  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.
+  20:.\common\src/system_va108xx.c ****  * ARM SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR
+  21:.\common\src/system_va108xx.c ****  * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+  22:.\common\src/system_va108xx.c ****  *
+  23:.\common\src/system_va108xx.c ****  ******************************************************************************/
+  24:.\common\src/system_va108xx.c ****  /*
+  25:.\common\src/system_va108xx.c ****  From: C:\Keil\ARM\Device\ARM\ARMCM0\Source
+  26:.\common\src/system_va108xx.c ****  */
+  27:.\common\src/system_va108xx.c **** 
+  28:.\common\src/system_va108xx.c **** #include "va108xx.h"
+  29:.\common\src/system_va108xx.c **** 
+  30:.\common\src/system_va108xx.c **** /*----------------------------------------------------------------------------
+  31:.\common\src/system_va108xx.c ****   Define clocks
+  32:.\common\src/system_va108xx.c ****  *----------------------------------------------------------------------------*/
+  33:.\common\src/system_va108xx.c **** #define __HSI             ( 8000000UL)
+  34:.\common\src/system_va108xx.c **** #define __XTAL            ( 50000000UL)   /* Oscillator frequency             */
+  35:.\common\src/system_va108xx.c **** 
+  36:.\common\src/system_va108xx.c **** #define __SYSTEM_CLOCK    (__XTAL)
+  37:.\common\src/system_va108xx.c **** 
+  38:.\common\src/system_va108xx.c **** 
+  39:.\common\src/system_va108xx.c **** /*----------------------------------------------------------------------------
+  40:.\common\src/system_va108xx.c ****   Clock Variable definitions
+  41:.\common\src/system_va108xx.c ****  *----------------------------------------------------------------------------*/
+  42:.\common\src/system_va108xx.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK;/*!< System Clock Frequency (Core Clock)*/
+  43:.\common\src/system_va108xx.c **** 
+  44:.\common\src/system_va108xx.c **** 
+  45:.\common\src/system_va108xx.c **** /*----------------------------------------------------------------------------
+  46:.\common\src/system_va108xx.c ****   Clock functions
+  47:.\common\src/system_va108xx.c ****  *----------------------------------------------------------------------------*/
+  48:.\common\src/system_va108xx.c **** void SystemCoreClockUpdate (void)            /* Get Core Clock Frequency      */
+  49:.\common\src/system_va108xx.c **** {
+  50:.\common\src/system_va108xx.c **** 
+  51:.\common\src/system_va108xx.c ****   SystemCoreClock = __SYSTEM_CLOCK;
+  52:.\common\src/system_va108xx.c **** 
+  53:.\common\src/system_va108xx.c **** }
+  54:.\common\src/system_va108xx.c **** 
+  55:.\common\src/system_va108xx.c **** /**
+  56:.\common\src/system_va108xx.c ****  * Initialize the system
+  57:.\common\src/system_va108xx.c ****  *
+  58:.\common\src/system_va108xx.c ****  * @param  none
+  59:.\common\src/system_va108xx.c ****  * @return none
+  60:.\common\src/system_va108xx.c ****  *
+  61:.\common\src/system_va108xx.c ****  * @brief  Setup the microcontroller system.
+  62:.\common\src/system_va108xx.c ****  *         Initialize the System.
+  63:.\common\src/system_va108xx.c ****  */
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 4
+
+
+  64:.\common\src/system_va108xx.c **** void SystemInit (void)
+  65:.\common\src/system_va108xx.c **** {
+ 109              		.loc 1 65 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+ 114              	@ .\common\src\system_va108xx.c:67:   SystemCoreClock = __SYSTEM_CLOCK;
+  66:.\common\src/system_va108xx.c **** 
+  67:.\common\src/system_va108xx.c ****   SystemCoreClock = __SYSTEM_CLOCK;
+ 115              		.loc 1 67 0
+ 116 0010 014B     		ldr	r3, .L5	@ tmp110,
+ 117 0012 024A     		ldr	r2, .L5+4	@ tmp111,
+ 118              	@ .\common\src\system_va108xx.c:69: }
+  68:.\common\src/system_va108xx.c **** 
+  69:.\common\src/system_va108xx.c **** }
+ 119              		.loc 1 69 0
+ 120              		@ sp needed	@
+ 121              	@ .\common\src\system_va108xx.c:67:   SystemCoreClock = __SYSTEM_CLOCK;
+  67:.\common\src/system_va108xx.c **** 
+ 122              		.loc 1 67 0
+ 123 0014 1A60     		str	r2, [r3]	@ tmp111, SystemCoreClock
+ 124              	@ .\common\src\system_va108xx.c:69: }
+ 125              		.loc 1 69 0
+ 126 0016 7047     		bx	lr
+ 127              	.L6:
+ 128              		.align	2
+ 129              	.L5:
+ 130 0018 00000000 		.word	.LANCHOR0
+ 131 001c 80F0FA02 		.word	50000000
+ 132              		.cfi_endproc
+ 133              	.LFE35:
+ 134              		.size	SystemInit, .-SystemInit
+ 135              		.global	SystemCoreClock
+ 136              		.data
+ 137              		.align	2
+ 138              		.set	.LANCHOR0,. + 0
+ 139              		.type	SystemCoreClock, %object
+ 140              		.size	SystemCoreClock, 4
+ 141              	SystemCoreClock:
+ 142 0000 80F0FA02 		.word	50000000
+ 143              		.text
+ 144              	.Letext0:
+ 145              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 146              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 147              		.file 4 ".\\common\\hdr/system_va108xx.h"
+ 148              		.section	.debug_info,"",%progbits
+ 149              	.Ldebug_info0:
+ 150 0000 BC000000 		.4byte	0xbc
+ 151 0004 0200     		.2byte	0x2
+ 152 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 153 000a 04       		.byte	0x4
+ 154 000b 01       		.uleb128 0x1
+ 155 000c A9000000 		.4byte	.LASF11
+ 156 0010 0C       		.byte	0xc
+ 157 0011 74010000 		.4byte	.LASF12
+ 158 0015 6A000000 		.4byte	.LASF13
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 5
+
+
+ 159 0019 00000000 		.4byte	.Ltext0
+ 160 001d 20000000 		.4byte	.Letext0
+ 161 0021 00000000 		.4byte	.Ldebug_line0
+ 162 0025 02       		.uleb128 0x2
+ 163 0026 01       		.byte	0x1
+ 164 0027 06       		.byte	0x6
+ 165 0028 68010000 		.4byte	.LASF0
+ 166 002c 02       		.uleb128 0x2
+ 167 002d 01       		.byte	0x1
+ 168 002e 08       		.byte	0x8
+ 169 002f 9B000000 		.4byte	.LASF1
+ 170 0033 02       		.uleb128 0x2
+ 171 0034 02       		.byte	0x2
+ 172 0035 05       		.byte	0x5
+ 173 0036 92010000 		.4byte	.LASF2
+ 174 003a 02       		.uleb128 0x2
+ 175 003b 02       		.byte	0x2
+ 176 003c 07       		.byte	0x7
+ 177 003d 55010000 		.4byte	.LASF3
+ 178 0041 02       		.uleb128 0x2
+ 179 0042 04       		.byte	0x4
+ 180 0043 05       		.byte	0x5
+ 181 0044 36010000 		.4byte	.LASF4
+ 182 0048 03       		.uleb128 0x3
+ 183 0049 26000000 		.4byte	.LASF9
+ 184 004d 02       		.byte	0x2
+ 185 004e 4F       		.byte	0x4f
+ 186 004f 53000000 		.4byte	0x53
+ 187 0053 02       		.uleb128 0x2
+ 188 0054 04       		.byte	0x4
+ 189 0055 07       		.byte	0x7
+ 190 0056 41000000 		.4byte	.LASF5
+ 191 005a 02       		.uleb128 0x2
+ 192 005b 08       		.byte	0x8
+ 193 005c 05       		.byte	0x5
+ 194 005d 00000000 		.4byte	.LASF6
+ 195 0061 02       		.uleb128 0x2
+ 196 0062 08       		.byte	0x8
+ 197 0063 07       		.byte	0x7
+ 198 0064 53000000 		.4byte	.LASF7
+ 199 0068 04       		.uleb128 0x4
+ 200 0069 04       		.byte	0x4
+ 201 006a 05       		.byte	0x5
+ 202 006b 696E7400 		.ascii	"int\000"
+ 203 006f 02       		.uleb128 0x2
+ 204 0070 04       		.byte	0x4
+ 205 0071 07       		.byte	0x7
+ 206 0072 19000000 		.4byte	.LASF8
+ 207 0076 03       		.uleb128 0x3
+ 208 0077 2D010000 		.4byte	.LASF10
+ 209 007b 03       		.byte	0x3
+ 210 007c 30       		.byte	0x30
+ 211 007d 48000000 		.4byte	0x48
+ 212 0081 05       		.uleb128 0x5
+ 213 0082 31000000 		.4byte	.LASF14
+ 214 0086 04       		.byte	0x4
+ 215 0087 B2       		.byte	0xb2
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 6
+
+
+ 216 0088 76000000 		.4byte	0x76
+ 217 008c 01       		.byte	0x1
+ 218 008d 01       		.byte	0x1
+ 219 008e 06       		.uleb128 0x6
+ 220 008f 81000000 		.4byte	0x81
+ 221 0093 01       		.byte	0x1
+ 222 0094 2A       		.byte	0x2a
+ 223 0095 05       		.byte	0x5
+ 224 0096 03       		.byte	0x3
+ 225 0097 00000000 		.4byte	SystemCoreClock
+ 226 009b 07       		.uleb128 0x7
+ 227 009c 01       		.byte	0x1
+ 228 009d 0E000000 		.4byte	.LASF15
+ 229 00a1 01       		.byte	0x1
+ 230 00a2 40       		.byte	0x40
+ 231 00a3 01       		.byte	0x1
+ 232 00a4 01       		.byte	0x1
+ 233 00a5 08       		.uleb128 0x8
+ 234 00a6 01       		.byte	0x1
+ 235 00a7 3F010000 		.4byte	.LASF16
+ 236 00ab 01       		.byte	0x1
+ 237 00ac 30       		.byte	0x30
+ 238 00ad 01       		.byte	0x1
+ 239 00ae 09       		.uleb128 0x9
+ 240 00af 9B000000 		.4byte	0x9b
+ 241 00b3 10000000 		.4byte	.LFB35
+ 242 00b7 20000000 		.4byte	.LFE35
+ 243 00bb 02       		.byte	0x2
+ 244 00bc 7D       		.byte	0x7d
+ 245 00bd 00       		.sleb128 0
+ 246 00be 01       		.byte	0x1
+ 247 00bf 00       		.byte	0
+ 248              		.section	.debug_abbrev,"",%progbits
+ 249              	.Ldebug_abbrev0:
+ 250 0000 01       		.uleb128 0x1
+ 251 0001 11       		.uleb128 0x11
+ 252 0002 01       		.byte	0x1
+ 253 0003 25       		.uleb128 0x25
+ 254 0004 0E       		.uleb128 0xe
+ 255 0005 13       		.uleb128 0x13
+ 256 0006 0B       		.uleb128 0xb
+ 257 0007 03       		.uleb128 0x3
+ 258 0008 0E       		.uleb128 0xe
+ 259 0009 1B       		.uleb128 0x1b
+ 260 000a 0E       		.uleb128 0xe
+ 261 000b 11       		.uleb128 0x11
+ 262 000c 01       		.uleb128 0x1
+ 263 000d 12       		.uleb128 0x12
+ 264 000e 01       		.uleb128 0x1
+ 265 000f 10       		.uleb128 0x10
+ 266 0010 06       		.uleb128 0x6
+ 267 0011 00       		.byte	0
+ 268 0012 00       		.byte	0
+ 269 0013 02       		.uleb128 0x2
+ 270 0014 24       		.uleb128 0x24
+ 271 0015 00       		.byte	0
+ 272 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 7
+
+
+ 273 0017 0B       		.uleb128 0xb
+ 274 0018 3E       		.uleb128 0x3e
+ 275 0019 0B       		.uleb128 0xb
+ 276 001a 03       		.uleb128 0x3
+ 277 001b 0E       		.uleb128 0xe
+ 278 001c 00       		.byte	0
+ 279 001d 00       		.byte	0
+ 280 001e 03       		.uleb128 0x3
+ 281 001f 16       		.uleb128 0x16
+ 282 0020 00       		.byte	0
+ 283 0021 03       		.uleb128 0x3
+ 284 0022 0E       		.uleb128 0xe
+ 285 0023 3A       		.uleb128 0x3a
+ 286 0024 0B       		.uleb128 0xb
+ 287 0025 3B       		.uleb128 0x3b
+ 288 0026 0B       		.uleb128 0xb
+ 289 0027 49       		.uleb128 0x49
+ 290 0028 13       		.uleb128 0x13
+ 291 0029 00       		.byte	0
+ 292 002a 00       		.byte	0
+ 293 002b 04       		.uleb128 0x4
+ 294 002c 24       		.uleb128 0x24
+ 295 002d 00       		.byte	0
+ 296 002e 0B       		.uleb128 0xb
+ 297 002f 0B       		.uleb128 0xb
+ 298 0030 3E       		.uleb128 0x3e
+ 299 0031 0B       		.uleb128 0xb
+ 300 0032 03       		.uleb128 0x3
+ 301 0033 08       		.uleb128 0x8
+ 302 0034 00       		.byte	0
+ 303 0035 00       		.byte	0
+ 304 0036 05       		.uleb128 0x5
+ 305 0037 34       		.uleb128 0x34
+ 306 0038 00       		.byte	0
+ 307 0039 03       		.uleb128 0x3
+ 308 003a 0E       		.uleb128 0xe
+ 309 003b 3A       		.uleb128 0x3a
+ 310 003c 0B       		.uleb128 0xb
+ 311 003d 3B       		.uleb128 0x3b
+ 312 003e 0B       		.uleb128 0xb
+ 313 003f 49       		.uleb128 0x49
+ 314 0040 13       		.uleb128 0x13
+ 315 0041 3F       		.uleb128 0x3f
+ 316 0042 0C       		.uleb128 0xc
+ 317 0043 3C       		.uleb128 0x3c
+ 318 0044 0C       		.uleb128 0xc
+ 319 0045 00       		.byte	0
+ 320 0046 00       		.byte	0
+ 321 0047 06       		.uleb128 0x6
+ 322 0048 34       		.uleb128 0x34
+ 323 0049 00       		.byte	0
+ 324 004a 47       		.uleb128 0x47
+ 325 004b 13       		.uleb128 0x13
+ 326 004c 3A       		.uleb128 0x3a
+ 327 004d 0B       		.uleb128 0xb
+ 328 004e 3B       		.uleb128 0x3b
+ 329 004f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 8
+
+
+ 330 0050 02       		.uleb128 0x2
+ 331 0051 0A       		.uleb128 0xa
+ 332 0052 00       		.byte	0
+ 333 0053 00       		.byte	0
+ 334 0054 07       		.uleb128 0x7
+ 335 0055 2E       		.uleb128 0x2e
+ 336 0056 00       		.byte	0
+ 337 0057 3F       		.uleb128 0x3f
+ 338 0058 0C       		.uleb128 0xc
+ 339 0059 03       		.uleb128 0x3
+ 340 005a 0E       		.uleb128 0xe
+ 341 005b 3A       		.uleb128 0x3a
+ 342 005c 0B       		.uleb128 0xb
+ 343 005d 3B       		.uleb128 0x3b
+ 344 005e 0B       		.uleb128 0xb
+ 345 005f 27       		.uleb128 0x27
+ 346 0060 0C       		.uleb128 0xc
+ 347 0061 20       		.uleb128 0x20
+ 348 0062 0B       		.uleb128 0xb
+ 349 0063 00       		.byte	0
+ 350 0064 00       		.byte	0
+ 351 0065 08       		.uleb128 0x8
+ 352 0066 2E       		.uleb128 0x2e
+ 353 0067 00       		.byte	0
+ 354 0068 3F       		.uleb128 0x3f
+ 355 0069 0C       		.uleb128 0xc
+ 356 006a 03       		.uleb128 0x3
+ 357 006b 0E       		.uleb128 0xe
+ 358 006c 3A       		.uleb128 0x3a
+ 359 006d 0B       		.uleb128 0xb
+ 360 006e 3B       		.uleb128 0x3b
+ 361 006f 0B       		.uleb128 0xb
+ 362 0070 27       		.uleb128 0x27
+ 363 0071 0C       		.uleb128 0xc
+ 364 0072 00       		.byte	0
+ 365 0073 00       		.byte	0
+ 366 0074 09       		.uleb128 0x9
+ 367 0075 2E       		.uleb128 0x2e
+ 368 0076 00       		.byte	0
+ 369 0077 31       		.uleb128 0x31
+ 370 0078 13       		.uleb128 0x13
+ 371 0079 11       		.uleb128 0x11
+ 372 007a 01       		.uleb128 0x1
+ 373 007b 12       		.uleb128 0x12
+ 374 007c 01       		.uleb128 0x1
+ 375 007d 40       		.uleb128 0x40
+ 376 007e 0A       		.uleb128 0xa
+ 377 007f 9742     		.uleb128 0x2117
+ 378 0081 0C       		.uleb128 0xc
+ 379 0082 00       		.byte	0
+ 380 0083 00       		.byte	0
+ 381 0084 00       		.byte	0
+ 382              		.section	.debug_aranges,"",%progbits
+ 383 0000 1C000000 		.4byte	0x1c
+ 384 0004 0200     		.2byte	0x2
+ 385 0006 00000000 		.4byte	.Ldebug_info0
+ 386 000a 04       		.byte	0x4
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 9
+
+
+ 387 000b 00       		.byte	0
+ 388 000c 0000     		.2byte	0
+ 389 000e 0000     		.2byte	0
+ 390 0010 00000000 		.4byte	.Ltext0
+ 391 0014 20000000 		.4byte	.Letext0-.Ltext0
+ 392 0018 00000000 		.4byte	0
+ 393 001c 00000000 		.4byte	0
+ 394              		.section	.debug_line,"",%progbits
+ 395              	.Ldebug_line0:
+ 396 0000 44010000 		.section	.debug_str,"MS",%progbits,1
+ 396      02002A01 
+ 396      00000201 
+ 396      FB0E0D00 
+ 396      01010101 
+ 397              	.LASF6:
+ 398 0000 6C6F6E67 		.ascii	"long long int\000"
+ 398      206C6F6E 
+ 398      6720696E 
+ 398      7400
+ 399              	.LASF15:
+ 400 000e 53797374 		.ascii	"SystemInit\000"
+ 400      656D496E 
+ 400      697400
+ 401              	.LASF8:
+ 402 0019 756E7369 		.ascii	"unsigned int\000"
+ 402      676E6564 
+ 402      20696E74 
+ 402      00
+ 403              	.LASF9:
+ 404 0026 5F5F7569 		.ascii	"__uint32_t\000"
+ 404      6E743332 
+ 404      5F7400
+ 405              	.LASF14:
+ 406 0031 53797374 		.ascii	"SystemCoreClock\000"
+ 406      656D436F 
+ 406      7265436C 
+ 406      6F636B00 
+ 407              	.LASF5:
+ 408 0041 6C6F6E67 		.ascii	"long unsigned int\000"
+ 408      20756E73 
+ 408      69676E65 
+ 408      6420696E 
+ 408      7400
+ 409              	.LASF7:
+ 410 0053 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 410      206C6F6E 
+ 410      6720756E 
+ 410      7369676E 
+ 410      65642069 
+ 411              	.LASF13:
+ 412 006a 433A5C56 		.ascii	"C:\\VA108xx_GCC\\Wksp_VOR_ Blink\\vorago_blink_only"
+ 412      41313038 
+ 412      78785F47 
+ 412      43435C57 
+ 412      6B73705F 
+ 413 009a 00       		.ascii	"\000"
+ 414              	.LASF1:
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 10
+
+
+ 415 009b 756E7369 		.ascii	"unsigned char\000"
+ 415      676E6564 
+ 415      20636861 
+ 415      7200
+ 416              	.LASF11:
+ 417 00a9 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 417      43313120 
+ 417      372E322E 
+ 417      31203230 
+ 417      31373039 
+ 418 00dc 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m0 -mthumb -gdwa"
+ 418      20726576 
+ 418      6973696F 
+ 418      6E203235 
+ 418      35323034 
+ 419 010f 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+ 419      202D4F73 
+ 419      202D666F 
+ 419      6D69742D 
+ 419      6672616D 
+ 420              	.LASF10:
+ 421 012d 75696E74 		.ascii	"uint32_t\000"
+ 421      33325F74 
+ 421      00
+ 422              	.LASF4:
+ 423 0136 6C6F6E67 		.ascii	"long int\000"
+ 423      20696E74 
+ 423      00
+ 424              	.LASF16:
+ 425 013f 53797374 		.ascii	"SystemCoreClockUpdate\000"
+ 425      656D436F 
+ 425      7265436C 
+ 425      6F636B55 
+ 425      70646174 
+ 426              	.LASF3:
+ 427 0155 73686F72 		.ascii	"short unsigned int\000"
+ 427      7420756E 
+ 427      7369676E 
+ 427      65642069 
+ 427      6E7400
+ 428              	.LASF0:
+ 429 0168 7369676E 		.ascii	"signed char\000"
+ 429      65642063 
+ 429      68617200 
+ 430              	.LASF12:
+ 431 0174 2E5C636F 		.ascii	".\\common\\src\\system_va108xx.c\000"
+ 431      6D6D6F6E 
+ 431      5C737263 
+ 431      5C737973 
+ 431      74656D5F 
+ 432              	.LASF2:
+ 433 0192 73686F72 		.ascii	"short int\000"
+ 433      7420696E 
+ 433      7400
+ 434              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 system_va108xx.c
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:73     .text:00000000 $t
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:80     .text:00000000 SystemCoreClockUpdate
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:94     .text:00000008 $d
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:99     .text:00000010 $t
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:106    .text:00000010 SystemInit
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:130    .text:00000018 $d
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:141    .data:00000000 SystemCoreClock
+C:\Users\demo1\AppData\Local\Temp\ccZZLSsQ.s:137    .data:00000000 $d
+
+NO UNDEFINED SYMBOLS
