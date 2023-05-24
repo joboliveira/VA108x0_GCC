@@ -50,7 +50,7 @@ int main(void)
 
 /* Configure PA[7]. This GPIO will turn ON LED D3. */
       VOR_GPIO->BANK[0].DIR |= (1 << PORTA_7_D3);
-	  VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
+	  	VOR_GPIO->BANK[0].DATAMASK |= (1 << PORTA_7_D3);
       VOR_GPIO->BANK[0].DATAOUT |= (1 << PORTA_7_D3);
 
 
